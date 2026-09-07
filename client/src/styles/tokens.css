@@ -1,0 +1,143 @@
+/* Design Tokens — Filenders Lojistik ve Teknoloji */
+/* Source of truth: client/design/design-tokens.json — bu dosyayı JSON ile senkron tutun. */
+
+/* === PRIMITIVES === */
+:root {
+  --primitive-color-slate-50: #F4F7F9;
+  --primitive-color-slate-200: #D7E0E6;
+  --primitive-color-slate-400: #7C8B98;
+  --primitive-color-slate-600: #45525E;
+  --primitive-color-teal-300: #7CE6EE;
+  --primitive-color-teal-400: #3DD3DF;
+  --primitive-color-teal-450: #1AC4D1;
+  --primitive-color-teal-500: #16B8C4;
+  --primitive-color-teal-600: #0E939D;
+  --primitive-color-teal-700: #0B6E76;
+  --primitive-color-emerald-500: #10B981;
+  --primitive-color-emerald-600: #059669;
+  --primitive-color-amber-500: #F59E0B;
+  --primitive-color-red-500: #EF4444;
+  --primitive-color-red-600: #DC2626;
+  --primitive-color-white: #FFFFFF;
+  --primitive-color-black: #000000;
+
+  --primitive-spacing-1: 0.25rem;
+  --primitive-spacing-2: 0.5rem;
+  --primitive-spacing-3: 0.75rem;
+  --primitive-spacing-4: 1rem;
+  --primitive-spacing-5: 1.25rem;
+  --primitive-spacing-6: 1.5rem;
+  --primitive-spacing-8: 2rem;
+  --primitive-spacing-10: 2.5rem;
+  --primitive-spacing-12: 3rem;
+  --primitive-spacing-16: 4rem;
+  --primitive-spacing-20: 5rem;
+  --primitive-spacing-24: 6rem;
+  --primitive-spacing-32: 8rem;
+
+  --primitive-fontFamily-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --primitive-fontFamily-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+  --primitive-fontSize-xs: 0.75rem;
+  --primitive-fontSize-sm: 0.875rem;
+  --primitive-fontSize-base: 1rem;
+  --primitive-fontSize-lg: 1.125rem;
+  --primitive-fontSize-xl: 1.25rem;
+  --primitive-fontSize-2xl: 1.5rem;
+  --primitive-fontSize-3xl: 1.875rem;
+  --primitive-fontSize-4xl: 2.25rem;
+  --primitive-fontSize-5xl: 3rem;
+  --primitive-fontSize-6xl: 3.75rem;
+  --primitive-fontSize-7xl: 4.5rem;
+
+  --primitive-radius-sm: 0.375rem;
+  --primitive-radius-default: 0.5rem;
+  --primitive-radius-md: 0.75rem;
+  --primitive-radius-lg: 1.25rem;
+  --primitive-radius-xl: 1.75rem;
+  --primitive-radius-2xl: 2.25rem;
+  --primitive-radius-full: 9999px;
+
+  --primitive-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.24);
+  --primitive-shadow-default: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+  --primitive-shadow-md: 0 8px 20px -4px rgb(0 0 0 / 0.35);
+  --primitive-shadow-lg: 0 20px 40px -12px rgb(0 0 0 / 0.45);
+  --primitive-shadow-xl: 0 32px 64px -16px rgb(0 0 0 / 0.55);
+  --primitive-shadow-glow: 0 0 0 1px rgb(22 184 196 / 0.25), 0 12px 40px -8px rgb(22 184 196 / 0.45);
+
+  --primitive-duration-fast: 150ms;
+  --primitive-duration-normal: 280ms;
+  --primitive-duration-slow: 550ms;
+  --primitive-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* === SEMANTIC === */
+:root {
+  --color-background: #070B10;
+  --color-background-subtle: #0B1117;
+  --color-foreground: #F2F6F8;
+  --color-foreground-muted: #90A0AC;
+
+  --color-primary: #1AC4D1;
+  --color-primary-hover: #3DD3DF;
+  --color-primary-foreground: #04141A;
+  --color-primary-subtle: rgb(26 196 209 / 0.12);
+
+  --color-accent: #7CE6EE;
+  --color-secondary: #101820;
+  --color-secondary-foreground: #F2F6F8;
+  --color-muted: #0D141B;
+  --color-muted-foreground: #7C8B98;
+
+  --color-border: #1B2530;
+  --color-border-strong: #29394A;
+  --color-ring: #1AC4D1;
+
+  --color-success: #10B981;
+  --color-success-subtle: rgb(16 185 129 / 0.12);
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+
+  --color-surface: #0D141C;
+  --color-surface-2: #121B24;
+  --color-surface-inverted: #F2F6F8;
+  --color-foreground-inverted: #070B10;
+
+  --spacing-component: 1rem;
+  --spacing-section-y: 7rem;
+  --spacing-section-y-sm: 3.5rem;
+}
+
+/* === COMPONENTS === */
+:root {
+  --button-primary-bg: #1AC4D1;
+  --button-primary-fg: #04141A;
+  --button-primary-hover-bg: #3DD3DF;
+  --button-primary-radius: 9999px;
+  --button-primary-padding-x: 1.75rem;
+  --button-primary-padding-y: 0.85rem;
+  --button-primary-shadow: 0 12px 32px -8px rgb(26 196 209 / 0.55);
+
+  --button-secondary-bg: transparent;
+  --button-secondary-fg: #F2F6F8;
+  --button-secondary-border: #29394A;
+  --button-secondary-hover-bg: #121B24;
+  --button-secondary-radius: 9999px;
+  --button-secondary-padding-x: 1.75rem;
+  --button-secondary-padding-y: 0.85rem;
+
+  --card-bg: #0D141C;
+  --card-border: #1B2530;
+  --card-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3);
+  --card-shadow-hover: 0 20px 40px -12px rgb(0 0 0 / 0.5);
+  --card-padding: 2.5rem;
+  --card-radius: 1.75rem;
+
+  --badge-bg: rgb(26 196 209 / 0.12);
+  --badge-fg: #7CE6EE;
+  --badge-radius: 9999px;
+  --badge-padding-x: 0.875rem;
+  --badge-padding-y: 0.375rem;
+
+  --nav-bg: rgb(7 11 16 / 0.72);
+  --nav-border: #1B2530;
+}
