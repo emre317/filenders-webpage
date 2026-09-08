@@ -1,12 +1,17 @@
 import { motion, useMotionValue, useSpring } from 'framer-motion'
 import logo from '../assets/logo.png'
 import { ArrowRightIcon } from './icons'
+import PathDrawingText from './PathDrawingText'
+import { useLanguage } from '../i18n/LanguageContext'
+import useTilt3D from '../hooks/useTilt3D'
 
 export default function Hero() {
+  const { t, lang } = useLanguage()
   const mx = useMotionValue(0)
   const my = useMotionValue(0)
   const glowX = useSpring(mx, { stiffness: 120, damping: 30, mass: 0.6 })
   const glowY = useSpring(my, { stiffness: 120, damping: 30, mass: 0.6 })
+  const { ref: visualRef, tiltProps: visualTilt } = useTilt3D(10)
 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect()
@@ -15,7 +20,7 @@ export default function Hero() {
   }
 
   return (
-    <section id="top" className="hero" onMouseMove={handleMouseMove}>
+    <section className="hero" onMouseMove={handleMouseMove}>
       <div className="hero-grid" aria-hidden="true" />
       <div className="hero-glow" aria-hidden="true" />
       <motion.div
@@ -31,46 +36,74 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="hero-copy"
         >
-          <span className="badge">Lojistik ve Teknolojiyi Bir Araya Getiriyoruz</span>
+          <span className="badge">{t('hero.badge')}</span>
 
           <h1>
-            Filenders
-            <br />
-            <span className="text-gradient">Lojistik &amp; Teknoloji</span>
+            <PathDrawingText
+              key={`brand-${lang}`}
+              text={t('hero.brand')}
+              className="hero-title-draw"
+              fontSize={104}
+              viewBoxWidth={560}
+              viewBoxHeight={130}
+            />
+            <PathDrawingText
+              key={`subtitle-${lang}`}
+              text={t('hero.subtitle')}
+              className="hero-subtitle-draw"
+              fontSize={80}
+              viewBoxWidth={980}
+              viewBoxHeight={110}
+              durationSec={5.5}
+            />
           </h1>
 
-          <p className="hero-lede">
-            Yükünüzü güvenle taşıyan lojistik operasyonları ile onu yöneten akıllı
-            teknolojiyi tek çatı altında birleştiriyoruz — hızlı, izlenebilir ve
-            geleceğe hazır.
-          </p>
+          <p className="hero-lede">{t('hero.lede')}</p>
 
           <div className="hero-actions">
             <a href="#bolumler" className="btn btn-primary btn-lg">
-              Bölümlerimizi Keşfedin
+              {t('hero.exploreCta')}
               <ArrowRightIcon width={16} height={16} />
             </a>
             <a href="#iletisim" className="btn btn-secondary btn-lg">
-              Bize Ulaşın
+              {t('hero.contactCta')}
             </a>
           </div>
         </motion.div>
 
         <motion.div
+          ref={visualRef}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="hero-visual"
+          {...visualTilt}
         >
           <div className="hero-logo-ring" aria-hidden="true" />
+          <span className="hero-spark-field" aria-hidden="true">
+            {Array.from({ length: 8 }).map((_, i) => (
+              <span
+                key={i}
+                className="hero-spark"
+                style={{
+                  transform: `rotate(${i * 45}deg) translateY(-135%)`,
+                  transitionDelay: `${i * 35}ms`,
+                }}
+              />
+            ))}
+          </span>
           <motion.img
             src={logo}
             alt="Filenders"
             className="hero-logo"
             animate={{ rotate: 360 }}
-            transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
+            whileHover={{ scale: 1.1 }}
+            transition={{
+              rotate: { duration: 40, repeat: Infinity, ease: 'linear' },
+              scale: { type: 'spring', stiffness: 260, damping: 16 },
+            }}
           />
-          <span className="hero-tagline">discover the true path</span>
+          <span className="hero-tagline">{t('hero.tagline')}</span>
         </motion.div>
       </div>
 

@@ -1,11 +1,12 @@
 /* Design Tokens — Filenders Lojistik ve Teknoloji */
+/* Marka renkleri: Beyaz, Turkuaz, Turuncu, Lacivert */
 /* Source of truth: client/design/design-tokens.json — bu dosyayı JSON ile senkron tutun. */
 
 /* === PRIMITIVES === */
 :root {
   --primitive-color-slate-50: #F4F7F9;
   --primitive-color-slate-200: #D7E0E6;
-  --primitive-color-slate-400: #7C8B98;
+  --primitive-color-slate-400: #8B9AB0;
   --primitive-color-slate-600: #45525E;
   --primitive-color-teal-300: #7CE6EE;
   --primitive-color-teal-400: #3DD3DF;
@@ -13,6 +14,17 @@
   --primitive-color-teal-500: #16B8C4;
   --primitive-color-teal-600: #0E939D;
   --primitive-color-teal-700: #0B6E76;
+  --primitive-color-orange-300: #FFB273;
+  --primitive-color-orange-400: #FFA05C;
+  --primitive-color-orange-500: #FF8A3D;
+  --primitive-color-orange-600: #E8722A;
+  --primitive-color-navy-950: #050B18;
+  --primitive-color-navy-900: #081226;
+  --primitive-color-navy-800: #0B1730;
+  --primitive-color-navy-700: #0F1C38;
+  --primitive-color-navy-600: #142544;
+  --primitive-color-navy-500: #1C2E4E;
+  --primitive-color-navy-400: #2C4370;
   --primitive-color-emerald-500: #10B981;
   --primitive-color-emerald-600: #059669;
   --primitive-color-amber-500: #F59E0B;
@@ -62,7 +74,7 @@
   --primitive-shadow-md: 0 8px 20px -4px rgb(0 0 0 / 0.35);
   --primitive-shadow-lg: 0 20px 40px -12px rgb(0 0 0 / 0.45);
   --primitive-shadow-xl: 0 32px 64px -16px rgb(0 0 0 / 0.55);
-  --primitive-shadow-glow: 0 0 0 1px rgb(22 184 196 / 0.25), 0 12px 40px -8px rgb(22 184 196 / 0.45);
+  --primitive-shadow-glow: 0 0 0 1px rgb(26 196 209 / 0.25), 0 12px 40px -8px rgb(26 196 209 / 0.45);
 
   --primitive-duration-fast: 150ms;
   --primitive-duration-normal: 280ms;
@@ -72,24 +84,27 @@
 
 /* === SEMANTIC === */
 :root {
-  --color-background: #070B10;
-  --color-background-subtle: #0B1117;
-  --color-foreground: #F2F6F8;
-  --color-foreground-muted: #90A0AC;
+  --color-background: #081226;
+  --color-background-subtle: #0B1730;
+  --color-foreground: #FFFFFF;
+  --color-foreground-muted: #9FB0C8;
 
   --color-primary: #1AC4D1;
   --color-primary-hover: #3DD3DF;
   --color-primary-foreground: #04141A;
-  --color-primary-subtle: rgb(26 196 209 / 0.12);
+  --color-primary-subtle: rgb(26 196 209 / 0.14);
 
-  --color-accent: #7CE6EE;
-  --color-secondary: #101820;
-  --color-secondary-foreground: #F2F6F8;
-  --color-muted: #0D141B;
-  --color-muted-foreground: #7C8B98;
+  --color-accent: #FF8A3D;
+  --color-accent-hover: #FFA05C;
+  --color-accent-subtle: rgb(255 138 61 / 0.14);
 
-  --color-border: #1B2530;
-  --color-border-strong: #29394A;
+  --color-secondary: #101E3A;
+  --color-secondary-foreground: #FFFFFF;
+  --color-muted: #0D1A32;
+  --color-muted-foreground: #8B9AB0;
+
+  --color-border: #1C2E4E;
+  --color-border-strong: #2C4370;
   --color-ring: #1AC4D1;
 
   --color-success: #10B981;
@@ -97,10 +112,11 @@
   --color-warning: #F59E0B;
   --color-danger: #EF4444;
 
-  --color-surface: #0D141C;
-  --color-surface-2: #121B24;
-  --color-surface-inverted: #F2F6F8;
-  --color-foreground-inverted: #070B10;
+  --color-surface: #0F1C38;
+  --color-surface-2: #142544;
+  --color-surface-inverted: #FFFFFF;
+  --color-foreground-inverted: #081226;
+  --color-section-alt: var(--color-background);
 
   --spacing-component: 1rem;
   --spacing-section-y: 7rem;
@@ -118,26 +134,85 @@
   --button-primary-shadow: 0 12px 32px -8px rgb(26 196 209 / 0.55);
 
   --button-secondary-bg: transparent;
-  --button-secondary-fg: #F2F6F8;
-  --button-secondary-border: #29394A;
-  --button-secondary-hover-bg: #121B24;
+  --button-secondary-fg: #FFFFFF;
+  --button-secondary-border: #2C4370;
+  --button-secondary-hover-bg: #142544;
   --button-secondary-radius: 9999px;
   --button-secondary-padding-x: 1.75rem;
   --button-secondary-padding-y: 0.85rem;
 
-  --card-bg: #0D141C;
-  --card-border: #1B2530;
+  --card-bg: #0F1C38;
+  --card-border: #1C2E4E;
   --card-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3);
   --card-shadow-hover: 0 20px 40px -12px rgb(0 0 0 / 0.5);
   --card-padding: 2.5rem;
   --card-radius: 1.75rem;
 
-  --badge-bg: rgb(26 196 209 / 0.12);
-  --badge-fg: #7CE6EE;
+  --badge-bg: rgb(26 196 209 / 0.14);
+  --badge-fg: #FF8A3D;
   --badge-radius: 9999px;
   --badge-padding-x: 0.875rem;
   --badge-padding-y: 0.375rem;
 
-  --nav-bg: rgb(7 11 16 / 0.72);
-  --nav-border: #1B2530;
+  --nav-bg: rgb(8 18 38 / 0.75);
+  --nav-border: #1C2E4E;
+}
+
+/* === LIGHT THEME OVERRIDES === */
+/* Aynı marka renkleri (turkuaz/turuncu), zemin ve metin tonları tersine döner. */
+:root[data-theme='light'] {
+  --color-background: #FFFFFF;
+  --color-background-subtle: #F4F7FB;
+  --color-foreground: #0B1730;
+  --color-foreground-muted: #5B6B85;
+
+  --color-primary: #1AC4D1;
+  --color-primary-hover: #0E939D;
+  --color-primary-foreground: #04141A;
+  --color-primary-subtle: rgb(26 196 209 / 0.1);
+
+  --color-accent: #D9631F;
+  --color-accent-hover: #E8722A;
+  --color-accent-subtle: rgb(217 99 31 / 0.12);
+
+  --color-secondary: #EEF2F8;
+  --color-secondary-foreground: #0B1730;
+  --color-muted: #F0F3F8;
+  --color-muted-foreground: #64748B;
+
+  --color-border: #E2E8F0;
+  --color-border-strong: #C7D2E0;
+  --color-ring: #1AC4D1;
+
+  --color-success: #059669;
+  --color-success-subtle: rgb(5 150 105 / 0.1);
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+
+  --color-surface: #F7F9FC;
+  --color-surface-2: #EDF1F7;
+  --color-surface-inverted: #0B1730;
+  --color-foreground-inverted: #FFFFFF;
+  --color-section-alt: #E7EDF6;
+
+  --button-primary-bg: #1AC4D1;
+  --button-primary-fg: #04141A;
+  --button-primary-hover-bg: #0E939D;
+  --button-primary-shadow: 0 12px 28px -8px rgb(26 196 209 / 0.4);
+
+  --button-secondary-bg: #FFFFFF;
+  --button-secondary-fg: #0B1730;
+  --button-secondary-border: #C7D2E0;
+  --button-secondary-hover-bg: #F3F6FA;
+
+  --card-bg: #F7F9FC;
+  --card-border: #E2E8F0;
+  --card-shadow: 0 2px 6px -2px rgb(15 23 42 / 0.1), 0 1px 2px -1px rgb(15 23 42 / 0.08);
+  --card-shadow-hover: 0 24px 44px -14px rgb(15 23 42 / 0.2);
+
+  --badge-bg: rgb(26 196 209 / 0.1);
+  --badge-fg: #D9631F;
+
+  --nav-bg: rgb(255 255 255 / 0.78);
+  --nav-border: #E2E8F0;
 }

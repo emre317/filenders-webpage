@@ -1,23 +1,25 @@
 import { motion } from 'framer-motion'
 import { ArrowRightIcon, MailIcon } from './icons'
+import { useLanguage } from '../i18n/LanguageContext'
 
 export default function CTA() {
+  const { t } = useLanguage()
+
   return (
     <section id="iletisim" className="cta">
       <motion.div
         className="cta-inner"
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 24, rotateX: 10 }}
+        whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
         viewport={{ once: true, margin: '-10%' }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        style={{ transformPerspective: 1000 }}
       >
         <h2>
-          Operasyonunuzu <span className="text-gradient">birlikte</span> büyütelim
+          {t('cta.titlePrefix')} <span className="text-gradient">{t('cta.titleHighlight')}</span>{' '}
+          {t('cta.titleSuffix')}
         </h2>
-        <p>
-          Lojistik ihtiyaçlarınız ya da teknoloji projeleriniz için ekibimizle
-          iletişime geçin.
-        </p>
+        <p>{t('cta.lede')}</p>
 
         <div className="cta-actions">
           <a href="mailto:info@filenders.com" className="btn btn-primary btn-lg">

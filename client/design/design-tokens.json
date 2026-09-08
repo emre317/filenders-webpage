@@ -1,21 +1,36 @@
 {
   "$schema": "https://design-tokens.org/schema.json",
-  "$description": "Filenders Lojistik ve Teknoloji — kurumsal tasarım sistemi. Source of truth for client/src/styles/tokens.css.",
+  "$description": "Filenders Lojistik ve Teknoloji — kurumsal tasarım sistemi. Marka renkleri: Beyaz, Turkuaz, Turuncu, Lacivert. Source of truth for client/src/styles/tokens.css.",
   "primitive": {
     "color": {
       "slate": {
         "50": { "$value": "#F4F7F9", "$type": "color" },
         "200": { "$value": "#D7E0E6", "$type": "color" },
-        "400": { "$value": "#7C8B98", "$type": "color" },
+        "400": { "$value": "#8B9AB0", "$type": "color" },
         "600": { "$value": "#45525E", "$type": "color" }
       },
       "teal": {
-        "300": { "$value": "#7CE6EE", "$type": "color", "$description": "Accent — vurgu metinleri, ikincil parlaklık" },
+        "300": { "$value": "#7CE6EE", "$type": "color", "$description": "Rezerve — eski aksan tonu, artık aktif kullanımda değil" },
         "400": { "$value": "#3DD3DF", "$type": "color", "$description": "Primary hover" },
-        "450": { "$value": "#1AC4D1", "$type": "color", "$description": "Brand primary — Filenders'ın imza rengi" },
+        "450": { "$value": "#1AC4D1", "$type": "color", "$description": "Brand primary — Filenders'ın imza turkuaz rengi" },
         "500": { "$value": "#16B8C4", "$type": "color" },
         "600": { "$value": "#0E939D", "$type": "color" },
         "700": { "$value": "#0B6E76", "$type": "color" }
+      },
+      "orange": {
+        "300": { "$value": "#FFB273", "$type": "color" },
+        "400": { "$value": "#FFA05C", "$type": "color", "$description": "Accent hover" },
+        "500": { "$value": "#FF8A3D", "$type": "color", "$description": "Brand accent — Filenders'ın imza turuncu rengi" },
+        "600": { "$value": "#E8722A", "$type": "color" }
+      },
+      "navy": {
+        "950": { "$value": "#050B18", "$type": "color" },
+        "900": { "$value": "#081226", "$type": "color", "$description": "Brand background — Filenders'ın imza lacivert zemini" },
+        "800": { "$value": "#0B1730", "$type": "color" },
+        "700": { "$value": "#0F1C38", "$type": "color" },
+        "600": { "$value": "#142544", "$type": "color" },
+        "500": { "$value": "#1C2E4E", "$type": "color" },
+        "400": { "$value": "#2C4370", "$type": "color" }
       },
       "emerald": {
         "500": { "$value": "#10B981", "$type": "color", "$description": "Rezerve — başarı durumları (form/uyarı bileşenleri için)" },
@@ -28,7 +43,7 @@
         "500": { "$value": "#EF4444", "$type": "color", "$description": "Rezerve — hata/tehlike durumları" },
         "600": { "$value": "#DC2626", "$type": "color" }
       },
-      "white": { "$value": "#FFFFFF", "$type": "color" },
+      "white": { "$value": "#FFFFFF", "$type": "color", "$description": "Brand — Filenders'ın imza beyaz rengi (metin/kontrast)" },
       "black": { "$value": "#000000", "$type": "color" }
     },
     "spacing": {
@@ -78,7 +93,7 @@
       "md": { "$value": "0 8px 20px -4px rgb(0 0 0 / 0.35)", "$type": "shadow" },
       "lg": { "$value": "0 20px 40px -12px rgb(0 0 0 / 0.45)", "$type": "shadow" },
       "xl": { "$value": "0 32px 64px -16px rgb(0 0 0 / 0.55)", "$type": "shadow" },
-      "glow": { "$value": "0 0 0 1px rgb(22 184 196 / 0.25), 0 12px 40px -8px rgb(22 184 196 / 0.45)", "$type": "shadow" }
+      "glow": { "$value": "0 0 0 1px rgb(26 196 209 / 0.25), 0 12px 40px -8px rgb(26 196 209 / 0.45)", "$type": "shadow" }
     },
     "duration": {
       "fast": { "$value": "150ms", "$type": "duration" },
@@ -91,30 +106,32 @@
   },
   "semantic": {
     "color": {
-      "background": { "$value": "#070B10", "$type": "color", "$description": "En derin zemin — bespoke gece tonu, ölçekte tekrar kullanılmaz" },
-      "background-subtle": { "$value": "#0B1117", "$type": "color" },
-      "foreground": { "$value": "#F2F6F8", "$type": "color" },
-      "foreground-muted": { "$value": "#90A0AC", "$type": "color" },
+      "background": { "$value": "{primitive.color.navy.900}", "$type": "color", "$description": "En derin zemin — marka lacivert tonu" },
+      "background-subtle": { "$value": "{primitive.color.navy.800}", "$type": "color" },
+      "foreground": { "$value": "{primitive.color.white}", "$type": "color" },
+      "foreground-muted": { "$value": "#9FB0C8", "$type": "color" },
       "primary": { "$value": "{primitive.color.teal.450}", "$type": "color" },
       "primary-hover": { "$value": "{primitive.color.teal.400}", "$type": "color" },
       "primary-foreground": { "$value": "#04141A", "$type": "color" },
-      "primary-subtle": { "$value": "rgb(26 196 209 / 0.12)", "$type": "color", "$description": "primary %12 opaklık" },
-      "accent": { "$value": "{primitive.color.teal.300}", "$type": "color" },
-      "secondary": { "$value": "#101820", "$type": "color" },
-      "secondary-foreground": { "$value": "#F2F6F8", "$type": "color" },
-      "muted": { "$value": "#0D141B", "$type": "color" },
+      "primary-subtle": { "$value": "rgb(26 196 209 / 0.14)", "$type": "color", "$description": "primary %14 opaklık" },
+      "accent": { "$value": "{primitive.color.orange.500}", "$type": "color", "$description": "Marka turuncu — vurgu metinleri, rozetler, origin işaretleri" },
+      "accent-hover": { "$value": "{primitive.color.orange.400}", "$type": "color" },
+      "accent-subtle": { "$value": "rgb(255 138 61 / 0.14)", "$type": "color" },
+      "secondary": { "$value": "#101E3A", "$type": "color" },
+      "secondary-foreground": { "$value": "{primitive.color.white}", "$type": "color" },
+      "muted": { "$value": "#0D1A32", "$type": "color" },
       "muted-foreground": { "$value": "{primitive.color.slate.400}", "$type": "color" },
-      "border": { "$value": "#1B2530", "$type": "color" },
-      "border-strong": { "$value": "#29394A", "$type": "color" },
+      "border": { "$value": "{primitive.color.navy.500}", "$type": "color" },
+      "border-strong": { "$value": "{primitive.color.navy.400}", "$type": "color" },
       "ring": { "$value": "{primitive.color.teal.450}", "$type": "color" },
       "success": { "$value": "{primitive.color.emerald.500}", "$type": "color" },
       "success-subtle": { "$value": "rgb(16 185 129 / 0.12)", "$type": "color" },
       "warning": { "$value": "{primitive.color.amber.500}", "$type": "color" },
       "danger": { "$value": "{primitive.color.red.500}", "$type": "color" },
-      "surface": { "$value": "#0D141C", "$type": "color" },
-      "surface-2": { "$value": "#121B24", "$type": "color" },
-      "surface-inverted": { "$value": "#F2F6F8", "$type": "color" },
-      "foreground-inverted": { "$value": "#070B10", "$type": "color" }
+      "surface": { "$value": "{primitive.color.navy.700}", "$type": "color" },
+      "surface-2": { "$value": "{primitive.color.navy.600}", "$type": "color" },
+      "surface-inverted": { "$value": "{primitive.color.white}", "$type": "color" },
+      "foreground-inverted": { "$value": "{primitive.color.navy.900}", "$type": "color" }
     },
     "spacing": {
       "component": { "$value": "{primitive.spacing.4}", "$type": "dimension" },
@@ -157,7 +174,7 @@
       "padding-y": { "$value": "0.375rem", "$type": "dimension" }
     },
     "nav": {
-      "bg": { "$value": "rgb(7 11 16 / 0.72)", "$type": "color" },
+      "bg": { "$value": "rgb(8 18 38 / 0.75)", "$type": "color" },
       "border": { "$value": "{semantic.color.border}", "$type": "color" }
     }
   }

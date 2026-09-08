@@ -1,50 +1,60 @@
+import { motion } from 'framer-motion'
 import logo from '../assets/logo.png'
 import { MailIcon, MapPinIcon } from './icons'
+import { useLanguage } from '../i18n/LanguageContext'
 
-const columns = [
-  {
-    title: 'Bölümlerimiz',
-    links: [
-      { href: '#freight', label: 'Deniz & Hava Taşımacılığı' },
-      { href: '#teknoloji', label: 'Teknoloji' },
-      { href: '#ground', label: 'Kara Hizmetleri' },
-      { href: '#project', label: 'Proje & Multimodal Taşımacılık' },
-    ],
-  },
-]
+const divisionIds = ['freight', 'teknoloji', 'ground', 'project']
 
-export default function Footer() {
+export default function Footer({ onSelectDivision, onOpenMemberships }) {
+  const { t } = useLanguage()
   const year = new Date().getFullYear()
+
+  const links = divisionIds.map((id) => ({
+    id,
+    label: t(`divisions.items.${id}.title`),
+  }))
 
   return (
     <footer className="footer">
-      <div className="footer-inner">
+      <motion.div
+        className="footer-inner"
+        initial={{ opacity: 0, y: 20, rotateX: 8 }}
+        whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+        viewport={{ once: true, margin: '-10%' }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        style={{ transformPerspective: 1000 }}
+      >
         <div className="footer-brand">
           <a href="#top" className="navbar-brand">
             <img src={logo} alt="Filenders logo" className="navbar-logo" />
             <span className="navbar-brand-text">
               Filenders
-              <small>Lojistik &amp; Teknoloji</small>
+              <small>{t('hero.subtitle')}</small>
             </span>
           </a>
-          <p>Lojistik ve teknolojiyi tek çatı altında birleştiren güvenilir çözüm ortağınız.</p>
+          <p>{t('footer.brandDesc')}</p>
         </div>
 
-        {columns.map((col) => (
-          <div key={col.title} className="footer-column">
-            <h4>{col.title}</h4>
-            <ul>
-              {col.links.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href}>{link.label}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <div className="footer-column">
+          <h4>{t('footer.servicesTitle')}</h4>
+          <ul>
+            {links.map((link) => (
+              <li key={link.id}>
+                <a href="#bolumler" onClick={() => onSelectDivision?.(link.id)}>
+                  {link.label}
+                </a>
+              </li>
+            ))}
+            <li>
+              <a href="#uyelikler" onClick={() => onOpenMemberships?.()}>
+                {t('nav.memberships')}
+              </a>
+            </li>
+          </ul>
+        </div>
 
         <div className="footer-column footer-contact-col">
-          <h4>İletişim</h4>
+          <h4>{t('footer.contactTitle')}</h4>
           <ul>
             <li>
               <a href="mailto:info@filenders.com" className="footer-contact">
@@ -60,16 +70,17 @@ export default function Footer() {
             <li className="footer-address">
               <MapPinIcon width={16} height={16} />
               <span>
-                Ar-Ge Merkezi — Mersin Üniversitesi Çiftlikköy Kampüsü Teknopark,
-                1. Kuluçka Binası 35B/B02, Yenişehir/Mersin
+                {t('footer.rdCenter')} — {t('footer.address')}
               </span>
             </li>
           </ul>
         </div>
-      </div>
+      </motion.div>
 
       <div className="footer-bottom">
-        <p>© {year} Filenders Lojistik ve Teknoloji. Tüm hakları saklıdır.</p>
+        <p>
+          © {year} Filenders {t('hero.subtitle')}. {t('footer.rights')}
+        </p>
         <p className="footer-duns">D-U-N-S® No: 751133530</p>
       </div>
     </footer>
