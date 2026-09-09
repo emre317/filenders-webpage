@@ -9,6 +9,35 @@ const base = {
   strokeLinejoin: 'round',
 }
 
+export function ThermometerIcon(props) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M12 14.5V4.5a2 2 0 0 0-4 0v10a4 4 0 1 0 4 0Z" />
+      <path d="M12 9h-2.5" />
+    </svg>
+  )
+}
+
+export function TrainIcon(props) {
+  return (
+    <svg {...base} {...props}>
+      <rect x="5" y="3" width="14" height="13" rx="3" />
+      <path d="M5 11h14" />
+      <circle cx="8.5" cy="14" r="0.6" fill="currentColor" />
+      <circle cx="15.5" cy="14" r="0.6" fill="currentColor" />
+      <path d="M8 20 6 22M16 20l2 2M9 16.5v0M15 16.5v0" />
+    </svg>
+  )
+}
+
+export function ChevronDownIcon(props) {
+  return (
+    <svg {...base} {...props}>
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  )
+}
+
 export function SunIcon(props) {
   return (
     <svg {...base} {...props}>

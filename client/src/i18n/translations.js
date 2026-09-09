@@ -60,10 +60,10 @@ export const translations = {
           ],
         },
         ground: {
-          title: 'Kara Hizmetleri',
-          tagline: 'Yerel uzmanlık, güvenilir operasyon.',
+          title: 'Karayolu ve Intermodal Taşımacılık',
+          tagline: 'Bağlantılı koridorlar. Esnek taşıma.',
           description:
-            'Depodan kapıya, sahada güvenilir kara taşımacılığı ve operasyonel destek sağlıyoruz.',
+            "Türkiye'yi Avrupa, Orta Doğu, CIS ve Orta Asya'ya bağlayan esnek karayolu ve intermodal çözümler sunuyoruz.",
           features: [
             { label: 'Karayolu Taşımacılığı', desc: 'Esnek filo kapasitesiyle yurt içi dağıtım.' },
             { label: 'Depolama & Elleçleme', desc: 'Modern depo altyapısı ile güvenli stok yönetimi.' },
@@ -158,6 +158,10 @@ export const translations = {
       titleHighlight: 'birlikte',
       titleSuffix: 'büyütelim',
       lede: 'Lojistik ihtiyaçlarınız ya da teknoloji projeleriniz için ekibimizle iletişime geçin.',
+      statusBadge: 'Yeni Projelere Açığız',
+      successBadge: 'Harika',
+      successHeading: 'Hemen Konuşalım',
+      successSubtext: 'Ekibimiz genellikle 1 iş günü içinde dönüş yapar',
     },
     footer: {
       brandDesc: 'Lojistik ve teknolojiyi tek çatı altında birleştiren güvenilir çözüm ortağınız.',
@@ -166,14 +170,6 @@ export const translations = {
       rdCenter: 'Ar-Ge Merkezi',
       address: 'Mersin Üniversitesi Çiftlikköy Kampüsü Teknopark, 1. Kuluçka Binası 35B/B02, Yenişehir/Mersin',
       rights: 'Tüm hakları saklıdır.',
-    },
-    fleet: {
-      stops: ['Mersin', 'Adana', 'Konya', 'Ankara', 'İstanbul'],
-      stats: [
-        { value: 128, suffix: '', label: 'Aktif Araç' },
-        { value: 47, suffix: '', label: 'İl Kapsamı' },
-        { value: 98, suffix: '%', label: 'Zamanında Teslim' },
-      ],
     },
     projectDetail: {
       intro: [
@@ -490,6 +486,132 @@ export const translations = {
         line2: 'Discover the True Path.',
       },
     },
+    groundDetail: {
+      badge: 'Bağlantılı Koridorlar',
+      intro: [
+        "Filenders; Türkiye'yi Avrupa, Balkanlar, Orta Doğu, CIS ve Orta Asya'ya bağlayan esnek karayolu ve intermodal taşıma çözümleri sunar. Uluslararası karayolu taşımacılığı, demiryolu bağlantıları, RoRo servisleri ve iç dağıtım ağlarını bir araya getirerek komple ve parsiyel yükler için uçtan uca çözümler geliştiriyoruz.",
+        'Düzenli FTL ve LTL taşımalarından reefer, transit ve zamana duyarlı operasyonlara kadar her taşıma; yük özellikleri, güzergah koşulları, sınır gereklilikleri, transit süre ve toplam maliyet dikkate alınarak planlanır.',
+      ],
+      corridor: {
+        title: 'Bağlantılı Koridorlar',
+        nodes: ['Avrupa', 'Türkiye', 'Orta Doğu', 'CIS', 'Orta Asya'],
+        europeText:
+          "Karayolu ağımız Türkiye ile Avrupa'nın önemli pazarları arasındaki düzenli ithalat ve ihracat akışlarını destekler. Pickup, ana taşıma, sınır operasyonları ve nihai teslimatlar seçilmiş uluslararası taşıyıcılar ve bölgesel ağlar üzerinden koordine edilir.",
+        eastText:
+          "Filenders, Türkiye'yi Irak, Kafkaslar, CIS ve Orta Asya'ya bağlayan stratejik ve operasyonel olarak zor koridorlarda karayolu ve multimodal çözümler geliştirir. Rota seçimi; sınır koşulları, transit gereklilikleri, güvenlik, altyapı, transit süre ve toplam lojistik maliyet dikkate alınarak yapılır.",
+      },
+      capabilities: [
+        {
+          id: 'ftl',
+          title: 'FTL – Komple Araç Taşımacılığı',
+          teaser: 'Endüstriyel, ticari ve proje yükleri için komple araç çözümleri.',
+          video: 'warehouse',
+          body: 'Endüstriyel, ticari ve proje yükleri için uluslararası komple araç taşımalarını yönetiyoruz. Güzergah ve yük gerekliliklerine göre standart tenteli, mega, reefer ve uygun özel ekipman çözümleri seçilmiş taşıma partnerleri üzerinden sağlanır.',
+          bullets: [
+            'Kapıdan kapıya FTL servisleri',
+            'İhracat, ithalat ve transit taşımalar',
+            'Standart tenteli ve mega treylerler',
+            'Reefer ve ısı kontrollü ekipman',
+            'Dedike araç çözümleri',
+            'Cross-border ve üçüncü ülke taşımaları',
+            'Zamana duyarlı ve planlı taşıma',
+          ],
+        },
+        {
+          id: 'ltl',
+          title: 'LTL – Parsiyel Karayolu Taşımacılığı',
+          teaser: 'Maliyet ve teslimat dengesini gözeten grupaj çözümleri.',
+          video: 'aerial',
+          body: 'Komple araç gerektirmeyen yüklerde, taşıma maliyetini optimize ederken güvenilir teslimat planını koruyan LTL ve grupaj çözümleri sunuyoruz. Yükler; destinasyon, hacim, elleçleme gereksinimleri ve teslimat önceliğine göre seçilmiş linehaul ve dağıtım ağlarında konsolide edilir.',
+          bullets: [],
+        },
+        {
+          id: 'reefer',
+          title: 'Reefer ve Isı Kontrollü Taşımacılık',
+          teaser: 'Kontrollü sıcaklık gerektiren yükler için özel ekipman.',
+          video: 'mountain',
+          body: 'Taşıma süresince kontrollü sıcaklık koşulu gerektiren yükler için reefer ve sıcaklık kontrollü karayolu çözümleri sağlıyoruz. Operasyonlar ürün gereklilikleri, sıcaklık aralığı, rota, transit süre ve ekipman uygunluğuna göre planlanır.',
+          bullets: [],
+        },
+        {
+          id: 'transit',
+          title: 'Transit Karayolu Taşımacılığı',
+          teaser: "Türkiye üzerinden yönetilen sınır aşan operasyonlar.",
+          video: 'interchange',
+          body: "Türkiye; Avrupa, Orta Doğu, Kafkaslar ve Orta Asya arasında stratejik bir lojistik geçiş noktasıdır. Filenders, Türkiye üzerinden transit karayolu operasyonlarını yönetir ve yürürlükteki gümrük ve mevzuat şartlarına bağlı olarak Irak, Suriye, Kafkaslar, CIS ve Orta Asya pazarları için sınır aşan çözümler geliştirir.",
+          bullets: [],
+        },
+        {
+          id: 'roadRail',
+          title: 'Karayolu + Demiryolu Intermodal Çözümleri',
+          teaser: 'Maliyet, kapasite ve emisyon dengesi için demiryolu entegrasyonu.',
+          video: 'truckFog',
+          body: 'Demiryolunun operasyonel, kapasite veya sürdürülebilirlik açısından avantaj sağladığı koridorlarda karayolu ve demiryolunu entegre ediyoruz. İlk ve son taşıma karayoluyla yapılırken ana koridor demiryolu üzerinden işletilebilir; böylece maliyet, kapasite ve emisyon açısından daha dengeli çözümler oluşturulur.',
+          bullets: [
+            'Karayolu + demiryolu kombinasyonları',
+            'Terminalden terminale demiryolu taşımaları',
+            'İlk ve son kilometre karayolu operasyonları',
+            "Uygun hatlarda 45' PW ve intermodal ekipman çözümleri",
+            'Avrupa ve Avrasya koridor planlaması',
+          ],
+        },
+        {
+          id: 'roroRoad',
+          title: 'RoRo + Karayolu Çözümleri',
+          teaser: 'Sürüş mesafesini azaltan entegre feribot bağlantıları.',
+          video: 'truckPortrait',
+          body: 'Uygun koridorlarda RoRo, uluslararası karayolu taşımacılığıyla entegre edilerek sürüş mesafesi azaltılabilir, operasyonel esneklik artırılabilir ve rota riski optimize edilebilir. Filenders; araç, feribot/RoRo ve nihai teslimat ayaklarını tek bir taşıma akışı olarak koordine eder.',
+          bullets: [],
+        },
+        {
+          id: 'crossBorder',
+          title: 'Sınır Geçişleri ve Gümrük Koordinasyonu',
+          teaser: 'Doküman ve transit gümrük süreçlerinde uçtan uca koordinasyon.',
+          video: 'truckPortrait',
+          body: 'Uluslararası karayolu taşımacılığının başarısı doğru dokümantasyon, sınır prosedürleri ve transit gümrük süreçlerine bağlıdır. Filenders; müşteri, gümrük müşaviri ve taşıma partnerleri arasındaki operasyonel koordinasyonu sağlayarak sınır gecikmelerini ve operasyonel kesintileri azaltmayı hedefler.',
+          bullets: [],
+        },
+        {
+          id: 'specialTransport',
+          title: 'Özel Karayolu Taşımaları',
+          teaser: 'Ağır ve gabari dışı yükler için özel ekipman entegrasyonu.',
+          video: 'mountain',
+          body: 'Yük ölçüleri veya ağırlığı standart karayolu limitlerini aştığında lowbed, extendable, step-deck ve diğer özel ekipman çözümleri karayolu operasyonuna entegre edilebilir. Kompleks ağır ve gabari dışı taşımalar, Proje ve Multimodal Taşımacılık yetkinliğimizle birlikte yönetilir.',
+          bullets: [],
+        },
+        {
+          id: 'distribution',
+          title: 'Dağıtım ve Son Kilometre Çözümleri',
+          teaser: 'Türkiye ve seçilmiş pazarlarda planlı dağıtım operasyonları.',
+          video: 'interchange',
+          body: "Türkiye'de ve seçilmiş uluslararası pazarlarda iç dağıtım ve nihai teslimat çözümleri sağlıyoruz. Sevkiyat profiline göre teslimatlar dedike, konsolide veya planlı dağıtım operasyonları şeklinde kurgulanabilir.",
+          bullets: [],
+        },
+        {
+          id: 'visibility',
+          title: 'Görünürlük ve Operasyonel Kontrol',
+          teaser: 'Filentech ile desteklenen merkezi takip ve raporlama.',
+          video: 'aerial',
+          body: "Karayolu ve intermodal operasyonlarımız Filenders'in dijital altyapısı ve Filentech teknolojisiyle desteklenir. Müşteriler, sevkiyat yaşam döngüsü boyunca merkezi bilgi yönetimi, kilometre taşı takibi, maliyet kontrolü ve operasyonel raporlama imkanlarından faydalanır.",
+          bullets: [],
+        },
+      ],
+      whyUs: {
+        title: 'Neden Filenders?',
+        points: [
+          'Türkiye–Avrupa–Orta Doğu koridorlarında güçlü uzmanlık',
+          'Esnek FTL ve LTL ağı',
+          'Karayolu, demiryolu ve RoRo entegrasyonu',
+          'Reefer ve özel ekipman kabiliyeti',
+          'Transit ve sınır aşan operasyon tecrübesi',
+          'Teknoloji destekli görünürlük ve kontrol',
+        ],
+      },
+      closing: {
+        line1: 'Bağlantılı Koridorlar. Esnek Taşıma. Tek Kontrol Noktası.',
+        line2: 'Discover the True Path.',
+      },
+    },
   },
   en: {
     meta: {
@@ -551,10 +673,10 @@ export const translations = {
           ],
         },
         ground: {
-          title: 'Ground Services',
-          tagline: 'Local expertise, reliable operations.',
+          title: 'Road & Intermodal Transport',
+          tagline: 'Connected corridors. Flexible transport.',
           description:
-            'From warehouse to doorstep, we provide dependable ground transport and on-site operational support.',
+            'Flexible road and intermodal solutions connecting Türkiye with Europe, the Middle East, CIS and Central Asia.',
           features: [
             { label: 'Road Freight', desc: 'Domestic distribution with flexible fleet capacity.' },
             { label: 'Warehousing & Handling', desc: 'Secure inventory management with modern warehouse infrastructure.' },
@@ -649,6 +771,10 @@ export const translations = {
       titleHighlight: 'operation',
       titleSuffix: 'together',
       lede: 'Get in touch with our team for your logistics needs or technology projects.',
+      statusBadge: 'Available for New Projects',
+      successBadge: 'Perfect',
+      successHeading: "Let's Talk",
+      successSubtext: 'Our team typically responds within 1 business day',
     },
     footer: {
       brandDesc: 'Your reliable partner, uniting logistics and technology under one roof.',
@@ -657,14 +783,6 @@ export const translations = {
       rdCenter: 'R&D Center',
       address: 'Mersin University Çiftlikköy Campus Technopark, Incubation Building 1, 35B/B02, Yenişehir/Mersin',
       rights: 'All rights reserved.',
-    },
-    fleet: {
-      stops: ['Mersin', 'Adana', 'Konya', 'Ankara', 'Istanbul'],
-      stats: [
-        { value: 128, suffix: '', label: 'Active Vehicles' },
-        { value: 47, suffix: '', label: 'Provinces Covered' },
-        { value: 98, suffix: '%', label: 'On-Time Delivery' },
-      ],
     },
     projectDetail: {
       intro: [
@@ -978,6 +1096,132 @@ export const translations = {
       },
       closing: {
         line1: 'Connected Logistics. Smarter Decisions. One Digital Platform.',
+        line2: 'Discover the True Path.',
+      },
+    },
+    groundDetail: {
+      badge: 'Connected Corridors',
+      intro: [
+        'Filenders provides flexible road and intermodal transport solutions connecting Türkiye with Europe, the Balkans, the Middle East, CIS and Central Asia. Our network combines international road freight, rail connections, RoRo services and inland distribution to create reliable end-to-end transportation solutions for both full and partial loads.',
+        'From regular FTL and LTL traffic to reefer, transit and time-sensitive road movements, our teams design each operation around cargo characteristics, route conditions, border requirements, transit time and total transportation cost.',
+      ],
+      corridor: {
+        title: 'Connected Corridors',
+        nodes: ['Europe', 'Türkiye', 'Middle East', 'CIS', 'Central Asia'],
+        europeText:
+          'Our road network supports regular import and export movements between Türkiye and major European markets. We coordinate pickups, linehaul transportation, border operations and final deliveries through selected international transport partners and regional networks.',
+        eastText:
+          'Filenders develops road and multimodal solutions for difficult and strategically important corridors linking Türkiye with Iraq, the Caucasus, CIS and Central Asia. Route selection is based on border conditions, transit requirements, security, infrastructure, transit time and total logistics cost.',
+      },
+      capabilities: [
+        {
+          id: 'ftl',
+          title: 'FTL – Full Truck Load',
+          teaser: 'Full truck load solutions for industrial, commercial and project cargo.',
+          video: 'warehouse',
+          body: 'Filenders manages international full truck load shipments for industrial, commercial and project cargo. Depending on the route and cargo requirements, we provide standard tautliner, mega, reefer and suitable specialized equipment through selected transport partners.',
+          bullets: [
+            'Door-to-door FTL services',
+            'Export, import and transit movements',
+            'Standard tautliner and mega trailers',
+            'Reefer and temperature-controlled equipment',
+            'Dedicated vehicle solutions',
+            'Cross-border and third-country movements',
+            'Time-sensitive and scheduled transport',
+          ],
+        },
+        {
+          id: 'ltl',
+          title: 'LTL – Less than Truck Load',
+          teaser: 'Groupage solutions balancing cost and delivery reliability.',
+          video: 'aerial',
+          body: 'For smaller shipments, Filenders provides LTL and groupage solutions designed to reduce transportation cost while maintaining reliable delivery schedules. Cargo is consolidated through selected linehaul and distribution networks according to destination, volume, handling requirements and delivery priority.',
+          bullets: [],
+        },
+        {
+          id: 'reefer',
+          title: 'Reefer & Temperature-Controlled Transport',
+          teaser: 'Specialized equipment for cargo requiring controlled conditions.',
+          video: 'mountain',
+          body: 'We provide refrigerated and temperature-controlled road transport solutions for cargo requiring controlled conditions throughout the journey. Operations are planned according to product requirements, temperature range, route, transit time and equipment availability.',
+          bullets: [],
+        },
+        {
+          id: 'transit',
+          title: 'Transit Road Transport',
+          teaser: 'Cross-border operations managed through Türkiye.',
+          video: 'interchange',
+          body: 'Türkiye is a strategic logistics gateway between Europe, the Middle East, the Caucasus and Central Asia. Filenders manages transit road movements through Türkiye and develops cross-border solutions for markets including Iraq, Syria, the Caucasus, CIS and Central Asia, subject to applicable customs and regulatory requirements.',
+          bullets: [],
+        },
+        {
+          id: 'roadRail',
+          title: 'Road + Rail Intermodal Solutions',
+          teaser: 'Rail integration for balanced cost, capacity and emissions.',
+          video: 'truckFog',
+          body: 'Where rail provides operational or environmental advantages, Filenders combines road and rail transport to create intermodal solutions. Pre-carriage and final delivery are managed by road while the main corridor can be operated by rail, helping customers optimize cost, capacity and emissions.',
+          bullets: [
+            'Road + rail combinations',
+            'Terminal-to-terminal rail movements',
+            'First-mile and last-mile trucking',
+            "45' PW and other intermodal equipment where available",
+            'European and Eurasian corridor planning',
+          ],
+        },
+        {
+          id: 'roroRoad',
+          title: 'RoRo + Road Solutions',
+          teaser: 'Integrated ferry connections that reduce driving distance.',
+          video: 'truckPortrait',
+          body: 'For selected corridors, RoRo can be integrated with international road transport to reduce driving distance, improve operational flexibility and optimize route risk. Filenders coordinates truck, ferry/RoRo and final delivery legs as one integrated transport flow.',
+          bullets: [],
+        },
+        {
+          id: 'crossBorder',
+          title: 'Cross-Border & Customs Coordination',
+          teaser: 'End-to-end coordination across documentation and transit customs.',
+          video: 'truckPortrait',
+          body: 'International road transport depends heavily on documentation, border procedures and transit customs. Filenders coordinates transportation documents and customs-process interfaces with customers, brokers and transport partners to reduce border delays and operational disruption.',
+          bullets: [],
+        },
+        {
+          id: 'specialTransport',
+          title: 'Special Road Transport',
+          teaser: 'Specialized equipment for heavy and out-of-gauge cargo.',
+          video: 'mountain',
+          body: 'When cargo dimensions or weight exceed standard road transport limits, Filenders can integrate lowbed, extendable, step-deck and other specialized equipment into the road solution. Complex heavy and oversized movements are managed together with our Project & Multimodal Logistics capabilities.',
+          bullets: [],
+        },
+        {
+          id: 'distribution',
+          title: 'Distribution & Final-Mile Solutions',
+          teaser: 'Scheduled distribution across Türkiye and selected markets.',
+          video: 'interchange',
+          body: 'We support customers with inland distribution and final delivery solutions in Türkiye and selected international markets. Depending on the shipment profile, deliveries can be planned as dedicated, consolidated or scheduled distribution operations.',
+          bullets: [],
+        },
+        {
+          id: 'visibility',
+          title: 'Visibility & Operational Control',
+          teaser: 'Centralized tracking and reporting powered by Filentech.',
+          video: 'aerial',
+          body: "Road and intermodal operations are supported by Filenders' digital infrastructure and Filentech technology. Customers benefit from centralized shipment information, milestone tracking, cost control and operational reporting across the transportation lifecycle.",
+          bullets: [],
+        },
+      ],
+      whyUs: {
+        title: 'Why Filenders?',
+        points: [
+          'Strong Türkiye–Europe–Middle East corridor expertise',
+          'Flexible FTL and LTL network',
+          'Road, rail and RoRo integration',
+          'Reefer and special-equipment capability',
+          'Transit and cross-border operational know-how',
+          'Technology-supported visibility and control',
+        ],
+      },
+      closing: {
+        line1: 'Connected Corridors. Flexible Transport. One Control Point.',
         line2: 'Discover the True Path.',
       },
     },

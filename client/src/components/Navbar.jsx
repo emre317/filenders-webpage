@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import logo from '../assets/logo.png'
-import { MenuIcon, CloseIcon, ArrowRightIcon, PlaneIcon, CpuIcon, TruckIcon, CraneIcon } from './icons'
+import { MenuIcon, CloseIcon, ChevronDownIcon, PlaneIcon, CpuIcon, TruckIcon, CraneIcon } from './icons'
 import ThemeToggle from './ThemeToggle'
 import LanguageToggle from './LanguageToggle'
 import { useLanguage } from '../i18n/LanguageContext'
 
 const EASE = [0.16, 1, 0.3, 1]
-const divisionOrder = ['freight', 'teknoloji', 'ground', 'project']
+const divisionOrder = ['ground', 'freight', 'project', 'teknoloji']
 const divisionIcons = { freight: PlaneIcon, teknoloji: CpuIcon, ground: TruckIcon, project: CraneIcon }
 
 export default function Navbar({ onNavigateHome, onOpenMemberships, onSelectDivision }) {
@@ -71,7 +71,7 @@ export default function Navbar({ onNavigateHome, onOpenMemberships, onSelectDivi
               onClick={() => onNavigateHome?.()}
             >
               {t('nav.services')}
-              <ArrowRightIcon width={11} height={11} style={{ transform: 'rotate(90deg)' }} />
+              <ChevronDownIcon width={15} height={15} className="navbar-dropdown-caret" />
             </a>
             <AnimatePresence>
               {servicesOpen && (
@@ -136,10 +136,10 @@ export default function Navbar({ onNavigateHome, onOpenMemberships, onSelectDivi
               aria-expanded={mobileServicesOpen}
             >
               {t('nav.services')}
-              <ArrowRightIcon
-                width={13}
-                height={13}
-                style={{ transform: mobileServicesOpen ? 'rotate(90deg)' : 'rotate(0deg)' }}
+              <ChevronDownIcon
+                width={16}
+                height={16}
+                style={{ transform: mobileServicesOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
               />
             </button>
             <AnimatePresence initial={false}>

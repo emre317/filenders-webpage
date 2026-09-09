@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import logo from '../assets/logo.png'
 import RouteMap from './RouteMap'
-import FleetTracker from './FleetTracker'
 import ProjectDetail from './ProjectDetail'
 import TechDetail from './TechDetail'
+import GroundDetail from './GroundDetail'
 import freightPhoto from '../assets/divisions/freight.jpg'
 import groundPhoto from '../assets/divisions/ground.jpg'
 import projectPhoto from '../assets/divisions/project.jpg'
@@ -163,10 +163,11 @@ function DetailPanel({ id, onBack }) {
         <ProjectDetail division={division} contactCta={contactCta} />
       ) : id === 'teknoloji' ? (
         <TechDetail division={division} contactCta={contactCta} />
+      ) : id === 'ground' ? (
+        <GroundDetail division={division} contactCta={contactCta} />
       ) : (
         <>
           {id === 'freight' && <RouteMap />}
-          {id === 'ground' && <FleetTracker />}
 
           <div className="division-detail-head">
             <span className="division-detail-icon">
