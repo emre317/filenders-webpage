@@ -1,17 +1,16 @@
 import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import logo from '../assets/logo.png'
-import RouteMap from './RouteMap'
 import ProjectDetail from './ProjectDetail'
 import TechDetail from './TechDetail'
 import GroundDetail from './GroundDetail'
+import OceanAirDetail from './OceanAirDetail'
 import freightPhoto from '../assets/divisions/freight.jpg'
 import groundPhoto from '../assets/divisions/ground.jpg'
 import projectPhoto from '../assets/divisions/project.jpg'
 import projectVideo from '../assets/divisions/project.mp4'
 import teknolojiVideo from '../assets/divisions/teknoloji.mp4'
 import { useLanguage } from '../i18n/LanguageContext'
-import useTilt3D from '../hooks/useTilt3D'
 import useOrbitRotation from '../hooks/useOrbitRotation'
 import {
   PlaneIcon,
@@ -116,29 +115,6 @@ function DivisionMedia({ division }) {
   )
 }
 
-function FeatureCard({ feature, index }) {
-  const { ref, tiltProps, glowX, glowY } = useTilt3D(7)
-
-  return (
-    <motion.div
-      ref={ref}
-      className="division-feature-card"
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      whileHover={{ y: -4 }}
-      transition={{ duration: 0.45, delay: 0.1 + index * 0.07, ease: EASE }}
-      {...tiltProps}
-    >
-      <motion.span className="tilt-glow" aria-hidden="true" style={{ left: glowX, top: glowY }} />
-      <span className="division-feature-icon">
-        <feature.icon width={18} height={18} />
-      </span>
-      <h4>{feature.label}</h4>
-      <p>{feature.desc}</p>
-    </motion.div>
-  )
-}
-
 function DetailPanel({ id, onBack }) {
   const { t } = useLanguage()
   const division = useDivision(id)
@@ -166,31 +142,7 @@ function DetailPanel({ id, onBack }) {
       ) : id === 'ground' ? (
         <GroundDetail division={division} contactCta={contactCta} />
       ) : (
-        <>
-          {id === 'freight' && <RouteMap />}
-
-          <div className="division-detail-head">
-            <span className="division-detail-icon">
-              <division.icon width={30} height={30} />
-            </span>
-            <div>
-              <h2>{division.title}</h2>
-            </div>
-          </div>
-
-          <p className="division-desc">{division.description}</p>
-
-          <div className="division-feature-grid">
-            {division.features.map((feature, i) => (
-              <FeatureCard key={feature.label} feature={feature} index={i} />
-            ))}
-          </div>
-
-          <a href="#iletisim" className="btn btn-primary btn-lg">
-            {contactCta}
-            <ArrowRightIcon width={16} height={16} />
-          </a>
-        </>
+        <OceanAirDetail division={division} contactCta={contactCta} />
       )}
     </motion.div>
   )

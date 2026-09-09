@@ -36,10 +36,10 @@ export const translations = {
       contactCtaTemplate: '{title} ekibimizle görüşün',
       items: {
         freight: {
-          title: 'Deniz & Hava Taşımacılığı',
-          tagline: 'Global bağlantılarla, hassasiyetle teslim.',
+          title: 'Deniz ve Hava Forwarding Hizmetleri',
+          tagline: 'Çıkış noktasından nihai teslimata. Tek kontrol noktası.',
           description:
-            'Dünyanın her noktasına deniz ve hava yoluyla güvenilir, uçtan uca navlun çözümleri sunuyoruz.',
+            "Türkiye'yi dünyanın önde gelen ticaret merkezlerine bağlayan güvenilir, esnek ve maliyet odaklı deniz ve hava taşımacılığı çözümleri.",
           features: [
             { label: 'Hava Kargo', desc: 'Zamana duyarlı sevkiyatlarda hızlı hava taşımacılığı.' },
             { label: 'Deniz Taşımacılığı', desc: 'Konteyner ve parsiyel yüklerde global liman ağı.' },
@@ -612,6 +612,110 @@ export const translations = {
         line2: 'Discover the True Path.',
       },
     },
+    oceanAirDetail: {
+      badge: 'Tek Kontrol Noktası',
+      modeLabels: { ocean: 'Denizyolu', air: 'Havayolu' },
+      intro: [
+        "Filenders, Türkiye'yi dünyanın önde gelen ticaret merkezlerine bağlayan güvenilir, esnek ve maliyet odaklı deniz ve hava taşımacılığı çözümleri sunar. Uluslararası partner ağımız, armatör ve havayolu ilişkilerimiz ile operasyonel uzmanlığımız sayesinde sevkiyatları çıkış noktasından nihai teslimata kadar; hizmet güvenilirliği, görünürlük, maliyet kontrolü ve operasyonel verimlilik odağında yönetiyoruz.",
+        'Standart konteyner taşımalarından acil hava kargolarına ve kompleks kapıdan kapıya operasyonlara kadar her taşıma için müşterinin operasyonel önceliklerine uygun çözüm tasarlıyoruz.',
+      ],
+      ocean: {
+        title: 'Denizyolu Taşımacılığı',
+        intro:
+          'Filenders, uluslararası ithalat ve ihracat yükleri için global armatörler ve seçilmiş NVOCC partnerleri üzerinden kapsamlı denizyolu taşımacılığı çözümleri sunar. Her sevkiyat için alternatif armatörler, rotalar, transit süreler, serbest süre koşulları, ekipman uygunluğu ve toplam lojistik maliyeti birlikte değerlendirilir.',
+        cargoBadge: 'Seçili',
+        fcl: {
+          title: 'FCL – Komple Konteyner Taşımacılığı',
+          body: 'Standart, soğutuculu ve özel ekipman gerektiren yükler için esnek armatör ve rota seçenekleriyle komple konteyner taşımalarını yönetiyoruz.',
+          bullets: [
+            "20', 40' ve 40' High Cube konteynerler",
+            'Open Top ve Flat Rack ekipmanlar',
+            'Reefer konteynerler',
+            'Armatör ve NVOCC çözümleri',
+            'Limandan limana ve kapıdan kapıya taşıma',
+            'İhracat ve ithalat taşımaları',
+            'Cross-trade sevkiyatlar',
+            'Transit yük yönetimi',
+            'Ön taşıma ve son taşıma koordinasyonu',
+          ],
+        },
+        lcl: {
+          title: 'LCL – Parsiyel Konteyner Taşımacılığı',
+          body: 'Komple konteyner gerektirmeyen yükler için güvenilir global konsolidasyon ağları üzerinden esnek LCL çözümleri sunuyoruz. Yükün çıkış noktasından alınması, konsolidasyon, denizyolu taşıması, de-konsolidasyon ve nihai teslimat süreçlerini uçtan uca koordine ediyoruz.',
+        },
+      },
+      air: {
+        title: 'Havayolu Taşımacılığı',
+        intro:
+          'Filenders; genel kargo, acil ve yüksek değerli yükler için global havayolları, ana hava kargo merkezleri ve seçilmiş partnerler üzerinden uluslararası hava kargo çözümleri sunar. Havalimanından havalimanına ve kapıdan kapıya servislerle pickup, dokümantasyon, gümrük koordinasyonu ve nihai teslimat süreçlerini yönetiyoruz.',
+        priority: {
+          title: 'Acil ve Öncelikli Hava Kargo',
+          body: 'Zamana duyarlı veya operasyonel açıdan kritik yüklerde, ihtiyaç duyulan teslimat süresine göre öncelikli hava kargo çözümleri geliştiriyoruz. En hızlı rota, uygun havayolu kapasitesi ve alternatif havalimanları değerlendirilerek transit süre ve operasyonel risk minimize edilir.',
+          bullets: [
+            'Otomotiv yedek parçaları',
+            'Endüstriyel komponentler',
+            'AOG ve kritik yedek parçalar',
+            'Makine parçaları',
+            'Medikal ve sağlık ürünleri',
+            'Acil üretim malzemeleri',
+            'Yüksek değerli yükler',
+          ],
+        },
+      },
+      network: {
+        title: 'Global Ağ, Merkezi Kontrol',
+        lede:
+          'Seçilmiş uluslararası NVOCC ve acente iş birliklerimiz sayesinde alternatif rota seçenekleri, rekabetçi navlun koşulları ve geniş global kapsama sunuyoruz.',
+        stackBadge: 'Seçili',
+        regions: ['Avrupa', 'Asya', 'Orta Doğu', 'Kuzey Amerika', 'Afrika', 'CIS', 'Orta Asya'],
+        services: [
+          {
+            id: 'doorToDoor',
+            title: 'Kapıdan Kapıya Taşıma Çözümleri',
+            body: 'Filenders, tedarikçi adresinden nihai teslimat noktasına kadar tüm taşıma sürecini tek noktadan yönetir. Incoterm ve müşteri ihtiyacına göre pickup, ihracat gümrük koordinasyonu, liman veya havalimanı işlemleri, ana taşıma, ithalat gümrük koordinasyonu, varış işlemleri, iç nakliye ve nihai teslimat hizmetleri organize edilir.',
+          },
+          {
+            id: 'crossTrade',
+            title: 'Cross Trade ve Üçüncü Ülke Taşımaları',
+            body: "Filenders, yükün Türkiye'ye girmeden iki farklı ülke arasında hareket ettiği uluslararası sevkiyatları da yönetir. Global partner ağımız sayesinde çıkış operasyonu, ana taşıma, varış operasyonu ve dokümantasyon süreçleri merkezi bir kontrol noktası üzerinden koordine edilir.",
+          },
+          {
+            id: 'nvocc',
+            title: 'NVOCC ve Global Acentelik Çözümleri',
+            body: 'Seçilmiş uluslararası NVOCC ve acente iş birliklerimiz sayesinde alternatif rota seçenekleri, rekabetçi navlun koşulları ve geniş global kapsama sunuyoruz. Avrupa, Asya, Orta Doğu, Kuzey Amerika, Afrika, CIS ve Orta Asya hatlarında çözüm geliştiriyoruz.',
+          },
+          {
+            id: 'importExport',
+            title: 'İthalat ve İhracat Freight Management',
+            body: "Türkiye'de lojistik yönetimine ihtiyaç duyan yerli ve uluslararası müşterilere sevkiyat planlama, booking, dokümantasyon, operasyon takibi ve teslimat süreçlerinde destek veriyoruz. Tüm süreç boyunca yapılandırılmış ve izlenebilir bilgi akışı sağlıyoruz.",
+          },
+          {
+            id: 'optimisation',
+            title: 'Armatör ve Rota Optimizasyonu',
+            body: 'Taşıma kararlarının yalnızca en düşük navlun fiyatına göre verilmemesi gerektiğine inanıyoruz. Filenders; navlun maliyeti, transit süre, sefer sıklığı, armatör güvenilirliği, aktarma noktaları, serbest süre, ekipman uygunluğu, liman performansı, iç nakliye maliyetleri ve operasyonel riskleri birlikte analiz eder.',
+          },
+          {
+            id: 'visibility',
+            title: 'Sevkiyat Görünürlüğü ve Kontrol',
+            body: "Freight operasyonlarımız Filenders'in dijital altyapısı ve Filentech teknoloji çözümleriyle desteklenir. Müşterilerimiz sevkiyat görünürlüğü, merkezi bilgi yönetimi, operasyonel raporlama ve maliyet kontrolü imkanlarından faydalanır.",
+          },
+        ],
+      },
+      whyUs: {
+        title: 'Neden Filenders?',
+        points: [
+          'Global Ağ, Merkezi Kontrol',
+          'Güçlü Operasyonel Deneyim',
+          'Esnek Armatör ve Rota Stratejisi',
+          'Teknoloji Destekli Operasyonlar',
+          'Multimodal Çözüm Kabiliyeti',
+        ],
+      },
+      closing: {
+        line1: 'Çıkış Noktasından Nihai Teslimata. Tek Kontrol Noktası.',
+        line2: 'Discover the True Path.',
+      },
+    },
   },
   en: {
     meta: {
@@ -649,10 +753,10 @@ export const translations = {
       contactCtaTemplate: 'Talk to our {title} team',
       items: {
         freight: {
-          title: 'Sea & Air Freight',
-          tagline: 'Delivered with precision, through global connections.',
+          title: 'Ocean & Air Freight Forwarding',
+          tagline: 'From origin to destination. One control point.',
           description:
-            'We provide reliable, end-to-end freight solutions by sea and air to every corner of the world.',
+            'Reliable, flexible and cost-effective ocean and air freight solutions connecting Türkiye with major global markets.',
           features: [
             { label: 'Air Cargo', desc: 'Fast air freight for time-sensitive shipments.' },
             { label: 'Ocean Freight', desc: 'Global port network for container and LCL shipments.' },
@@ -1222,6 +1326,110 @@ export const translations = {
       },
       closing: {
         line1: 'Connected Corridors. Flexible Transport. One Control Point.',
+        line2: 'Discover the True Path.',
+      },
+    },
+    oceanAirDetail: {
+      badge: 'One Control Point',
+      modeLabels: { ocean: 'Ocean', air: 'Air' },
+      intro: [
+        'Filenders provides reliable, flexible and cost-effective ocean and air freight solutions connecting Türkiye with major global markets. Through our international partner network, carrier relationships and operational expertise, we manage shipments from origin to final destination with a strong focus on service reliability, visibility, cost control and operational efficiency.',
+        "Whether the requirement is a standard container shipment, urgent air cargo or a complex door-to-door movement, our teams design the most suitable transportation solution according to the customer's operational priorities.",
+      ],
+      ocean: {
+        title: 'Ocean Freight',
+        intro:
+          'We provide comprehensive ocean freight solutions for international import and export shipments through major global shipping lines and selected NVOCC partners. Our team evaluates carrier alternatives, routings, transit times, free-time conditions, equipment availability and total logistics costs to determine the most suitable option for each shipment.',
+        cargoBadge: 'Selected',
+        fcl: {
+          title: 'FCL – Full Container Load',
+          body: 'Filenders manages full-container shipments with flexible carrier and routing options for standard, refrigerated and special-equipment cargo.',
+          bullets: [
+            "20', 40' and 40' High Cube containers",
+            'Open Top and Flat Rack equipment',
+            'Reefer containers',
+            'Carrier and NVOCC solutions',
+            'Port-to-port and door-to-door transportation',
+            'Export and import shipments',
+            'Cross-trade shipments',
+            'Transit cargo management',
+            'Pre-carriage and on-carriage coordination',
+          ],
+        },
+        lcl: {
+          title: 'LCL – Less than Container Load',
+          body: 'For shipments that do not require a full container, Filenders provides flexible LCL consolidation solutions through reliable global consolidation networks. We coordinate origin pickup, consolidation, ocean transportation, deconsolidation and final delivery while maintaining shipment visibility throughout the process.',
+        },
+      },
+      air: {
+        title: 'Air Freight',
+        intro:
+          'Filenders provides international air freight solutions for general, urgent and high-value cargo through major airlines, global hubs and selected air freight partners. We support airport-to-airport and door-to-door transportation while coordinating pickup, documentation, customs processes and final delivery.',
+        priority: {
+          title: 'Time-Critical & Priority Air Freight',
+          body: 'For urgent or operationally critical cargo, we provide priority air freight solutions designed around the required delivery timeline. Our team evaluates the fastest available routing, airline capacity and alternative airports to minimize transit time and operational risk.',
+          bullets: [
+            'Automotive spare parts',
+            'Industrial components',
+            'AOG and critical spare parts',
+            'Machinery components',
+            'Medical and healthcare cargo',
+            'Emergency production materials',
+            'High-value shipments',
+          ],
+        },
+      },
+      network: {
+        title: 'Global Network, Centralised Control',
+        lede:
+          'Through selected international NVOCC and agency partnerships, we provide alternative routing options, competitive freight conditions and extended global coverage.',
+        stackBadge: 'Selected',
+        regions: ['Europe', 'Asia', 'Middle East', 'North America', 'Africa', 'CIS', 'Central Asia'],
+        services: [
+          {
+            id: 'doorToDoor',
+            title: 'Door-to-Door Freight Solutions',
+            body: 'Filenders manages the complete transportation process from supplier pickup to final delivery. Depending on the Incoterm and customer requirements, our solutions may include origin pickup, export customs coordination, port or airport handling, main carriage, import customs coordination, destination handling, inland transportation and final delivery.',
+          },
+          {
+            id: 'crossTrade',
+            title: 'Cross Trade & Third-Country Shipments',
+            body: 'Filenders manages international shipments where cargo moves between two countries without entering Türkiye. Through our global partner network, we coordinate origin operations, main carriage, destination operations and shipment documentation from a central control point.',
+          },
+          {
+            id: 'nvocc',
+            title: 'NVOCC & Global Agency Solutions',
+            body: 'Through selected international NVOCC and agency partnerships, Filenders provides alternative routing options, competitive freight conditions and extended global coverage across Europe, Asia, the Middle East, North America, Africa, CIS and Central Asia.',
+          },
+          {
+            id: 'importExport',
+            title: 'Import & Export Freight Management',
+            body: 'We support Turkish exporters and importers as well as international customers requiring logistics management in Türkiye. Our teams coordinate shipment planning, booking, documentation, operational follow-up and delivery with structured information throughout the shipment lifecycle.',
+          },
+          {
+            id: 'optimisation',
+            title: 'Carrier & Route Optimisation',
+            body: 'Freight decisions should not be based only on the lowest freight rate. Filenders evaluates each shipment according to freight cost, transit time, sailing frequency, carrier reliability, transshipment points, free-time conditions, equipment availability, port performance, inland transportation cost and operational risk.',
+          },
+          {
+            id: 'visibility',
+            title: 'Shipment Visibility & Control',
+            body: "Our freight operations are supported by Filenders' digital infrastructure and Filentech technology solutions. Customers benefit from improved shipment visibility, centralized information management, operational reporting and cost control throughout the transportation process.",
+          },
+        ],
+      },
+      whyUs: {
+        title: 'Why Filenders?',
+        points: [
+          'Global Network, Centralised Control',
+          'Operational Experience',
+          'Flexible Carrier Strategy',
+          'Technology-Driven Operations',
+          'Multimodal Capability',
+        ],
+      },
+      closing: {
+        line1: 'From Origin to Destination. One Control Point.',
         line2: 'Discover the True Path.',
       },
     },
