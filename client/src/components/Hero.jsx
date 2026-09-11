@@ -5,8 +5,9 @@ import PathDrawingText from './PathDrawingText'
 import { useLanguage } from '../i18n/LanguageContext'
 import useTilt3D from '../hooks/useTilt3D'
 
-export default function Hero() {
+export default function Hero({ onOpenIndustries }) {
   const { t, lang } = useLanguage()
+  const sectors = t('industries.sectors')
   const mx = useMotionValue(0)
   const my = useMotionValue(0)
   const glowX = useSpring(mx, { stiffness: 120, damping: 30, mass: 0.6 })
@@ -46,26 +47,20 @@ export default function Hero() {
               fontSize={104}
               viewBoxWidth={560}
               viewBoxHeight={130}
-            />
-            <PathDrawingText
-              key={`subtitle-${lang}`}
-              text={t('hero.subtitle')}
-              className="hero-subtitle-draw"
-              fontSize={80}
-              viewBoxWidth={980}
-              viewBoxHeight={110}
-              durationSec={5.5}
+              filled
+              fromColor="var(--color-accent)"
+              toColor="var(--color-danger)"
             />
           </h1>
 
           <p className="hero-lede">{t('hero.lede')}</p>
 
           <div className="hero-actions">
-            <a href="#bolumler" className="btn btn-primary btn-lg">
+            <a href="#services" className="btn btn-primary btn-lg">
               {t('hero.exploreCta')}
               <ArrowRightIcon width={16} height={16} />
             </a>
-            <a href="#iletisim" className="btn btn-secondary btn-lg">
+            <a href="#contact" className="btn btn-secondary btn-lg">
               {t('hero.contactCta')}
             </a>
           </div>
@@ -92,6 +87,28 @@ export default function Hero() {
               />
             ))}
           </span>
+          <div className="hero-orbit" aria-hidden="false">
+            {sectors.map((sector, i) => {
+              const angle = (360 / sectors.length) * i
+              return (
+                <div key={sector.id} className="hero-orbit-slot" style={{ transform: `rotate(${angle}deg)` }}>
+                  <div className="hero-orbit-counter">
+                    <a
+                      href="#industries"
+                      className="hero-orbit-item"
+                      style={{ transform: `rotate(${-angle}deg)` }}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        onOpenIndustries?.()
+                      }}
+                    >
+                      {sector.key}
+                    </a>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
           <motion.img
             src={logo}
             alt="Filenders"

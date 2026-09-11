@@ -239,10 +239,10 @@ export default function GroundDetail({ division, contactCta }) {
           transition={{ duration: 0.5, ease: EASE }}
         >
           <span className="badge">{detail.badge}</span>
-          <h2>{division.title}</h2>
+          <h2 className="text-gradient">{division.title}</h2>
           <p className="road-hero-tagline">{division.tagline}</p>
           <div className="road-hero-actions">
-            <a href="#iletisim" className="btn btn-primary btn-lg">
+            <a href="#contact" className="btn btn-primary btn-lg">
               {contactCta}
               <ArrowRightIcon width={16} height={16} />
             </a>
@@ -323,7 +323,7 @@ export default function GroundDetail({ division, contactCta }) {
         <div className="road-closing-content">
           <p className="road-closing-line">{detail.closing.line1}</p>
           <p className="road-closing-tagline">{detail.closing.line2}</p>
-          <a href="#iletisim" className="btn btn-primary btn-lg">
+          <a href="#contact" className="btn btn-primary btn-lg">
             {contactCta}
             <ArrowRightIcon width={16} height={16} />
           </a>

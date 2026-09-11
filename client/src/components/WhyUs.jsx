@@ -1,15 +1,24 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { ShieldIcon, RouteIcon, CpuIcon, TruckIcon } from './icons'
+import { ShieldIcon, UsersIcon, EyeIcon, CpuIcon, LinkIcon, RouteIcon } from './icons'
 import { useLanguage } from '../i18n/LanguageContext'
 import useTilt3D from '../hooks/useTilt3D'
-import freightPhoto from '../assets/divisions/freight.jpg'
-import groundPhoto from '../assets/divisions/ground.jpg'
-import techPhoto from '../assets/divisions/tech.jpg'
-import projectPhoto from '../assets/divisions/project.jpg'
+import ownTheOutcomePhoto from '../assets/culture/own-the-outcome.jpg'
+import moveWithTrustPhoto from '../assets/culture/move-with-trust.jpg'
+import makeItVisiblePhoto from '../assets/culture/make-it-visible.jpg'
+import thinkAheadPhoto from '../assets/culture/think-ahead.jpg'
+import oneTeamPhoto from '../assets/culture/one-team.jpg'
+import keepMovingPhoto from '../assets/culture/keep-moving.jpg'
 
-const pointIcons = [ShieldIcon, RouteIcon, CpuIcon, TruckIcon]
-const pointPhotos = [freightPhoto, groundPhoto, techPhoto, projectPhoto]
+const pointIcons = [ShieldIcon, UsersIcon, EyeIcon, CpuIcon, LinkIcon, RouteIcon]
+const pointPhotos = [
+  ownTheOutcomePhoto,
+  moveWithTrustPhoto,
+  makeItVisiblePhoto,
+  thinkAheadPhoto,
+  oneTeamPhoto,
+  keepMovingPhoto,
+]
 const EASE = [0.16, 1, 0.3, 1]
 
 function WhyUsRow({ point, index, reverse }) {
@@ -70,7 +79,7 @@ export default function WhyUs() {
   const points = t('whyus.points').map((point, i) => ({ ...point, icon: pointIcons[i] }))
 
   return (
-    <section id="hakkimizda" className="whyus">
+    <section id="culture" className="whyus">
       <motion.div
         className="whyus-head"
         initial={{ opacity: 0, y: 24, rotateX: 8 }}
@@ -89,6 +98,17 @@ export default function WhyUs() {
           <WhyUsRow key={point.title} point={point} index={i} reverse={i % 2 === 1} />
         ))}
       </div>
+
+      <motion.div
+        className="whyus-closing"
+        initial={{ opacity: 0, y: 18 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-10%' }}
+        transition={{ duration: 0.5, ease: EASE }}
+      >
+        <p className="whyus-closing-line">{t('whyus.closing.line1')}</p>
+        <p className="whyus-closing-tagline">{t('whyus.closing.line2')}</p>
+      </motion.div>
     </section>
   )
 }

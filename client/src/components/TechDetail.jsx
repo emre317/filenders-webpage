@@ -198,7 +198,7 @@ export default function TechDetail({ division, contactCta }) {
               {detail.loginCta}
               <ArrowRightIcon width={16} height={16} />
             </a>
-            <a href="#iletisim" className="btn btn-secondary btn-lg">
+            <a href="#contact" className="btn btn-secondary btn-lg">
               {contactCta}
             </a>
           </div>
@@ -284,13 +284,15 @@ export default function TechDetail({ division, contactCta }) {
         style={{ transformPerspective: 1000 }}
       >
         <p className="tech-closing-line">{detail.closing.line1}</p>
-        <p className="tech-closing-tagline">{detail.closing.line2}</p>
+        <p className="tech-closing-tagline" lang="en">
+          {detail.closing.line2}
+        </p>
         <div className="tech-closing-actions">
           <a href={FILENTECH_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">
             {detail.loginCta}
             <ArrowRightIcon width={16} height={16} />
           </a>
-          <a href="#iletisim" className="btn btn-secondary btn-lg">
+          <a href="#contact" className="btn btn-secondary btn-lg">
             {contactCta}
           </a>
         </div>

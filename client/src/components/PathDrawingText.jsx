@@ -11,12 +11,14 @@ export default function PathDrawingText({
   viewBoxWidth = 560,
   viewBoxHeight = 130,
   align = 'start',
+  filled = false,
   className = '',
 }) {
   const gradientId = `path-draw-${useId().replace(/:/g, '')}`
   const reduceMotion = useReducedMotion()
   const x = align === 'start' ? '0' : '50%'
   const textAnchor = align === 'start' ? 'start' : 'middle'
+  const animate = !filled && !reduceMotion
 
   return (
     <svg
@@ -36,17 +38,17 @@ export default function PathDrawingText({
         y="50%"
         textAnchor={textAnchor}
         dominantBaseline="middle"
-        fill="none"
-        stroke={`url(#${gradientId})`}
-        strokeWidth={strokeWidth}
+        fill={filled ? `url(#${gradientId})` : 'none'}
+        stroke={filled ? 'none' : `url(#${gradientId})`}
+        strokeWidth={filled ? 0 : strokeWidth}
         strokeLinejoin="round"
         strokeLinecap="round"
         fontSize={fontSize}
         fontWeight="800"
         fontFamily="Inter, system-ui, sans-serif"
         letterSpacing="-0.02em"
-        className={reduceMotion ? undefined : 'path-draw-sweep'}
-        style={reduceMotion ? undefined : { animationDuration: `${durationSec}s` }}
+        className={animate ? 'path-draw-sweep' : undefined}
+        style={animate ? { animationDuration: `${durationSec}s` } : undefined}
       >
         {text}
       </text>

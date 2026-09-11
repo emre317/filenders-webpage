@@ -62,12 +62,12 @@ export default function Memberships({ onBack }) {
   const loop = [...items, ...items]
 
   useEffect(() => {
-    document.getElementById('uyelikler')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    document.getElementById('memberships')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }, [])
 
   return (
     <motion.section
-      id="uyelikler"
+      id="memberships"
       className="memberships"
       initial={{ opacity: 0, y: 24, rotateX: 8 }}
       animate={{ opacity: 1, y: 0, rotateX: 0 }}
@@ -88,7 +88,7 @@ export default function Memberships({ onBack }) {
         style={{ transformPerspective: 1000 }}
       >
         <span className="badge">{t('memberships.badge')}</span>
-        <h2>{t('memberships.title')}</h2>
+        <h2 className="text-gradient">{t('memberships.title')}</h2>
         <p>{t('memberships.lede')}</p>
       </motion.div>
 

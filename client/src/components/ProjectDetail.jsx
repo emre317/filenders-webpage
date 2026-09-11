@@ -148,7 +148,7 @@ export default function ProjectDetail({ division, contactCta }) {
           transition={{ duration: 0.6, ease: EASE }}
           style={{ transformPerspective: 1000 }}
         >
-          <h2>{division.title}</h2>
+          <h2 className="text-gradient">{division.title}</h2>
           <p>{division.tagline}</p>
         </motion.div>
       </div>
@@ -200,8 +200,10 @@ export default function ProjectDetail({ division, contactCta }) {
         style={{ transformPerspective: 1000 }}
       >
         <p className="project-closing-line">{detail.closing.line1}</p>
-        <p className="project-closing-tagline">{detail.closing.line2}</p>
-        <a href="#iletisim" className="btn btn-primary btn-lg">
+        <p className="project-closing-tagline" lang="en">
+          {detail.closing.line2}
+        </p>
+        <a href="#contact" className="btn btn-primary btn-lg">
           {contactCta}
           <ArrowRightIcon width={16} height={16} />
         </a>

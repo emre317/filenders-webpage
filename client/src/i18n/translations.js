@@ -8,6 +8,7 @@ export const translations = {
     },
     nav: {
       services: 'Hizmetlerimiz',
+      industries: 'Sektörler',
       about: 'Hakkımızda',
       memberships: 'Üyelikler',
       contact: 'İletişim',
@@ -16,6 +17,10 @@ export const translations = {
       langLabel: 'Dil',
       menuOpen: 'Menüyü aç',
       menuClose: 'Menüyü kapat',
+      legal: 'Yasal',
+      legalNotice: 'Yasal Bildirim',
+      dataPrivacy: 'Veri Gizliliği',
+      codeOfConduct: 'İş Etiği Kuralları',
     },
     hero: {
       badge: 'Lojistik ve Teknolojiyi Bir Araya Getiriyoruz',
@@ -87,27 +92,45 @@ export const translations = {
     },
     whyus: {
       badge: 'Neden Filenders?',
-      title: 'Dört servis, tek güç',
+      title: 'Hareket Etme Biçimimiz',
       lede:
-        'Taşımacılık, teknoloji, saha operasyonları ve proje lojistiğini aynı çatı altında geliştirerek, sektörün ihtiyaç duyduğu hızı ve öngörüyü birlikte sunuyoruz.',
+        "Farklı pazarlar, farklı zorluklar, tek bir bakış açısı: Filenders'ta kültür duvara yazılan bir söylem değil; nasıl karar verdiğimiz, sorunları nasıl çözdüğümüz ve işi nasıl ileri taşıdığımızdır.",
       points: [
         {
-          title: 'Güvenilirlik',
-          description: 'Her sevkiyatı, sözünü tutan bir operasyon anlayışıyla teslim ediyoruz.',
+          title: 'Sonucun Sahibi Ol',
+          description:
+            'İlk görüşmeden nihai teslimata kadar sorumluluğu üstleniriz — hesap verebilirlik bizim için bir departman değil, bir çalışma biçimidir.',
         },
         {
-          title: 'İzlenebilirlik',
-          description: 'Yükünüzün nerede olduğunu her an şeffaf şekilde görebiliyorsunuz.',
+          title: 'Güvenle Hareket Et',
+          description:
+            'Açık iletişim kurar, sözümüzü tutar ve tek bir sevkiyatın ötesine geçen ilişkiler kurarız.',
         },
         {
-          title: 'Teknoloji Odaklı',
-          description: 'Operasyonu kendi geliştirdiğimiz yazılımlarla akıllı hale getiriyoruz.',
+          title: 'Görünür Kıl',
+          description:
+            'Şeffaflık, teknoloji ve gerçek zamanlı bilgiyle belirsizliği azaltırız — daha iyi görünürlük, daha doğru kararlar demektir.',
         },
         {
-          title: 'Uçtan Uca Hizmet',
-          description: 'Taşımadan depolamaya, tek muhatapla eksiksiz bir tedarik zinciri.',
+          title: 'İleriyi Düşün',
+          description:
+            'Geleneksel yöntemleri sorgular, yükü ve bilgiyi taşımanın daha iyi yollarını ararız — teknoloji, düşünme biçimimizin bir parçasıdır.',
+        },
+        {
+          title: 'Tek Takım, Sınır Yok',
+          description:
+            'Lojistik, teknoloji, operasyon ve küresel iş ortaklarımız tek bir bağlantılı sistem gibi çalışır, ortak sonuca odaklanır.',
+        },
+        {
+          title: 'Daima İleri',
+          description:
+            'Sürekli ölçer, geliştirir ve ilerleriz — gelişim bizim için dönemsel bir proje değil, günlük çalışma biçimimizdir.',
         },
       ],
+      closing: {
+        line1: 'Sorumluluk al. Güven oluştur. Görünür kıl. İleriyi düşün. Birlikte hareket et. Sürekli gelişin.',
+        line2: 'Discover the True Path.',
+      },
     },
     memberships: {
       back: 'Ana Sayfa',
@@ -166,23 +189,559 @@ export const translations = {
         },
       ],
     },
+    industries: {
+      back: 'Ana Sayfa',
+      badge: 'Sektörler',
+      title: 'Hizmet Verdiğimiz Sektörler',
+      tagline: 'Sektöre Özel Lojistik. Tedarik Zincirinize Göre Tasarlanan Çözümler.',
+      intro: [
+        'Her sektörün lojistik gereksinimleri farklıdır. Filenders; freight forwarding, proje lojistiği, multimodal taşımacılık ve teknoloji kabiliyetlerini bir araya getirerek müşterilerinin faaliyet gösterdiği sektörün operasyonel gerçeklerine göre lojistik ve tedarik zinciri çözümleri geliştirir.',
+        'Zamana duyarlı otomotiv komponentlerinden bitmiş araçlara, ağır endüstriyel ekipmanlardan enerji projelerine, kimyasal yüklerden insani yardım operasyonlarına ve kompleks sınır geçişli taşımalara kadar tüm süreçleri operasyonel kontrol, görünürlük, risk yönetimi ve maliyet verimliliği odağında yönetiyoruz.',
+      ],
+      sectors: [
+        {
+          id: 'automotive',
+          key: 'Otomotiv',
+          title: 'Otomotiv',
+          tagline: 'Otomotiv Tedarik Zincirleri İçin Entegre Lojistik Çözümleri',
+          body: [
+            'Otomotiv lojistiği; tedarikçiler, üretim tesisleri, limanlar, dağıtım merkezleri ve nihai pazarlar arasında hız, hassasiyet, görünürlük ve güçlü operasyonel koordinasyon gerektirir. Filenders; otomotiv üreticileri, OEM tedarikçileri, yedek parça üreticileri, araç distribütörleri ve bölgesel otomotiv ticaret şirketleri için entegre lojistik çözümleri sunar. Hizmetlerimiz hem üretim odaklı yük akışlarını hem de bitmiş araç lojistiğini kapsar.',
+            'Bitmiş araçlarda özel car carrier treylerlar, RoRo servisleri ve multimodal taşıma çözümleriyle taşıma organizasyonları gerçekleştiriyoruz. Araç pickup, limandan limana ve kapıdan kapıya taşıma, bölgesel dağıtım, transit araç hareketleri, geçici HUB çözümleri, depolama koordinasyonu ve bayi teslimatları organize edilebilir.',
+            'Filenders ayrıca çekici, dorse, ticari kamyon, özel araç ve filo transfer projelerinin lojistiğini yönetir.',
+            'Birden fazla pazarda faaliyet gösteren üreticiler ve distribütörler için bölgesel HUB ve dağıtım modelleri geliştiriyoruz. Türkiye, Orta Doğu, CIS, Orta Asya ve çevre pazarlara yönelik otomotiv dağıtımı için stratejik bir HUB olarak kullanılabilir.',
+            'Bitmiş araç lojistiğinin yanında OEM komponentleri, yedek parçalar, acil üretim malzemeleri, FTL/LTL, denizyolu, time-critical hava kargo, tedarikçi pickup yönetimi, sınır geçişli taşıma ve supply chain visibility hizmetleri sunuyoruz.',
+          ],
+          bullets: [],
+        },
+        {
+          id: 'energy',
+          key: 'Enerji',
+          title: 'Enerji ve Güç Sistemleri',
+          tagline: 'Kritik Enerji Altyapıları İçin Proje Lojistiği',
+          body: [
+            'Enerji projeleri çoğunlukla detaylı mühendislik ve taşıma planlaması gerektiren ağır, gabari dışı ve teknik açıdan hassas ekipmanlardan oluşur. Filenders; enerji üretimi, iletimi, dağıtımı ve yenilenebilir enerji projeleri için proje lojistiği ve multimodal taşıma çözümleri geliştirir.',
+            'Proje gereksinimine göre ağır karayolu, özel ekipman, breakbulk, RoRo, konteyner ve multimodal çözümler birlikte kullanılabilir.',
+          ],
+          bullets: [
+            'Transformatörler',
+            'Jeneratörler',
+            'Türbinler',
+            'Trafo merkezi ekipmanları',
+            'Elektrik sistemleri',
+            'Kablo makaraları',
+            'Enerji santrali ekipmanları',
+            'Güneş ve rüzgar enerjisi ekipmanları',
+          ],
+        },
+        {
+          id: 'oilgas',
+          key: 'Petrol ve Doğal Gaz',
+          title: 'Petrol ve Doğal Gaz',
+          tagline: 'Zorlu Coğrafyalar İçin Kompleks Lojistik Çözümleri',
+          body: [
+            'Petrol ve Doğal Gaz lojistiği; operasyonel tecrübe, özel ekipman, mevzuat bilgisi ve zorlu coğrafyalarda güçlü koordinasyon gerektirir. Filenders; endüstriyel makine, sondaj ekipmanı, boru, vana, proje yükleri ve kritik malzemelerin üreticiler, limanlar, depolama alanları ve proje sahaları arasındaki taşımalarını yönetir.',
+            'Bölgesel ağımız; Türkiye, Orta Doğu, Orta Asya ve çevre pazarlarda lojistik çözümler geliştirmemize imkan tanır.',
+          ],
+          bullets: [
+            'Ağır ve gabari dışı taşıma',
+            'Breakbulk ve konvansiyonel taşıma',
+            'RoRo',
+            'FTL ve özel karayolu',
+            'Multimodal taşıma',
+            'Transit lojistik',
+            'Saha teslimatı',
+            'Proje kargo yönetimi',
+          ],
+        },
+        {
+          id: 'industrial',
+          key: 'Endüstri',
+          title: 'Endüstri ve Üretim',
+          tagline: 'Global Üretim Ağlarını Birbirine Bağlıyoruz',
+          body: [
+            'Sanayi kuruluşları; hammadde, komponent, makine ve bitmiş ürünlerini tedarikçiler, fabrikalar ve müşteriler arasında güvenilir şekilde hareket ettirmek zorundadır. Filenders; denizyolu, havayolu, karayolu ve multimodal çözümleriyle üretim şirketlerinin global lojistik süreçlerini destekler.',
+            'Amacımız, üretim sürekliliğini desteklerken lojistik akışın tamamında görünürlüğü ve kontrolü artırmaktır.',
+          ],
+          bullets: [
+            'Tedarikçi yüklemeleri',
+            'Fabrikadan fabrikaya taşıma',
+            'Makine taşımacılığı',
+            'Hammadde lojistiği',
+            'Bitmiş ürün dağıtımı',
+            'İthalat ve ihracat freight management',
+            'Cross-trade taşımalar',
+            'Envanter ve sevkiyat görünürlüğü',
+            'Supply Chain Control Tower çözümleri',
+          ],
+        },
+        {
+          id: 'construction',
+          key: 'İnşaat',
+          title: 'İnşaat ve Altyapı',
+          tagline: 'Büyük Projelerin Arkasındaki Lojistik Güç',
+          body: [
+            'Büyük ölçekli inşaat ve altyapı projeleri; iş makineleri, yapısal komponentler ve gabari dışı yüklerin koordineli taşınmasını gerektirir. Filenders, tedarikçi noktasından nihai proje sahasına kadar inşaat ve altyapı projeleri için lojistik çözümleri geliştirir.',
+            'Her proje; yük ölçüleri, güzergah koşulları, teslimat sırası, kaldırma gereksinimleri ve saha erişim koşullarına göre değerlendirilir.',
+          ],
+          bullets: [
+            'İş makineleri',
+            'Çelik konstrüksiyonlar',
+            'Prefabrik komponentler',
+            'Endüstriyel modüller',
+            'Borular ve altyapı ekipmanları',
+            'Ağır yapı malzemeleri',
+            'Özel araçlar',
+            'Proje ekipmanları',
+          ],
+        },
+        {
+          id: 'machinery',
+          key: 'Madencilik',
+          title: 'Makine ve Madencilik',
+          tagline: 'Ağır Ekipmanlar İçin Mühendislik Odaklı Taşıma',
+          body: [
+            'Endüstriyel makineler ve madencilik ekipmanları çoğu zaman standart taşıma ölçülerinin ve ağırlık limitlerinin dışındadır. Filenders; ekipmanın ölçüleri, ağırlık dağılımı, yükleme yöntemi, güzergah kısıtları ve teslimat koşullarına göre uygun taşıma modelini belirler.',
+            'Her ekipmanı, teknik açıdan en uygun taşıma yöntemiyle eşleştirmeye odaklanıyoruz.',
+          ],
+          bullets: [
+            'Lowbed',
+            'Uzayabilir treyler',
+            'Modüler aks sistemleri',
+            'Flat Rack',
+            'Open Top',
+            'Breakbulk',
+            'RoRo',
+            'Multimodal taşıma',
+            'Heavy-lift koordinasyonu',
+          ],
+        },
+        {
+          id: 'chemicals',
+          key: 'Kimya',
+          title: 'Kimya ve Özel Yükler',
+          tagline: 'Hassas Yükler İçin Kontrollü Taşıma',
+          body: [
+            'Kimyasal ve özel endüstriyel yüklerin taşınması doğru sınıflandırma, dokümantasyon, mevzuat uyumu ve dikkatli operasyon planlaması gerektirir. Filenders, yük özelliklerine ve uygulanabilir mevzuata göre çözümler koordine eder.',
+            'Yaklaşımımız; kontrollü operasyon, yetkin hizmet sağlayıcılar ve net operasyonel dokümantasyon esasına dayanır.',
+          ],
+          bullets: [
+            'Denizyolu taşımacılığı',
+            'Karayolu taşımacılığı',
+            'Tank ve özel ekipman',
+            'Yetkili sağlayıcılar aracılığıyla tehlikeli madde taşımacılığı',
+            'Sıcaklık kontrollü taşıma',
+            'Özel dokümantasyon',
+            'Liman ve terminal koordinasyonu',
+            'Sınır geçişli ve transit hareketler',
+          ],
+        },
+        {
+          id: 'healthcare',
+          key: 'Sağlık',
+          title: 'Sağlık ve Medikal',
+          tagline: 'Hassas ve Zamana Duyarlı Yükler İçin Güvenilir Lojistik',
+          body: [
+            'Sağlık ve medikal sektöründe hız, güvenilirlik ve doğru elleçleme kritik öneme sahiptir. Filenders; medikal ekipmanlar, sağlık ürünleri, acil yedek parçalar ve kritik malzemeler için uluslararası taşıma çözümleri sunar.',
+          ],
+          bullets: [
+            'Time-critical hava kargo',
+            'Sıcaklık hassasiyetli yükler',
+            'Medikal ekipman taşımacılığı',
+            'Acil yedek parçalar',
+            'Kapıdan kapıya çözümler',
+            'Sınır geçişli taşıma',
+            'Sevkiyat görünürlüğü',
+            'Öncelikli operasyon yönetimi',
+          ],
+        },
+        {
+          id: 'marine',
+          key: 'Denizcilik',
+          title: 'Denizcilik ve Gemi Yedek Parçaları',
+          tagline: 'Denizcilik Operasyonları İçin Zaman Kritik Lojistik',
+          body: [
+            'Gemi yedek parçaları ve denizcilik ekipmanları çoğu zaman gemilere, limanlara veya tersanelere çok kısa operasyonel süreler içinde ulaştırılmalıdır. Filenders; armatörler, gemi işletmecileri, tedarikçiler, tersaneler ve denizcilik hizmet şirketleri için lojistik çözümleri sunar.',
+            'Denizcilik ve freight forwarding tecrübemiz; gemi yedek parça lojistiğinde zamanlamanın, dokümantasyonun ve liman koordinasyonunun önemini kavramamızı sağlar.',
+          ],
+          bullets: [
+            'Acil gemi yedek parça teslimatı',
+            'Hava kargo',
+            'Karayolu taşımacılığı',
+            'Liman teslimatı',
+            'Tersane lojistiği',
+            'Makine ve deniz ekipmanı taşımacılığı',
+            'Sınır geçişli hareketler',
+            'Zamana duyarlı lojistik',
+          ],
+        },
+        {
+          id: 'defense',
+          key: 'Savunma',
+          title: 'Savunma ve Kamu Projeleri',
+          tagline: 'Kritik Operasyonlar İçin Kontrollü Lojistik',
+          body: [
+            'Kamu ve savunma projeleri; güçlü koordinasyon, gizlilik, mevzuat bilgisi ve kontrollü operasyon yönetimi gerektirir. Filenders, gerekli izin ve mevzuat şartlarına uygun olarak özel ekipman, araç, makine ve proje yüklerinin lojistik süreçlerini yönetir.',
+            'Tüm bu hareketler; ilgili yasalar, izinler ve mevzuat onaylarına tabi olarak yürütülür.',
+          ],
+          bullets: [
+            'Havayolu',
+            'Karayolu',
+            'RoRo',
+            'Proje kargo',
+            'Multimodal taşıma',
+            'Özel ekipman',
+            'Transit lojistik',
+            'Zorlu bölge teslimatları',
+          ],
+        },
+        {
+          id: 'humanitarian',
+          key: 'İnsani Yardım',
+          title: 'İnsani Yardım ve NGO Lojistiği',
+          tagline: 'Lojistiğin En Kritik Olduğu Noktalarda',
+          body: [
+            'İnsani yardım operasyonları çoğu zaman altyapının, sınır süreçlerinin ve taşıma kapasitesinin sınırlı olduğu bölgelerde gerçekleştirilir. Filenders; insani yardım kuruluşları, uluslararası organizasyonlar ve proje yüklenicileri için esnek lojistik çözümleri organize eder.',
+            'Amacımız; geleneksel taşıma ağlarının sınırlı olduğu bölgelerde dahi güvenilir lojistik koridorları oluşturmaktır.',
+          ],
+          bullets: [
+            'Acil yük taşımaları',
+            'Medikal malzemeler',
+            'Yardım malzemeleri',
+            'Ekipman ve araçlar',
+            'Sınır geçişli taşıma',
+            'Multimodal lojistik',
+            'Zorlu bölge teslimatları',
+            'Time-critical taşıma',
+            'Transit kargo yönetimi',
+          ],
+        },
+        {
+          id: 'food',
+          key: 'Bozulabilir Gıda',
+          title: 'Gıda ve Sıcaklık Kontrollü Lojistik',
+          tagline: 'Sıcaklık Hassasiyeti Bulunan Tedarik Zincirleri İçin Kontrollü Taşıma',
+          body: [
+            'Gıda, içecek ve sıcaklık kontrollü ürünler; doğru ekipman seçimi, güvenilir taşıma ve operasyonel kontrol gerektirir. Filenders, seçilmiş reefer ve frigorifik taşıma partnerleri üzerinden sıcaklık kontrollü lojistik çözümleri koordine eder.',
+          ],
+          bullets: [
+            'Reefer konteyner',
+            'Frigorifik karayolu',
+            'FTL/LTL cold-chain',
+            'Liman ve terminal koordinasyonu',
+            'İthalat ve ihracat',
+            'Sınır geçişli teslimatlar',
+            'Sıcaklık hassasiyetli dağıtım',
+          ],
+        },
+      ],
+      closing: {
+        line1: 'Sektöre Özel Lojistik. Tedarik Zincirinize Göre Tasarlanan Çözümler.',
+        line2: 'Discover the True Path.',
+      },
+    },
+    aboutUs: {
+      back: 'Ana Sayfa',
+      badge: 'Hikâyemiz',
+      title: 'Hikâyemiz ve Tarihçemiz',
+      tagline: "Tecrübeden teknolojiye, Türkiye'den dünyaya.",
+      intro: [
+        "Filenders'in hikâyesi 2022 yılında kurulmuş bir şirketin ötesinde, kurucularının denizcilik, uluslararası freight forwarding, proje lojistiği, karayolu taşımacılığı, gümrük, varlık yönetimi, satış ve operasyon alanlarında yıllar boyunca biriktirdiği tecrübenin ortak bir vizyona dönüşmesidir.",
+        'Sektörde uzun yıllar boyunca aynı yapısal sorunları gördük: parçalı süreçler, farklı sistemlerde kalan veriler, kişilere bağımlı operasyonlar, sınırlı görünürlük ve müşterilerin kendi tedarik zincirleri üzerinde yeterli kontrol kuramaması. Filenders bu sorunlara yalnızca daha fazla taşıma kapasitesiyle değil; teknoloji, veri, doğru partner ağı ve güçlü operasyon yönetimini aynı sistem içinde birleştirerek cevap vermek üzere doğdu.',
+        'Bizim için lojistik, bir yükün A noktasından B noktasına taşınmasından ibaret değildir. Gerçek değer; doğru taşıma modelini tasarlamak, uygun tedarikçiyi seçmek, maliyeti şeffaf biçimde yönetmek, operasyonu görünür kılmak ve bütün tedarik zincirini ölçülebilir hale getirmektir.',
+      ],
+      timeline: [
+        {
+          year: '2022',
+          title: 'Kuruluş ve Ortak Vizyon',
+          body: [
+            'Filenders Logistics & Technology, 2022 yılında Türkiye\'de kuruldu. Kuruluş hedefi klasik bir freight forwarder modeli oluşturmak değil; saha tecrübesini teknoloji, veri ve uluslararası partner ağıyla birleştiren yeni nesil bir lojistik organizasyonu kurmaktı.',
+            'Denizyolu, havayolu, karayolu, proje ve multimodal taşımacılık kabiliyetleri aynı çatı altında geliştirilirken, şirketin gelecekte kendi dijital sistemleriyle çalışacağı yaklaşımı da kuruluş vizyonunun bir parçası haline geldi.',
+          ],
+        },
+        {
+          year: '2023',
+          title: 'Operasyonel Temeller ve Dijitalleşme',
+          body: [
+            "İlk büyüme döneminde operasyon standartları, tedarikçi ve müşteri yönetimi, teklif süreçleri ve uluslararası partner ilişkileri sistematik hale getirildi. Filenders'in operasyon merkezi olarak Mersin'in stratejik konumu; Doğu Akdeniz, Türkiye iç pazarı ve bölgesel transit koridorlara erişimde önemli bir avantaj sağladı.",
+            'Aynı dönemde lojistik süreçlerin dijital ortama taşınması için TMS, CRM, fiyatlandırma, raporlama ve operasyon yönetimi gibi temel fonksiyonların altyapısı geliştirilmeye başlandı. Teknoloji, operasyonun yanında duran ayrı bir ürün olarak değil, şirketin çalışma modelinin merkezinde konumlandırıldı.',
+          ],
+        },
+        {
+          year: '2024',
+          title: 'Multimodal Yetkinlik ve Global Ağ',
+          body: [
+            'Filenders, geleneksel port-to-port forwarding hizmetlerinin ötesine geçerek proje taşımacılığı, breakbulk, ağır ve gabari dışı yükler, intermodal ve multimodal çözümlerde daha güçlü bir uzmanlaşma geliştirdi.',
+            "Avrupa, Amerika, Orta Doğu ve Asya'daki bağımsız lojistik şirketleri, taşıyıcılar ve uzman servis sağlayıcılarla ilişkiler genişletildi. Türkiye'nin jeostratejik konumu yalnızca bir çıkış veya varış noktası olarak değil, farklı ticaret koridorlarını birbirine bağlayan bir operasyon merkezi olarak değerlendirilmeye başlandı.",
+          ],
+        },
+        {
+          year: '2025',
+          title: 'Filentech ve Control Tower Yaklaşımı',
+          body: [
+            'Teknoloji vizyonu Filentech markası altında daha belirgin bir yapıya kavuştu. TMS, CRM, RFQ yönetimi, spot quoting, shipment management, tracking & visibility, finansal yönetim ve raporlama gibi fonksiyonların birbirine bağlandığı bütünleşik bir dijital platform yaklaşımı geliştirildi.',
+            "Filenders'in hizmet modeli de bu teknolojik altyapıyla birlikte dönüşmeye başladı. Özellikle yurtdışındaki ithalatçılar ve lojistik şirketleri için spot market şeffaflığı, tedarikçi seçimi, contract management, operasyon yönetimi, görünürlük, maliyet kontrolü ve anlık raporlama sağlayan bir Supply Chain Control Tower modeli şekillendi.",
+            "Bu modelde müşteriler kendi lojistik hizmet sağlayıcılarını seçebilirken, ihtiyaç halinde Filenders'in in-house operasyon kabiliyetlerinden de yararlanabilmektedir. Böylece Filenders, yalnızca taşıma satın alan ve satan bir yapıdan, tedarik zincirinin karar ve kontrol katmanında yer alan bir organizasyona doğru ilerledi.",
+          ],
+        },
+        {
+          year: '2026',
+          title: 'Entegre Lojistik Ekosistemi',
+          body: [
+            "2026 yılında Filenders'in marka ve iş birimi yapısı daha net bir ekosisteme dönüştü. Amaç; freight forwarding, karayolu ve asset operasyonları, teknoloji ile global partner yönetimini tek bir dijital omurgada birleştirmek oldu.",
+            "Filenders'in bölgesel stratejisinde Türkiye, Europe – Türkiye – Middle East – Levant koridorunun merkezinde konumlandırıldı. Mersin ise özellikle Doğu Akdeniz, Irak, Suriye, GCC ve Levant bağlantılı operasyonlarda güçlü bir bölgesel geçiş ve konsolidasyon noktası olarak öne çıktı.",
+          ],
+        },
+      ],
+      units: {
+        title: '2026 Marka ve İş Birimi Yapısı',
+        items: [
+          {
+            id: 'logistics',
+            name: 'Filenders Logistics',
+            description:
+              'Denizyolu, havayolu, proje, breakbulk ve uluslararası freight forwarding hizmetlerinin ana operasyon yapısı.',
+          },
+          {
+            id: 'filtrucks',
+            name: 'FILTRUCKS',
+            description:
+              'Karayolu, intermodal, multimodal, özel taşıma, özmal/asset ve filo yönetimi odaklı operasyon yapısı.',
+          },
+          {
+            id: 'filentech',
+            name: 'Filentech',
+            description:
+              'TMS, CRM, quoting, tracking, müşteri ve tedarikçi portalları, finans, AI ve Control Tower çözümlerini geliştiren merkezi teknoloji platformu.',
+          },
+          {
+            id: 'filenetwork',
+            name: 'Filenetwork',
+            description:
+              'Yurtdışındaki freight forwarder, NVOCC, carrier ve lojistik hizmet sağlayıcılarıyla kurulan stratejik partner ağının yönetildiği yapı.',
+          },
+        ],
+      },
+      today: {
+        badge: 'Bugün',
+        title: 'Lojistik. Teknoloji. Ağ. Tek Ekosistem.',
+        paragraphs: [
+          "Bugün Filenders; denizyolu ve havayolu forwarding'den proje lojistiğine, karayolu ve intermodal taşımacılıktan global partner yönetimine, shipment visibility'den maliyet kontrolüne kadar farklı yetkinlikleri tek bir işletim modeli altında birleştirmektedir.",
+          'Şirketin önemli farklarından biri, teknolojinin gerçek lojistik operasyonlarından beslenmesidir. Geliştirilen sistemler teorik senaryolardan değil; sahadaki fiyatlandırma, taşıma, dokümantasyon, tedarikçi, finans ve müşteri yönetimi ihtiyaçlarından doğmaktadır.',
+          'Filenders aynı zamanda LojiDer, UTİKAD, Yük Mühendisleri Birliği (ALESC), Mersin Technoscope / Teknopark ve Mersin Deniz Ticaret Odası gibi sektörel ve kurumsal yapılardaki bağlantılarıyla ekosistem içindeki yerini güçlendirmektedir.',
+        ],
+      },
+      future: {
+        badge: 'Gelecek',
+        title: 'Global Lojistiğin İşletim Sistemini İnşa Ediyoruz.',
+        paragraphs: [
+          'Bir sonraki hedef yalnızca daha fazla taşıma yapmak değil; müşterileri, taşıyıcıları, servis sağlayıcıları ve global partnerleri aynı teknoloji altyapısı üzerinden birbirine bağlayan ölçeklenebilir bir lojistik ekosistemi oluşturmaktır.',
+          'Yapay zekâ destekli operasyon yönetimi, anlık fiyatlandırma, predictive logistics, shipment visibility, digital procurement, contract management, landed cost ve supply chain analytics bu dönüşümün temel parçalarını oluşturacaktır.',
+          "Filenders'in uzun vadeli vizyonu, Türkiye'nin jeostratejik avantajını saha tecrübesi ve teknolojiyle birleştirerek Avrupa, Türkiye, Orta Doğu ve Levant arasındaki ticaret akışlarında güçlü, güvenilir ve veri odaklı bir global supply chain platformu oluşturmaktır.",
+        ],
+      },
+      closing: 'Discover the True Path.',
+    },
     cta: {
-      titlePrefix: 'Operasyonunuzu',
-      titleHighlight: 'birlikte',
-      titleSuffix: 'büyütelim',
-      lede: 'Lojistik ihtiyaçlarınız ya da teknoloji projeleriniz için ekibimizle iletişime geçin.',
       statusBadge: 'Yeni Projelere Açığız',
       successBadge: 'Harika',
       successHeading: 'Hemen Konuşalım',
       successSubtext: 'Ekibimiz genellikle 1 iş günü içinde dönüş yapar',
+      form: {
+        title: 'Bizimle İletişime Geçin',
+        description:
+          'Hizmetlerimiz veya teknoloji çözümlerimiz hakkında sorularınız mı var? Formu doldurun, ekibimiz genellikle 1 iş günü içinde size dönüş yapar.',
+        emailLabel: 'E-posta',
+        phoneLabel: 'Telefon',
+        addressLabel: 'Adres',
+        name: 'Ad Soyad',
+        email: 'E-posta',
+        phone: 'Telefon',
+        message: 'Mesaj',
+        submit: 'Gönder',
+        subjectPrefix: 'Web Sitesi İletişim Formu',
+      },
     },
     footer: {
       brandDesc: 'Lojistik ve teknolojiyi tek çatı altında birleştiren güvenilir çözüm ortağınız.',
       servicesTitle: 'Hizmetlerimiz',
+      companyTitle: 'Kurumsal',
+      legalTitle: 'Yasal',
       contactTitle: 'İletişim',
       rdCenter: 'Ar-Ge Merkezi',
       address: 'Mersin Üniversitesi Çiftlikköy Kampüsü Teknopark, 1. Kuluçka Binası 35B/B02, Yenişehir/Mersin',
       rights: 'Tüm hakları saklıdır.',
+    },
+    legalNotice: {
+      back: 'Ana sayfaya dön',
+      badge: 'Yasal',
+      title: 'Yasal Bildirim',
+      updated: 'Son güncelleme: Eylül 2026',
+      intro:
+        'Bu sayfa, filenders.com web sitesinin işletmecisine ve siteyle ilgili yasal sorumluluklara dair bilgi sağlar.',
+      sections: [
+        {
+          title: 'İşletmeci Bilgileri',
+          body: [
+            'Bu web sitesi Filentech tarafından, Filenders Lojistik ve Teknoloji markası altında işletilmektedir.',
+            'Adres: Mersin Üniversitesi Çiftlikköy Kampüsü Teknopark, 1. Kuluçka Binası 35B/B02, Yenişehir/Mersin, Türkiye',
+            'D-U-N-S® No: 751133530',
+          ],
+        },
+        {
+          title: 'İletişim',
+          body: ['E-posta: info@filenders.com', 'Telefon: +90 324 503 8433'],
+        },
+        {
+          title: 'İçerikten Sorumluluk',
+          body: [
+            'Bu sitede yer alan bilgiler yalnızca genel tanıtım ve bilgilendirme amaçlıdır; belirli bir taşıma, hizmet veya ticari işlem için teklif niteliği taşımaz. İçeriklerin doğruluğu ve güncelliği için gerekli özen gösterilmekle birlikte, Filenders içeriklerin eksiksizliği, doğruluğu veya güncelliği konusunda garanti vermez.',
+          ],
+        },
+        {
+          title: 'Bağlantılar İçin Sorumluluk',
+          body: [
+            'Sitemiz, üçüncü taraflara ait web sitelerine bağlantılar (örneğin Filentech, LinkedIn, Instagram) içerebilir. Bu bağlantılı sitelerin içeriği üzerinde kontrolümüz bulunmamaktadır ve içeriklerinden sorumlu değiliz. Bağlantılı sayfalar için sorumluluk ilgili işletmecilere aittir.',
+          ],
+        },
+        {
+          title: 'Telif Hakkı',
+          body: [
+            "Bu web sitesinde yer alan metin, görsel, logo ve tasarım unsurları Filenders/Filentech'e aittir veya kullanım hakkı Filenders'e verilmiştir. Önceden yazılı izin alınmaksızın çoğaltılamaz, dağıtılamaz veya ticari amaçla kullanılamaz.",
+          ],
+        },
+      ],
+      note: 'Ticaret sicil numarası, vergi dairesi ve vergi kimlik numarası gibi kurumsal sicil bilgileri, Filenders Hukuk ve Uyum ekibi tarafından tamamlanarak bu sayfada yayımlanacaktır.',
+    },
+    dataPrivacy: {
+      back: 'Ana sayfaya dön',
+      badge: 'Yasal',
+      title: 'Veri Gizliliği',
+      updated: 'Son güncelleme: Eylül 2026',
+      intro:
+        'Filenders, iletişim formları ve web sitesi aracılığıyla paylaştığınız kişisel verilerin gizliliğine ve güvenliğine önem verir. Bu sayfa, hangi verileri, neden ve nasıl işlediğimizi özetlemektedir.',
+      sections: [
+        {
+          title: 'Veri Sorumlusu',
+          body: [
+            'Filentech (Filenders Lojistik ve Teknoloji), Mersin Üniversitesi Çiftlikköy Kampüsü Teknopark, 1. Kuluçka Binası 35B/B02, Yenişehir/Mersin adresinde faaliyet göstermektedir. Veri gizliliğiyle ilgili sorularınız için compliance@filenders.com adresinden bize ulaşabilirsiniz.',
+          ],
+        },
+        {
+          title: 'Topladığımız Veriler',
+          body: [
+            'Web sitemizdeki iletişim ve teklif formlarını doldurduğunuzda; adınız, e-posta adresiniz, telefon numaranız ve mesaj içeriğiniz gibi bilgileri topluyoruz. Bunun dışında, sitenin çalışması için gerekli olan temel teknik veriler (tarayıcı türü, IP adresi gibi) sunucu düzeyinde işlenebilir.',
+          ],
+        },
+        {
+          title: 'Verilerin Kullanım Amacı',
+          body: [
+            'Paylaştığınız veriler; talebinizi yanıtlamak, teklif hazırlamak, iş ilişkimizi yönetmek ve yasal yükümlülüklerimizi yerine getirmek amacıyla kullanılır. Verileriniz pazarlama amacıyla üçüncü taraflara satılmaz.',
+          ],
+        },
+        {
+          title: 'Çerezler ve İzleme',
+          body: [
+            'filenders.com, sitenin temel işlevleri dışında reklam veya analiz amaçlı izleme çerezi kullanmamaktadır. Tarayıcınız, tema ve dil gibi tercihlerinizi yalnızca cihazınızda, tarafımıza iletilmeksizin saklayabilir.',
+          ],
+        },
+        {
+          title: 'Verilerin Paylaşımı',
+          body: [
+            'Talebinizin niteliğine göre, hizmetin sunulabilmesi için gerekli olduğu ölçüde verileriniz iş ortaklarımız, taşıyıcılarımız veya teknoloji sağlayıcılarımızla (örn. Filentech altyapısı) paylaşılabilir. Bu paylaşım her zaman amaçla sınırlı tutulur.',
+          ],
+        },
+        {
+          title: 'Haklarınız',
+          body: [
+            'Kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme, düzeltilmesini veya silinmesini isteme ve işlemeye itiraz etme gibi haklara sahip olabilirsiniz. Bu haklarınızı kullanmak için compliance@filenders.com adresinden bizimle iletişime geçebilirsiniz.',
+          ],
+        },
+      ],
+      note: 'Bu sayfa, veri işleme yaklaşımımızın bir özetidir. KVKK ve ilgili mevzuata tam uyumlu, kapsamlı Aydınlatma Metni Filenders Hukuk ve Uyum ekibi tarafından hazırlanarak yayımlanacaktır.',
+    },
+    codeOfConduct: {
+      back: 'Ana sayfaya dön',
+      badge: 'Yasal',
+      title: 'İş Etiği Kuralları',
+      subtitle: 'Etik ve İş Davranışı Standartları',
+      version: 'Sürüm 1.0 · Ocak 2023',
+      intro: [
+        'Bu sayfa, Filenders Lojistik & Teknoloji\'nin resmi "Code of Business Conduct" (İş Etiği Kuralları) belgesinin ana başlıklarını özetlemektedir. Belgenin tamamına, aşağıdaki bağlantıdan orijinal PDF olarak ulaşabilirsiniz.',
+        "Filenders'te başarı yalnızca ticari sonuçlarla değil, bu sonuçlara nasıl ulaşıldığıyla da ölçülür. Dürüstlük, yasalara uyum, saygı, şeffaflık ve hesap verebilirlik; müşterilerimizle, çalışanlarımızla, iş ortaklarımızla ve faaliyet gösterdiğimiz topluluklarla kurduğumuz ilişkilerin temelini oluşturur.",
+      ],
+      pillars: [
+        {
+          id: 'scope',
+          title: 'Amaç ve Kapsam',
+          body: 'Bu kurallar; yönetim kurulu üyeleri, kurucular, yöneticiler, çalışanlar ve Filenders adına faaliyet gösteren temsilciler, danışmanlar, taşıyıcılar, alt yükleniciler ile teknoloji sağlayıcıları dahil tüm üçüncü taraflar için asgari etik, yasal ve mesleki standartları belirler.',
+        },
+        {
+          id: 'principles',
+          title: 'Temel İlkeler ve Yasalara Uygunluk',
+          body: 'Filenders; dürüstlük, profesyonellik, adillik, nesnellik ve hesap verebilirlik ilkeleriyle faaliyet gösterir. Ticaret, gümrük, vergilendirme, rekabet, istihdam, veri koruma ve iş sağlığı-güvenliğine ilişkin tüm geçerli yasalara uyulur; sektör pratiği veya müşteri talebi bu kuralları ihlal eden bir davranışı haklı çıkarmaz.',
+        },
+        {
+          id: 'anticorruption',
+          title: 'Rüşvet ve Yolsuzlukla Mücadele',
+          body: 'Rüşvet ve yolsuzluğa karşı sıfır tolerans uygulanır. Kolaylaştırma ödemeleri, uygunsuz hediye ve ağırlamalar, çıkar çatışmaları ve ilişkili taraf işlemleri; şeffaf, belgelenmiş ve rekabetçi şartlarla yönetilmelidir.',
+        },
+        {
+          id: 'fairtrade',
+          title: 'Adil Ticaret ve Küresel Uyum',
+          body: 'Filenders serbest ve adil rekabeti destekler, uluslararası yaptırım ve ihracat kontrol gerekliliklerine uyar, gümrük ve transit beyanlarının doğruluğunu güvence altına alır ve kara para aklamaya karşı uyanık kalır.',
+        },
+        {
+          id: 'partners',
+          title: 'Müşteriler, Tedarikçiler ve Üçüncü Taraflar',
+          body: 'Müşterilere doğru bilgi, adil ticari şartlar ve güvenilir operasyonlar sunulur. İş ortağı seçimi yalnızca fiyata değil; uyumluluk, kapasite, güvenilirlik ve finansal istikrara dayanır; yüksek riskli üçüncü taraflara risk bazlı durum tespiti uygulanabilir.',
+        },
+        {
+          id: 'people',
+          title: 'İnsan Hakları, Eşitlik ve İş Sağlığı-Güvenliği',
+          body: 'Zorla çalıştırma, modern kölelik, insan ticareti ve yasa dışı çocuk işçiliği kabul edilmez; ayrımcılık, taciz ve zorbalığa karşı sıfır tolerans uygulanır. Hiçbir operasyon insan sağlığı ve güvenliğinden daha önemli değildir; tehlikeli madde ve kısıtlı kargo işlemleri yalnızca geçerli mevzuata uygun şekilde yürütülür.',
+        },
+        {
+          id: 'environment',
+          title: 'Çevre ve Sürdürülebilirlik',
+          body: 'Filenders, lojistik faaliyetlerinin çevresel etkisinin farkındadır ve rota optimizasyonu, multimodal çözümler, teknoloji ve enerji verimliliği yoluyla bu etkiyi azaltmayı hedefler.',
+        },
+        {
+          id: 'data',
+          title: 'Kayıtlar, Gizlilik ve Teknolojinin Sorumlu Kullanımı',
+          body: "Finansal ve operasyonel kayıtlar doğru ve denetlenebilir olmalıdır. Müşteri verileri ve ticari sırlar yalnızca meşru iş amaçlarıyla kullanılır; kişisel veriler ilgili mevzuata uygun işlenir ve siber güvenlik olayları gecikmeksizin bildirilir. Yapay zekâ araçları verimlilik için kullanılabilir, ancak gizli müşteri veya finansal bilgiler onaylanmamış platformlara girilemez.",
+        },
+        {
+          id: 'assets',
+          title: 'Şirket Varlıkları, Fikri Mülkiyet ve Kurumsal İletişim',
+          body: "Şirket varlıkları esas olarak meşru iş amaçlarıyla kullanılır. Filenders'in marka, yazılım ve iş süreçleri korunan fikri mülkiyettir; kurumsal açıklamalar yalnızca yetkilendirilmiş kişiler tarafından yapılabilir.",
+        },
+        {
+          id: 'governance',
+          title: 'Bildirim, Denetim ve Yönetişim',
+          body: "Çalışanlar ve iş ortakları, iyi niyetli şüphelerini compliance@filenders.com adresine bildirmeye teşvik edilir; misilleme kesinlikle yasaktır. İhlaller uyarıdan sözleşme feshine kadar yaptırımlara yol açabilir ve iş ortakları risk bazlı denetime tabi tutulabilir.",
+        },
+      ],
+      decisionTest: {
+        title: 'Filenders Karar Testi',
+        intro: 'Bir eylemden emin olmadığınızda kendinize şu soruları sorun:',
+        questions: [
+          'Yasalara uygun mu?',
+          "Filenders politikalarıyla tutarlı mı?",
+          'Dürüst ve adil mi?',
+          'Müşteriye ve yönetime açıkça anlatabilir miyim?',
+          "Kamuoyuna açıklansa Filenders'in itibarına zarar verir mi?",
+          'Herkesin aynı şekilde davranmasını kabul eder miydik?',
+        ],
+        resolution:
+          "Herhangi bir cevap belirsizse: DUR – SOR – DOĞRULA – SONRA UYGULA. Şüphe duyduğunuzda harekete geçmeden önce compliance@filenders.com ile iletişime geçin.",
+        tagline: 'DUR – SOR – DOĞRULA – SONRA UYGULA.',
+      },
+      closingQuote: 'Dürüstlük, taviz vermediğimiz ilkemizdir.',
+      download: {
+        label: "Orijinal PDF'i İndir",
+        meta: 'PDF · 14 sayfa · İngilizce · Sürüm 1.0',
+        file: '/legal/Filenders_Code_of_Business_Conduct_EN.pdf',
+      },
     },
     projectDetail: {
       intro: [
@@ -290,7 +849,7 @@ export const translations = {
           body: 'Proje lojistiği çözümlerimizi, yük özellikleri ve operasyonel risklerin uzman planlama gerektirdiği sektörlere göre şekillendiriyoruz.',
           bullets: [
             'Enerji ve Güç Sistemleri',
-            'Oil & Gas',
+            'Petrol ve Doğal Gaz',
             'İnşaat ve Altyapı',
             'Otomotiv ve Ağır Araçlar',
             'Endüstriyel Üretim',
@@ -738,6 +1297,7 @@ export const translations = {
     },
     nav: {
       services: 'Services',
+      industries: 'Industries',
       about: 'About Us',
       memberships: 'Memberships',
       contact: 'Contact',
@@ -746,6 +1306,10 @@ export const translations = {
       langLabel: 'Language',
       menuOpen: 'Open menu',
       menuClose: 'Close menu',
+      legal: 'Legal',
+      legalNotice: 'Legal notice',
+      dataPrivacy: 'Data privacy',
+      codeOfConduct: 'Code of Business Conduct',
     },
     hero: {
       badge: 'Bringing Logistics and Technology Together',
@@ -817,27 +1381,45 @@ export const translations = {
     },
     whyus: {
       badge: 'Why Filenders?',
-      title: 'Four services, one force',
+      title: 'The Way We Move',
       lede:
-        'We develop transportation, technology, field operations and project logistics under the same roof, delivering the speed and foresight the industry needs.',
+        'Different markets. Different challenges. One mindset. At Filenders, culture is not a statement on the wall — it is how we make decisions, solve problems and move business forward.',
       points: [
         {
-          title: 'Reliability',
-          description: 'We deliver every shipment with an operation that keeps its word.',
+          title: 'Own the Outcome',
+          description:
+            'We take ownership from the first conversation to final delivery — accountability is not a department, it is a mindset.',
         },
         {
-          title: 'Traceability',
-          description: 'See exactly where your cargo is, at every moment, with full transparency.',
+          title: 'Move with Trust',
+          description:
+            'We communicate clearly, keep our commitments, and build relationships that last far beyond a single shipment.',
         },
         {
-          title: 'Technology-Driven',
-          description: 'We make operations smarter with software we build in-house.',
+          title: 'Make It Visible',
+          description:
+            'We reduce uncertainty through transparency, technology and real-time insight — better visibility means better decisions.',
         },
         {
-          title: 'End-to-End Service',
-          description: 'From transport to storage, a complete supply chain with a single point of contact.',
+          title: 'Think Ahead',
+          description:
+            'We question traditional methods and explore better ways to move goods and information — technology is part of how we think.',
+        },
+        {
+          title: 'One Team, No Silos',
+          description:
+            'Logistics, technology, operations and global partners work as one connected system, focused on the best outcome.',
+        },
+        {
+          title: 'Keep Moving Forward',
+          description:
+            'We measure, improve and evolve continuously — progress is not a project, it is part of our daily work.',
         },
       ],
+      closing: {
+        line1: 'Take ownership. Build trust. Stay visible. Think ahead. Work as one. Keep improving.',
+        line2: 'Discover the True Path.',
+      },
     },
     memberships: {
       back: 'Home',
@@ -896,23 +1478,560 @@ export const translations = {
         },
       ],
     },
+    industries: {
+      back: 'Home',
+      badge: 'Industries',
+      title: 'Industries We Serve',
+      tagline: 'Industry-Specific Logistics. Engineered Around Your Supply Chain.',
+      intro: [
+        'Every industry has different logistics requirements. Filenders combines freight forwarding, project logistics, multimodal transportation and technology to design logistics and supply chain solutions according to the operational realities of each industry.',
+        'From time-critical automotive components and finished vehicles to heavy industrial equipment, energy projects, chemicals, humanitarian cargo and complex cross-border movements, we manage logistics with a strong focus on operational control, visibility, risk management and cost efficiency.',
+      ],
+      sectors: [
+        {
+          id: 'automotive',
+          key: 'Automotive',
+          title: 'Automotive',
+          tagline: 'Integrated Logistics Solutions for Automotive Supply Chains',
+          body: [
+            'Automotive logistics requires speed, precision, visibility and strong operational coordination across suppliers, production facilities, ports, distribution hubs and final markets. Filenders provides integrated logistics solutions for automotive manufacturers, OEM suppliers, spare parts producers, vehicle distributors and regional automotive trading companies. Our capabilities cover both production-related cargo flows and finished vehicle logistics.',
+            'For finished vehicles, we organize transportation through specialized car carrier trailers, RoRo services and multimodal transport solutions. Depending on the origin, destination and project requirements, our services may include vehicle pickup, port-to-port and door-to-door transportation, regional distribution, transit vehicle movements, temporary HUB solutions, storage coordination and final dealer delivery.',
+            'Filenders also manages the transportation of commercial vehicles and transport equipment such as truck tractors, semi-trailers, commercial trucks, special vehicles and fleet relocation projects. The transportation method is selected according to vehicle dimensions, ground clearance, operational condition and final destination requirements.',
+            'For automotive manufacturers, distributors and trading companies operating across multiple markets, we develop regional HUB and distribution models. Vehicles can be consolidated at strategic gateway locations and distributed according to sales plans, customer orders or dealer requirements.',
+            'Türkiye can serve as a strategic automotive logistics HUB for distribution toward the Middle East, CIS, Central Asia and surrounding markets. By combining port operations, customs coordination, road transportation, RoRo services and our regional partner network, Filenders can manage transit vehicle movements from Türkiye to third-country destinations.',
+            'In addition to finished vehicle logistics, we support automotive production and aftermarket supply chains with OEM components, spare parts, emergency production materials, FTL and LTL transportation, ocean freight, time-critical air freight, supplier pickup management, cross-border transportation and supply chain visibility.',
+          ],
+          bullets: [],
+        },
+        {
+          id: 'energy',
+          key: 'Energy',
+          title: 'Energy & Power',
+          tagline: 'Project Logistics for Critical Energy Infrastructure',
+          body: [
+            'Energy and power projects often involve heavy, oversized and technically sensitive equipment requiring detailed engineering and transportation planning. Filenders develops project logistics and multimodal transportation solutions for power generation, transmission, distribution and renewable energy projects.',
+            'Depending on project requirements, we can combine heavy road transport, special equipment, breakbulk shipping, RoRo, containerized transport and multimodal solutions. Our project teams evaluate cargo dimensions, weight distribution, lifting requirements, route restrictions, port capabilities and final delivery conditions before defining the most suitable transport plan.',
+          ],
+          bullets: [
+            'Transformers',
+            'Generators',
+            'Turbines',
+            'Substation equipment',
+            'Electrical systems',
+            'Cable drums',
+            'Power plant equipment',
+            'Renewable energy components',
+            'Solar and wind energy equipment',
+          ],
+        },
+        {
+          id: 'oilgas',
+          key: 'Oil & Gas',
+          title: 'Oil & Gas',
+          tagline: 'Complex Logistics for Challenging Environments',
+          body: [
+            'Oil & Gas logistics requires operational experience, specialized equipment, regulatory awareness and reliable coordination across remote and difficult locations. Filenders supports the movement of industrial machinery, drilling equipment, pipes, valves, project cargo and other critical materials between manufacturers, ports, storage areas and project sites.',
+            'Our regional network allows us to develop logistics solutions across Türkiye, the Middle East, Central Asia and surrounding markets.',
+          ],
+          bullets: [
+            'Heavy and oversized transport',
+            'Breakbulk and conventional shipping',
+            'RoRo',
+            'FTL and special road transport',
+            'Multimodal transportation',
+            'Transit logistics',
+            'Site delivery coordination',
+            'Project cargo management',
+          ],
+        },
+        {
+          id: 'industrial',
+          key: 'Industrial',
+          title: 'Industrial & Manufacturing',
+          tagline: 'Connecting Global Production Networks',
+          body: [
+            'Industrial companies require reliable movement of raw materials, components, machinery and finished products between suppliers, factories and customers. Filenders supports manufacturers with integrated ocean, air, road and multimodal logistics solutions designed around production schedules and supply chain requirements.',
+            'Our objective is to support production continuity while improving visibility and control across the entire logistics flow.',
+          ],
+          bullets: [
+            'Supplier collections',
+            'Factory-to-factory transportation',
+            'Machinery transportation',
+            'Raw material logistics',
+            'Finished product distribution',
+            'Import and export freight management',
+            'Cross-trade shipments',
+            'Inventory and shipment visibility',
+            'Supply chain control tower solutions',
+          ],
+        },
+        {
+          id: 'construction',
+          key: 'Construction',
+          title: 'Construction & Infrastructure',
+          tagline: 'Logistics Behind Major Projects',
+          body: [
+            'Large construction and infrastructure projects often require the coordinated movement of machinery, structural components and oversized cargo. Filenders provides logistics solutions for construction, engineering and infrastructure projects from supplier location to final project site.',
+            'Each project is evaluated according to cargo dimensions, route conditions, delivery sequence, lifting requirements and site access conditions.',
+          ],
+          bullets: [
+            'Construction machinery',
+            'Steel structures',
+            'Prefabricated components',
+            'Industrial modules',
+            'Pipes and infrastructure equipment',
+            'Heavy construction materials',
+            'Special vehicles',
+            'Project equipment',
+          ],
+        },
+        {
+          id: 'machinery',
+          key: 'Mining',
+          title: 'Machinery & Mining',
+          tagline: 'Heavy Equipment. Engineered Transportation.',
+          body: [
+            'Industrial machinery and mining equipment frequently exceed standard transportation dimensions and weight limitations. Filenders designs logistics solutions according to cargo dimensions, weight distribution, loading method, route restrictions and final delivery conditions.',
+            'We focus on matching each piece of equipment with the most technically suitable transport method.',
+          ],
+          bullets: [
+            'Lowbed transportation',
+            'Extendable trailers',
+            'Modular axle systems',
+            'Flat Rack containers',
+            'Open Top containers',
+            'Breakbulk shipping',
+            'RoRo transportation',
+            'Multimodal transport',
+            'Heavy-lift coordination',
+          ],
+        },
+        {
+          id: 'chemicals',
+          key: 'Chemicals',
+          title: 'Chemicals & Special Cargo',
+          tagline: 'Controlled Logistics for Sensitive Cargo',
+          body: [
+            'Chemical and specialized industrial cargo requires accurate classification, documentation, regulatory compliance and careful operational planning. Filenders coordinates transportation solutions according to cargo characteristics, applicable regulations and safety requirements.',
+            'Our approach is based on controlled execution, qualified service providers and clear operational documentation.',
+          ],
+          bullets: [
+            'Ocean freight',
+            'Road transportation',
+            'Tank and specialized equipment',
+            'Dangerous goods transport through qualified providers',
+            'Temperature-controlled transportation',
+            'Special documentation',
+            'Port and terminal coordination',
+            'Cross-border and transit movements',
+          ],
+        },
+        {
+          id: 'healthcare',
+          key: 'Healthcare',
+          title: 'Healthcare & Medical',
+          tagline: 'Reliable Logistics for Sensitive and Time-Critical Cargo',
+          body: [
+            'Healthcare and medical logistics require reliability, speed and careful handling. Filenders supports manufacturers, distributors, healthcare suppliers and project organizations with international transportation solutions for medical equipment, healthcare products and urgent materials.',
+          ],
+          bullets: [
+            'Time-critical air freight',
+            'Temperature-sensitive cargo',
+            'Medical equipment transportation',
+            'Emergency spare parts',
+            'Door-to-door solutions',
+            'Cross-border transport',
+            'Shipment visibility',
+            'Priority operational handling',
+          ],
+        },
+        {
+          id: 'marine',
+          key: 'Marine',
+          title: 'Marine & Ship Spares',
+          tagline: 'Logistics for Maritime Operations',
+          body: [
+            'Ship spares and maritime equipment often need to reach vessels, ports and shipyards within strict operational timelines. Filenders provides logistics solutions for ship owners, ship managers, suppliers, shipyards and maritime service companies.',
+            'Our maritime and freight forwarding experience allows us to understand the importance of timing, documentation and port coordination in ship spare logistics.',
+          ],
+          bullets: [
+            'Urgent ship spare delivery',
+            'Air freight',
+            'Road transport',
+            'Port delivery',
+            'Shipyard logistics',
+            'Machinery and marine equipment transport',
+            'Cross-border movements',
+            'Time-critical logistics',
+          ],
+        },
+        {
+          id: 'defense',
+          key: 'Defense',
+          title: 'Defense & Government Projects',
+          tagline: 'Controlled Logistics for Mission-Critical Operations',
+          body: [
+            'Government and defense-related logistics require structured coordination, confidentiality, regulatory awareness and controlled execution. Filenders supports authorized projects involving specialized equipment, vehicles, machinery and project cargo through carefully selected transportation partners and operational procedures.',
+            'All such movements are handled subject to applicable laws, permits and regulatory approvals.',
+          ],
+          bullets: [
+            'Air freight',
+            'Road transportation',
+            'RoRo',
+            'Project cargo',
+            'Multimodal transport',
+            'Special equipment',
+            'Transit logistics',
+            'Remote-area deliveries',
+          ],
+        },
+        {
+          id: 'humanitarian',
+          key: 'Humanitarian',
+          title: 'Humanitarian & NGO Logistics',
+          tagline: 'Logistics Where Reliability Matters Most',
+          body: [
+            'Humanitarian and NGO operations often require transportation into regions where infrastructure, border processes and capacity can be challenging. Filenders develops flexible logistics solutions for humanitarian organizations, international institutions and project contractors operating across Türkiye, the Middle East, Central Asia and surrounding regions.',
+            'Our objective is to establish reliable logistics corridors even where conventional transportation networks may be limited.',
+          ],
+          bullets: [
+            'Emergency cargo transportation',
+            'Medical supplies',
+            'Relief materials',
+            'Equipment and vehicles',
+            'Cross-border transportation',
+            'Multimodal logistics',
+            'Remote-area deliveries',
+            'Time-critical movements',
+            'Transit cargo management',
+          ],
+        },
+        {
+          id: 'food',
+          key: 'Perishable',
+          title: 'Food & Temperature-Controlled Logistics',
+          tagline: 'Controlled Transport for Temperature-Sensitive Supply Chains',
+          body: [
+            'Food, beverage and temperature-sensitive products require reliable transport planning, equipment selection and operational monitoring. Filenders coordinates temperature-controlled transportation through selected reefer and refrigerated transport providers.',
+          ],
+          bullets: [
+            'Reefer container transportation',
+            'Refrigerated road transport',
+            'FTL and LTL cold-chain solutions',
+            'Port and terminal coordination',
+            'International import and export movements',
+            'Cross-border delivery',
+            'Temperature-sensitive distribution',
+          ],
+        },
+      ],
+      closing: {
+        line1: 'Industry-Specific Logistics. Engineered Around Your Supply Chain.',
+        line2: 'Discover the True Path.',
+      },
+    },
+    aboutUs: {
+      back: 'Home',
+      badge: 'Our Story',
+      title: 'Our Story & History',
+      tagline: 'From experience to technology. From Türkiye to the world.',
+      intro: [
+        'The Filenders story is more than the story of a company founded in 2022. It is the result of years of accumulated experience across seafaring, international freight forwarding, project logistics, road transportation, customs, asset management, sales and operations, brought together under one shared vision.',
+        'Over the years, we repeatedly observed the same structural challenges in logistics: fragmented processes, data held in disconnected systems, operations dependent on individuals, limited visibility and insufficient control for customers over their own supply chains. Filenders was created to address these challenges by combining operational expertise, technology, data and a trusted global partner network within one model.',
+        'For us, logistics is not simply about moving cargo from point A to point B. Real value comes from designing the right transport model, selecting the right providers, managing cost transparently, making operations visible and turning the entire supply chain into a measurable and manageable process.',
+      ],
+      timeline: [
+        {
+          year: '2022',
+          title: 'Foundation and a Shared Vision',
+          body: [
+            'Filenders Logistics & Technology was founded in Türkiye in 2022. From the beginning, the ambition was not to build a conventional freight forwarder, but a new-generation logistics organization combining field experience with technology, data and an international partner network.',
+            "Ocean, air, road, project and multimodal capabilities were developed under one roof, while the principle of operating through proprietary digital systems became part of the company's long-term vision.",
+          ],
+        },
+        {
+          year: '2023',
+          title: 'Operational Foundations and Digitalization',
+          body: [
+            "During the first growth phase, operational standards, supplier and customer management, quoting processes and international partner relations became more structured. Mersin's strategic position supported Filenders as an operational gateway to the Eastern Mediterranean, the Turkish market and regional transit corridors.",
+            'At the same time, the foundations of digital logistics management were developed around TMS, CRM, pricing, reporting and operational workflows. Technology was positioned not as a separate product beside operations, but as a core part of how the company would operate.',
+          ],
+        },
+        {
+          year: '2024',
+          title: 'Multimodal Capability and Global Network',
+          body: [
+            'Filenders expanded beyond conventional port-to-port forwarding and strengthened its expertise in project cargo, breakbulk, heavy and oversized cargo, intermodal and multimodal transportation.',
+            'Relationships with independent logistics companies, carriers and specialist service providers across Europe, the Americas, the Middle East and Asia were expanded. Türkiye increasingly became part of a wider strategy as an operational bridge connecting multiple trade corridors rather than simply an origin or destination market.',
+          ],
+        },
+        {
+          year: '2025',
+          title: 'Filentech and the Control Tower Model',
+          body: [
+            'The technology vision became more clearly structured under the Filentech brand. An integrated digital platform approach was developed around TMS, CRM, RFQ management, spot quoting, shipment management, tracking & visibility, financial management and reporting.',
+            "Together with this technology layer, Filenders' service model also evolved. A Supply Chain Control Tower approach took shape particularly for overseas importers and logistics companies, providing spot-market transparency, provider selection, contract management, operational management, visibility, cost control and real-time reporting.",
+            "Within this model, customers can retain the freedom to select their own logistics providers while using Filenders' in-house operational capabilities when required. This positioned Filenders increasingly at the decision and control layer of the supply chain, beyond the traditional buy-and-sell freight forwarding model.",
+          ],
+        },
+        {
+          year: '2026',
+          title: 'An Integrated Logistics Ecosystem',
+          body: [
+            'In 2026, the Filenders brand and business-unit structure evolved into a clearer ecosystem designed to connect freight forwarding, road and asset operations, technology and global partner management through one digital backbone.',
+            'Türkiye was positioned at the center of the Europe – Türkiye – Middle East – Levant corridor strategy. Mersin continued to grow in importance as a regional gateway and consolidation point for the Eastern Mediterranean, Iraq, Syria, GCC and Levant-related flows.',
+          ],
+        },
+      ],
+      units: {
+        title: '2026 Brand & Business Unit Structure',
+        items: [
+          {
+            id: 'logistics',
+            name: 'Filenders Logistics',
+            description:
+              'The core operating structure for ocean, air, project cargo, breakbulk and international freight forwarding services.',
+          },
+          {
+            id: 'filtrucks',
+            name: 'FILTRUCKS',
+            description: 'Road, intermodal, multimodal, special transportation, own-asset operations and fleet management.',
+          },
+          {
+            id: 'filentech',
+            name: 'Filentech',
+            description:
+              'The central technology platform for TMS, CRM, quoting, tracking, customer and supplier portals, finance, AI and Control Tower solutions.',
+          },
+          {
+            id: 'filenetwork',
+            name: 'Filenetwork',
+            description:
+              'The business unit managing strategic relationships with overseas freight forwarders, NVOCCs, carriers and logistics service providers.',
+          },
+        ],
+      },
+      today: {
+        badge: 'Today',
+        title: 'Logistics. Technology. Network. One Ecosystem.',
+        paragraphs: [
+          'Today, Filenders brings together a broad range of capabilities under one operating model: ocean and air forwarding, project logistics, road and intermodal transportation, global partner management, shipment visibility and cost control.',
+          "A key differentiator is that Filenders' technology is built from real logistics operations. The systems are shaped not by theoretical scenarios but by practical requirements in pricing, transportation, documentation, supplier management, finance and customer operations.",
+          'Filenders also strengthens its position in the wider logistics ecosystem through memberships and affiliations including LojiDer, UTIKAD, the Association of Load Engineering Services Cooperation (ALESC), Mersin Technoscope / Teknopark and the Mersin Chamber of Shipping.',
+        ],
+      },
+      future: {
+        badge: 'The Future',
+        title: 'Building the Operating System of Global Logistics',
+        paragraphs: [
+          'The next objective is not simply to move more freight. It is to build a scalable logistics ecosystem that connects customers, carriers, service providers and global partners through one technology infrastructure.',
+          'AI-supported operational management, instant pricing, predictive logistics, shipment visibility, digital procurement, contract management, landed-cost management and supply-chain analytics will form important parts of this transformation.',
+          "Filenders' long-term vision is to combine Türkiye's geostrategic advantage with deep operational expertise and technology, creating a reliable, data-driven global supply-chain platform for trade flows across Europe, Türkiye, the Middle East and the Levant.",
+        ],
+      },
+      closing: 'Discover the True Path.',
+    },
     cta: {
-      titlePrefix: "Let's grow your",
-      titleHighlight: 'operation',
-      titleSuffix: 'together',
-      lede: 'Get in touch with our team for your logistics needs or technology projects.',
       statusBadge: 'Available for New Projects',
       successBadge: 'Perfect',
       successHeading: "Let's Talk",
       successSubtext: 'Our team typically responds within 1 business day',
+      form: {
+        title: 'Get in Touch',
+        description:
+          'Have questions about our services or technology solutions? Fill out the form and our team will typically get back to you within 1 business day.',
+        emailLabel: 'Email',
+        phoneLabel: 'Phone',
+        addressLabel: 'Address',
+        name: 'Full Name',
+        email: 'Email',
+        phone: 'Phone',
+        message: 'Message',
+        submit: 'Submit',
+        subjectPrefix: 'Website Contact Form',
+      },
     },
     footer: {
       brandDesc: 'Your reliable partner, uniting logistics and technology under one roof.',
       servicesTitle: 'Services',
+      companyTitle: 'Company',
+      legalTitle: 'Legal',
       contactTitle: 'Contact',
       rdCenter: 'R&D Center',
       address: 'Mersin University Çiftlikköy Campus Technopark, Incubation Building 1, 35B/B02, Yenişehir/Mersin',
       rights: 'All rights reserved.',
+    },
+    legalNotice: {
+      back: 'Back to home',
+      badge: 'Legal',
+      title: 'Legal Notice',
+      updated: 'Last updated: September 2026',
+      intro:
+        'This page provides information about the operator of the filenders.com website and its legal responsibilities.',
+      sections: [
+        {
+          title: 'Operator Information',
+          body: [
+            'This website is operated by Filentech under the Filenders Logistics and Technology brand.',
+            'Address: Mersin University Çiftlikköy Campus Technopark, Incubation Building 1, 35B/B02, Yenişehir/Mersin, Türkiye',
+            'D-U-N-S® No: 751133530',
+          ],
+        },
+        {
+          title: 'Contact',
+          body: ['Email: info@filenders.com', 'Phone: +90 324 503 8433'],
+        },
+        {
+          title: 'Responsibility for Content',
+          body: [
+            'The information on this site is provided for general information and promotional purposes only and does not constitute a binding offer for any specific transport, service or commercial transaction. While we take reasonable care to keep content accurate and up to date, Filenders makes no warranty as to the completeness, accuracy or timeliness of the content.',
+          ],
+        },
+        {
+          title: 'Responsibility for Links',
+          body: [
+            'Our site may contain links to third-party websites (for example Filentech, LinkedIn, Instagram). We have no control over the content of these linked sites and accept no responsibility for it. Responsibility for linked pages rests with their respective operators.',
+          ],
+        },
+        {
+          title: 'Copyright',
+          body: [
+            'The text, images, logos and design elements on this website are owned by, or licensed to, Filenders/Filentech. They may not be reproduced, distributed or used for commercial purposes without prior written consent.',
+          ],
+        },
+      ],
+      note: "Corporate registration details such as trade registry, tax office and tax identification numbers will be completed and published on this page by Filenders' Legal & Compliance team.",
+    },
+    dataPrivacy: {
+      back: 'Back to home',
+      badge: 'Legal',
+      title: 'Data Privacy',
+      updated: 'Last updated: September 2026',
+      intro:
+        'Filenders values the privacy and security of the personal data you share through our contact forms and website. This page summarizes what data we process, why, and how.',
+      sections: [
+        {
+          title: 'Data Controller',
+          body: [
+            'Filentech (Filenders Logistics and Technology) operates from Mersin University Çiftlikköy Campus Technopark, Incubation Building 1, 35B/B02, Yenişehir/Mersin. For privacy-related questions, you can reach us at compliance@filenders.com.',
+          ],
+        },
+        {
+          title: 'Data We Collect',
+          body: [
+            'When you complete a contact or quotation form on our website, we collect information such as your name, email address, phone number and message content. Beyond this, basic technical data required for the site to function (such as browser type and IP address) may be processed at server level.',
+          ],
+        },
+        {
+          title: 'Purpose of Processing',
+          body: [
+            'The data you share is used to respond to your inquiry, prepare a quotation, manage our business relationship and meet our legal obligations. Your data is not sold to third parties for marketing purposes.',
+          ],
+        },
+        {
+          title: 'Cookies and Tracking',
+          body: [
+            'filenders.com does not use advertising or analytics tracking cookies beyond what is essential to the site. Your browser may store preferences such as theme and language locally on your device only, without transmitting them to us.',
+          ],
+        },
+        {
+          title: 'Sharing of Data',
+          body: [
+            'Depending on the nature of your request, your data may be shared with our business partners, carriers or technology providers (such as the Filentech platform) to the extent necessary to deliver the service. Any such sharing is always limited to that purpose.',
+          ],
+        },
+        {
+          title: 'Your Rights',
+          body: [
+            'You may have rights to find out whether your personal data is being processed, to request information about it, to request correction or deletion, and to object to processing. You can exercise these rights by contacting us at compliance@filenders.com.',
+          ],
+        },
+      ],
+      note: "This page summarizes our approach to data processing. A complete, jurisdiction-specific Privacy Notice will be prepared and published by Filenders' Legal & Compliance team.",
+    },
+    codeOfConduct: {
+      back: 'Back to home',
+      badge: 'Legal',
+      title: 'Code of Business Conduct',
+      subtitle: 'Ethics & Business Conduct Standards',
+      version: 'Version 1.0 · January 2023',
+      intro: [
+        "This page summarizes the key pillars of Filenders Logistics & Technology's official Code of Business Conduct. The full document is available to download as the original PDF below.",
+        'At Filenders, success is measured not only by commercial results, but also by how those results are achieved. Integrity, compliance with law, respect, transparency and accountability are the foundations of our relationships with customers, employees, business partners and the communities in which we operate.',
+      ],
+      pillars: [
+        {
+          id: 'scope',
+          title: 'Purpose and Scope',
+          body: 'This Code sets the minimum ethical, legal and professional standards for Board members, founders, managers, employees and any representatives, consultants, carriers, subcontractors and technology providers acting for or on behalf of Filenders.',
+        },
+        {
+          id: 'principles',
+          title: 'Core Principles and Legal Compliance',
+          body: 'Filenders conducts business on the basis of honesty, professionalism, fairness, objectivity and accountability. Applicable laws on trade, customs, taxation, competition, employment, data protection and health and safety must be followed; an industry practice or customer request never justifies a violation.',
+        },
+        {
+          id: 'anticorruption',
+          title: 'Anti-Bribery and Corruption',
+          body: 'Filenders maintains zero tolerance for bribery and corruption. Facilitation payments, improper gifts and hospitality, conflicts of interest and related-party transactions must be handled transparently, on documented and competitive terms.',
+        },
+        {
+          id: 'fairtrade',
+          title: 'Fair Trade and Global Compliance',
+          body: 'Filenders supports free and fair competition, complies with international sanctions and export-control requirements, ensures the accuracy of customs and transit declarations, and remains alert to money-laundering risk indicators.',
+        },
+        {
+          id: 'partners',
+          title: 'Customers, Suppliers and Third Parties',
+          body: 'Customers receive accurate information, fair commercial terms and reliable operations. Partner selection weighs compliance, capability, reliability and financial stability alongside price, and higher-risk third parties may be subject to risk-based due diligence.',
+        },
+        {
+          id: 'people',
+          title: 'Human Rights, Equality and Health & Safety',
+          body: 'Forced labour, modern slavery, human trafficking and unlawful child labour are never accepted, and there is zero tolerance for discrimination, harassment or bullying. No operation is more important than human health and safety, and dangerous goods and restricted cargo are handled strictly in line with applicable law.',
+        },
+        {
+          id: 'environment',
+          title: 'Environment and Sustainability',
+          body: 'Filenders recognizes the environmental impact of logistics and seeks to reduce it through route optimization, multimodal solutions, technology and energy efficiency.',
+        },
+        {
+          id: 'data',
+          title: 'Records, Confidentiality and Responsible Technology Use',
+          body: 'Financial and operational records must be accurate and auditable. Customer data and trade secrets are used only for legitimate business purposes, personal data is processed in line with applicable law, and cybersecurity incidents are reported without delay. AI tools may support productivity, but confidential customer or financial data must never be entered into unapproved platforms.',
+        },
+        {
+          id: 'assets',
+          title: 'Company Assets, IP and Corporate Communications',
+          body: "Company assets are used primarily for legitimate business purposes. Filenders' brand, software and business processes are protected intellectual property, and public or corporate statements may only be made by authorized persons.",
+        },
+        {
+          id: 'governance',
+          title: 'Speaking Up, Audits and Governance',
+          body: 'Employees and business partners are encouraged to raise good-faith concerns at compliance@filenders.com, and retaliation is strictly prohibited. Violations can lead to consequences ranging from a warning to termination of contract, and business partners may be subject to risk-based audits.',
+        },
+      ],
+      decisionTest: {
+        title: 'The Filenders Decision Test',
+        intro: 'When unsure about an action, ask yourself:',
+        questions: [
+          'Is it legal?',
+          'Is it consistent with Filenders policies?',
+          'Is it honest and fair?',
+          'Could I explain it openly to the customer and management?',
+          "Would public disclosure damage Filenders' reputation?",
+          'Would we accept everyone acting in the same way?',
+        ],
+        resolution:
+          'If any answer is unclear: STOP – ASK – VERIFY – THEN ACT. When in doubt, contact compliance@filenders.com before proceeding.',
+        tagline: 'STOP - ASK - VERIFY - THEN ACT.',
+      },
+      closingQuote: 'Integrity is not negotiable.',
+      download: {
+        label: 'Download the Original PDF',
+        meta: 'PDF · 14 pages · English · Version 1.0',
+        file: '/legal/Filenders_Code_of_Business_Conduct_EN.pdf',
+      },
     },
     projectDetail: {
       intro: [

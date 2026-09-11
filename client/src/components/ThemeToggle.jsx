@@ -2,21 +2,11 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { SunIcon, MoonIcon } from './icons'
 
-function getInitialTheme() {
-  if (typeof document === 'undefined') return 'dark'
-  return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark'
-}
-
 export default function ThemeToggle({ className = '' }) {
-  const [theme, setTheme] = useState(getInitialTheme)
+  const [theme, setTheme] = useState('dark')
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
-    try {
-      localStorage.setItem('filenders-theme', theme)
-    } catch {
-      /* localStorage erişilemez olabilir, sorun değil */
-    }
   }, [theme])
 
   const toggle = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))

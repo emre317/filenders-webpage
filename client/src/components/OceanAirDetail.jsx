@@ -63,7 +63,7 @@ function HeroSplit({ title, tagline }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.15, ease: EASE }}
       >
-        <h2>{title}</h2>
+        <h2 className="text-gradient">{title}</h2>
         <p>{tagline}</p>
       </motion.div>
     </div>
@@ -298,7 +298,7 @@ export default function OceanAirDetail({ division, contactCta }) {
 
       <div className="oa-hero-actions">
         <span className="badge">{detail.badge}</span>
-        <a href="#iletisim" className="btn btn-primary btn-lg">
+        <a href="#contact" className="btn btn-primary btn-lg">
           {contactCta}
           <ArrowRightIcon width={16} height={16} />
         </a>
@@ -429,7 +429,7 @@ export default function OceanAirDetail({ division, contactCta }) {
         <div className="oa-closing-content">
           <p className="oa-closing-line">{detail.closing.line1}</p>
           <p className="oa-closing-tagline">{detail.closing.line2}</p>
-          <a href="#iletisim" className="btn btn-primary btn-lg">
+          <a href="#contact" className="btn btn-primary btn-lg">
             {contactCta}
             <ArrowRightIcon width={16} height={16} />
           </a>

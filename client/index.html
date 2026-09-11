@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="tr">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/logo.png" />
@@ -15,24 +15,6 @@
       rel="stylesheet"
     />
     <title>Filenders — Lojistik &amp; Teknoloji</title>
-    <script>
-      (function () {
-        try {
-          var saved = localStorage.getItem('filenders-theme');
-          var theme = saved === 'light' || saved === 'dark' ? saved : 'dark';
-          document.documentElement.setAttribute('data-theme', theme);
-        } catch (e) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-        }
-        try {
-          var savedLang = localStorage.getItem('filenders-lang');
-          var lang = savedLang === 'tr' || savedLang === 'en' ? savedLang : 'tr';
-          document.documentElement.setAttribute('lang', lang);
-        } catch (e) {
-          document.documentElement.setAttribute('lang', 'tr');
-        }
-      })();
-    </script>
   </head>
   <body>
     <div id="root"></div>

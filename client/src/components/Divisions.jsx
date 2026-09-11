@@ -238,7 +238,7 @@ export default function Divisions({ active, onActiveChange }) {
   const logoRotate = useTransform([logoSpin, ringRotate], ([spin, ring]) => spin - ring)
 
   return (
-    <section id="bolumler" className="divisions">
+    <section id="services" className="divisions">
       {!active && (
         <motion.div
           className="divisions-head"

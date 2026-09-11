@@ -5,29 +5,54 @@ import { MenuIcon, CloseIcon, ChevronDownIcon, PlaneIcon, CpuIcon, TruckIcon, Cr
 import ThemeToggle from './ThemeToggle'
 import LanguageToggle from './LanguageToggle'
 import { useLanguage } from '../i18n/LanguageContext'
+import { DIVISION_TO_SLUG, LEGAL_SLUGS } from '../routes'
 
 const EASE = [0.16, 1, 0.3, 1]
 const divisionOrder = ['project', 'ground', 'freight', 'teknoloji']
 const divisionIcons = { freight: PlaneIcon, teknoloji: CpuIcon, ground: TruckIcon, project: CraneIcon }
 
-export default function Navbar({ onNavigateHome, onOpenMemberships, onSelectDivision }) {
+export default function Navbar({
+  onNavigateHome,
+  onOpenMemberships,
+  onOpenIndustries,
+  onOpenAbout,
+  onOpenLegal,
+  onSelectDivision,
+}) {
   const { t } = useLanguage()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
+  const [legalOpen, setLegalOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const [mobileLegalOpen, setMobileLegalOpen] = useState(false)
 
   const divisionItems = divisionOrder.map((id) => ({
     id,
+    href: `#${DIVISION_TO_SLUG[id]}`,
     label: t(`divisions.items.${id}.title`),
     icon: divisionIcons[id],
   }))
 
-  const links = [
-    { href: '#hakkimizda', label: t('nav.about'), onClick: onNavigateHome },
-    { href: '#uyelikler', label: t('nav.memberships'), onClick: onOpenMemberships },
-    { href: '#iletisim', label: t('nav.contact'), onClick: onNavigateHome },
+  const legalItems = [
+    { id: 'notice', label: t('nav.legalNotice') },
+    { id: 'privacy', label: t('nav.dataPrivacy') },
+    { id: 'conduct', label: t('nav.codeOfConduct') },
   ]
+
+  const links = [
+    { href: '#industries', label: t('nav.industries'), onClick: onOpenIndustries },
+    { href: '#about', label: t('nav.about'), onClick: onOpenAbout },
+    { href: '#memberships', label: t('nav.memberships'), onClick: onOpenMemberships },
+    { href: '#contact', label: t('nav.contact'), onClick: onNavigateHome },
+  ]
+
+  const selectLegal = (id) => {
+    onOpenLegal?.(id)
+    setLegalOpen(false)
+    setMobileLegalOpen(false)
+    setOpen(false)
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -51,7 +76,14 @@ export default function Navbar({ onNavigateHome, onOpenMemberships, onSelectDivi
       className={`navbar ${scrolled ? 'is-scrolled' : ''}`}
     >
       <div className="navbar-inner">
-        <a href="#top" className="navbar-brand" onClick={onNavigateHome}>
+        <a
+          href="#"
+          className="navbar-brand"
+          onClick={(e) => {
+            e.preventDefault()
+            onNavigateHome?.()
+          }}
+        >
           <img src={logo} alt="Filenders logo" className="navbar-logo" />
           <span className="navbar-brand-text">Filenders</span>
         </a>
@@ -63,7 +95,7 @@ export default function Navbar({ onNavigateHome, onOpenMemberships, onSelectDivi
             onMouseLeave={() => setServicesOpen(false)}
           >
             <a
-              href="#bolumler"
+              href="#services"
               className="navbar-dropdown-trigger"
               onClick={() => onNavigateHome?.()}
             >
@@ -82,7 +114,7 @@ export default function Navbar({ onNavigateHome, onOpenMemberships, onSelectDivi
                   {divisionItems.map((item) => (
                     <a
                       key={item.id}
-                      href="#bolumler"
+                      href={item.href}
                       className="navbar-dropdown-item"
                       onClick={() => selectDivision(item.id)}
                     >
@@ -102,12 +134,55 @@ export default function Navbar({ onNavigateHome, onOpenMemberships, onSelectDivi
               {link.label}
             </a>
           ))}
+
+          <div
+            className="navbar-dropdown"
+            onMouseEnter={() => setLegalOpen(true)}
+            onMouseLeave={() => setLegalOpen(false)}
+          >
+            <a
+              href={`#${LEGAL_SLUGS.notice}`}
+              className="navbar-dropdown-trigger"
+              onClick={(e) => {
+                e.preventDefault()
+                selectLegal('notice')
+              }}
+            >
+              {t('nav.legal')}
+              <ChevronDownIcon width={15} height={15} className="navbar-dropdown-caret" />
+            </a>
+            <AnimatePresence>
+              {legalOpen && (
+                <motion.div
+                  className="navbar-dropdown-panel navbar-dropdown-panel-legal"
+                  initial={{ opacity: 0, x: '-50%', y: -6 }}
+                  animate={{ opacity: 1, x: '-50%', y: 0 }}
+                  exit={{ opacity: 0, x: '-50%', y: -6 }}
+                  transition={{ duration: 0.2, ease: EASE }}
+                >
+                  {legalItems.map((item) => (
+                    <a
+                      key={item.id}
+                      href={`#${LEGAL_SLUGS[item.id]}`}
+                      className="navbar-dropdown-item"
+                      onClick={(e) => {
+                        e.preventDefault()
+                        selectLegal(item.id)
+                      }}
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </nav>
 
         <div className="navbar-actions">
           <LanguageToggle />
           <ThemeToggle />
-          <a href="#iletisim" className="btn btn-primary btn-sm" onClick={onNavigateHome}>
+          <a href="#contact" className="btn btn-primary btn-sm navbar-cta" onClick={onNavigateHome}>
             {t('nav.contactCta')}
           </a>
         </div>
@@ -149,7 +224,7 @@ export default function Navbar({ onNavigateHome, onOpenMemberships, onSelectDivi
                   transition={{ duration: 0.25, ease: EASE }}
                 >
                   {divisionItems.map((item) => (
-                    <a key={item.id} href="#bolumler" onClick={() => selectDivision(item.id)}>
+                    <a key={item.id} href={item.href} onClick={() => selectDivision(item.id)}>
                       <item.icon width={16} height={16} />
                       {item.label}
                     </a>
@@ -171,6 +246,47 @@ export default function Navbar({ onNavigateHome, onOpenMemberships, onSelectDivi
               {link.label}
             </a>
           ))}
+
+          <div className="navbar-mobile-group">
+            <button
+              type="button"
+              className="navbar-mobile-toggle"
+              onClick={() => setMobileLegalOpen((v) => !v)}
+              aria-expanded={mobileLegalOpen}
+            >
+              {t('nav.legal')}
+              <ChevronDownIcon
+                width={16}
+                height={16}
+                style={{ transform: mobileLegalOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
+              />
+            </button>
+            <AnimatePresence initial={false}>
+              {mobileLegalOpen && (
+                <motion.div
+                  className="navbar-mobile-submenu"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.25, ease: EASE }}
+                >
+                  {legalItems.map((item) => (
+                    <a
+                      key={item.id}
+                      href={`#${LEGAL_SLUGS[item.id]}`}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        selectLegal(item.id)
+                      }}
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
           <div className="navbar-mobile-lang">
             <span>{t('nav.langLabel')}</span>
             <LanguageToggle />
@@ -180,8 +296,8 @@ export default function Navbar({ onNavigateHome, onOpenMemberships, onSelectDivi
             <ThemeToggle />
           </div>
           <a
-            href="#iletisim"
-            className="btn btn-primary btn-sm"
+            href="#contact"
+            className="btn btn-primary btn-sm navbar-cta"
             onClick={() => {
               onNavigateHome?.()
               setOpen(false)

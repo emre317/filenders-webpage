@@ -1,16 +1,31 @@
 import { motion } from 'framer-motion'
 import logo from '../assets/logo.png'
-import { MailIcon, MapPinIcon } from './icons'
+import { MailIcon, MapPinIcon, PhoneIcon, LinkedinIcon, InstagramIcon, CpuIcon } from './icons'
 import { useLanguage } from '../i18n/LanguageContext'
+import { DIVISION_TO_SLUG } from '../routes'
 
 const divisionIds = ['project', 'ground', 'freight', 'teknoloji']
 
-export default function Footer({ onSelectDivision, onOpenMemberships }) {
+const socialLinks = [
+  { href: 'https://www.linkedin.com/company/filenders/', name: 'Linkedin', icon: LinkedinIcon },
+  { href: 'https://www.instagram.com/filenders.co/', name: 'Instagram', icon: InstagramIcon },
+  { href: 'https://filentech.com/auth/login', name: 'Filentech', icon: CpuIcon },
+]
+
+export default function Footer({
+  onSelectDivision,
+  onOpenMemberships,
+  onOpenIndustries,
+  onOpenAbout,
+  onOpenLegal,
+  onNavigateHome,
+}) {
   const { t } = useLanguage()
   const year = new Date().getFullYear()
 
-  const links = divisionIds.map((id) => ({
+  const serviceLinks = divisionIds.map((id) => ({
     id,
+    href: `#${DIVISION_TO_SLUG[id]}`,
     label: t(`divisions.items.${id}.title`),
   }))
 
@@ -25,29 +40,84 @@ export default function Footer({ onSelectDivision, onOpenMemberships }) {
         style={{ transformPerspective: 1000 }}
       >
         <div className="footer-brand">
-          <a href="#top" className="navbar-brand">
-            <img src={logo} alt="Filenders logo" className="navbar-logo" />
-            <span className="navbar-brand-text">
-              Filenders
-              <small>{t('hero.subtitle')}</small>
-            </span>
+          <a
+            href="#"
+            className="footer-logo"
+            onClick={(e) => {
+              e.preventDefault()
+              onNavigateHome?.()
+            }}
+          >
+            <img src={logo} alt="Filenders" className="footer-logo-icon" />
+            <span className="footer-logo-text">Filenders</span>
           </a>
+          <span className="footer-logo-tagline">{t('hero.tagline')}</span>
           <p>{t('footer.brandDesc')}</p>
+
+          <div className="footer-social">
+            {socialLinks.map(({ href, name, icon: Icon }) => (
+              <a key={name} href={href} target="_blank" rel="noopener noreferrer" aria-label={name} data-tooltip={name}>
+                <Icon width={18} height={18} />
+              </a>
+            ))}
+          </div>
         </div>
 
         <div className="footer-column">
           <h4>{t('footer.servicesTitle')}</h4>
           <ul>
-            {links.map((link) => (
+            {serviceLinks.map((link) => (
               <li key={link.id}>
-                <a href="#bolumler" onClick={() => onSelectDivision?.(link.id)}>
+                <a href={link.href} onClick={() => onSelectDivision?.(link.id)}>
                   {link.label}
                 </a>
               </li>
             ))}
+          </ul>
+        </div>
+
+        <div className="footer-column">
+          <h4>{t('footer.companyTitle')}</h4>
+          <ul>
             <li>
-              <a href="#uyelikler" onClick={() => onOpenMemberships?.()}>
+              <a href="#about" onClick={() => onOpenAbout?.()}>
+                {t('nav.about')}
+              </a>
+            </li>
+            <li>
+              <a href="#industries" onClick={() => onOpenIndustries?.()}>
+                {t('nav.industries')}
+              </a>
+            </li>
+            <li>
+              <a href="#memberships" onClick={() => onOpenMemberships?.()}>
                 {t('nav.memberships')}
+              </a>
+            </li>
+            <li>
+              <a href="#contact" onClick={() => onNavigateHome?.()}>
+                {t('nav.contact')}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="footer-column">
+          <h4>{t('footer.legalTitle')}</h4>
+          <ul>
+            <li>
+              <a href="#legal-notice" onClick={() => onOpenLegal?.('notice')}>
+                {t('nav.legalNotice')}
+              </a>
+            </li>
+            <li>
+              <a href="#data-privacy" onClick={() => onOpenLegal?.('privacy')}>
+                {t('nav.dataPrivacy')}
+              </a>
+            </li>
+            <li>
+              <a href="#code-of-conduct" onClick={() => onOpenLegal?.('conduct')}>
+                {t('nav.codeOfConduct')}
               </a>
             </li>
           </ul>
@@ -64,6 +134,7 @@ export default function Footer({ onSelectDivision, onOpenMemberships }) {
             </li>
             <li>
               <a href="tel:+903245038433" className="footer-contact">
+                <PhoneIcon width={16} height={16} />
                 +90 324 503 8433
               </a>
             </li>
@@ -76,6 +147,8 @@ export default function Footer({ onSelectDivision, onOpenMemberships }) {
           </ul>
         </div>
       </motion.div>
+
+      <div className="footer-divider" />
 
       <div className="footer-bottom">
         <p>

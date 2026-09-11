@@ -3,28 +3,15 @@ import { translations } from './translations'
 
 const LanguageContext = createContext(null)
 
-function getInitialLang() {
-  if (typeof document !== 'undefined') {
-    const attr = document.documentElement.getAttribute('lang')
-    if (attr === 'tr' || attr === 'en') return attr
-  }
-  return 'tr'
-}
-
 function resolve(dict, path) {
   return path.split('.').reduce((acc, key) => (acc && acc[key] !== undefined ? acc[key] : undefined), dict)
 }
 
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState(getInitialLang)
+  const [lang, setLang] = useState('en')
 
   useEffect(() => {
     document.documentElement.setAttribute('lang', lang)
-    try {
-      window.localStorage.setItem('filenders-lang', lang)
-    } catch {
-      /* localStorage erişilemez olabilir, sorun değil */
-    }
   }, [lang])
 
   const value = useMemo(() => {
