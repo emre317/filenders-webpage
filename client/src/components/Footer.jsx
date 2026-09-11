@@ -3,7 +3,7 @@ import logo from '../assets/logo.png'
 import { MailIcon, MapPinIcon } from './icons'
 import { useLanguage } from '../i18n/LanguageContext'
 
-const divisionIds = ['freight', 'teknoloji', 'ground', 'project']
+const divisionIds = ['project', 'ground', 'freight', 'teknoloji']
 
 export default function Footer({ onSelectDivision, onOpenMemberships }) {
   const { t } = useLanguage()

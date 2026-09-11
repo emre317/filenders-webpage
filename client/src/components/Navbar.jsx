@@ -7,7 +7,7 @@ import LanguageToggle from './LanguageToggle'
 import { useLanguage } from '../i18n/LanguageContext'
 
 const EASE = [0.16, 1, 0.3, 1]
-const divisionOrder = ['ground', 'freight', 'project', 'teknoloji']
+const divisionOrder = ['project', 'ground', 'freight', 'teknoloji']
 const divisionIcons = { freight: PlaneIcon, teknoloji: CpuIcon, ground: TruckIcon, project: CraneIcon }
 
 export default function Navbar({ onNavigateHome, onOpenMemberships, onSelectDivision }) {
@@ -53,10 +53,7 @@ export default function Navbar({ onNavigateHome, onOpenMemberships, onSelectDivi
       <div className="navbar-inner">
         <a href="#top" className="navbar-brand" onClick={onNavigateHome}>
           <img src={logo} alt="Filenders logo" className="navbar-logo" />
-          <span className="navbar-brand-text">
-            Filenders
-            <small>Lojistik &amp; Teknoloji</small>
-          </span>
+          <span className="navbar-brand-text">Filenders</span>
         </a>
 
         <nav className="navbar-links" aria-label="Primary">
@@ -77,9 +74,9 @@ export default function Navbar({ onNavigateHome, onOpenMemberships, onSelectDivi
               {servicesOpen && (
                 <motion.div
                   className="navbar-dropdown-panel"
-                  initial={{ opacity: 0, y: -6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -6 }}
+                  initial={{ opacity: 0, x: '-50%', y: -6 }}
+                  animate={{ opacity: 1, x: '-50%', y: 0 }}
+                  exit={{ opacity: 0, x: '-50%', y: -6 }}
                   transition={{ duration: 0.2, ease: EASE }}
                 >
                   {divisionItems.map((item) => (
