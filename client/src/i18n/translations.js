@@ -122,6 +122,7 @@ export const translations = {
           name: 'LojiDer – Lojistik Hizmet Sağlayıcılar Derneği',
           description:
             'LojiDer, Türkiye genelinde faaliyet gösteren lojistik hizmet sağlayıcılarını bir araya getirerek sektörün gelişimine, temsiline ve profesyonel standartlarının güçlendirilmesine katkı sağlar.',
+          url: 'https://www.lojider.org.tr/',
         },
         {
           id: 'utikad',
@@ -129,6 +130,7 @@ export const translations = {
           name: 'UTİKAD – Uluslararası Taşımacılık ve Lojistik Hizmet Üretenleri Derneği',
           description:
             'UTİKAD, uluslararası taşımacılık, forwarding ve lojistik hizmetleri alanında faaliyet gösteren şirketleri temsil eder ve sektör standartlarının ve uluslararası entegrasyonun gelişmesinde önemli rol oynar.',
+          url: 'https://www.utikad.org.tr/',
         },
         {
           id: 'ymb',
@@ -136,6 +138,7 @@ export const translations = {
           name: 'YMB – Yük Mühendisleri Birliği',
           description:
             'YMB; yük mühendisliği, ağır ve gabari dışı taşımacılık, proje kargo ve özel lojistik operasyonları alanında faaliyet gösteren profesyonelleri ve şirketleri bir araya getirir.',
+          url: 'https://ymbd.org/',
         },
         {
           id: 'technoscope',
@@ -143,6 +146,7 @@ export const translations = {
           name: 'Mersin Technoscope / Teknopark',
           description:
             'Mersin Technoscope; yazılım, dijital çözümler ve teknoloji odaklı iş modelleri geliştiren şirketleri destekleyen bir teknoloji ve inovasyon ekosistemidir. Filenders, teknoloji faaliyetlerini bu inovasyon odaklı yapı içerisinde geliştirmektedir.',
+          url: 'https://www.technoscope.com.tr/',
         },
         {
           id: 'mto',
@@ -150,6 +154,15 @@ export const translations = {
           name: 'Mersin Deniz Ticaret Odası',
           description:
             "Mersin Deniz Ticaret Odası, Türkiye'nin en önemli liman ve lojistik bölgelerinden biri olan Mersin'de deniz ticareti ekosistemini temsil eder ve destekler. Filenders'in Mersin denizcilik ekosistemiyle olan bağlantısı; denizyolu taşımacılığı, proje lojistiği, liman operasyonları ve uluslararası ticaretteki konumunu güçlendirmektedir.",
+          url: 'https://mdto.org.tr/',
+        },
+        {
+          id: 'filenetwork',
+          shortName: 'FileNetwork',
+          name: 'FileNetwork – Filenders Dijital İş Ortakları Ağı',
+          description:
+            "FileNetwork, Filenders'in kendi dijital iş ortakları platformudur; acente, taşıyıcı ve çözüm ortaklarımızı tek çatı altında buluşturarak operasyonel iş birliğini, bilgi paylaşımını ve sevkiyat koordinasyonunu güçlendirir.",
+          url: 'https://filentech.com/auth/login',
         },
       ],
     },
@@ -839,6 +852,7 @@ export const translations = {
           name: 'LojiDer – Logistics Service Providers Association',
           description:
             'LojiDer brings together logistics service providers across Türkiye, contributing to the development, representation and professional standards of the industry.',
+          url: 'https://www.lojider.org.tr/',
         },
         {
           id: 'utikad',
@@ -846,6 +860,7 @@ export const translations = {
           name: 'UTIKAD – Association of International Forwarding and Logistics Service Providers',
           description:
             'UTIKAD represents companies operating in international transportation, forwarding and logistics services, and plays a key role in advancing industry standards and international integration.',
+          url: 'https://www.utikad.org.tr/',
         },
         {
           id: 'ymb',
@@ -853,6 +868,7 @@ export const translations = {
           name: 'ALESC – Association of Load Engineers and Special Cargo',
           description:
             'ALESC brings together professionals and companies operating in load engineering, heavy and out-of-gauge transportation, project cargo and special logistics operations.',
+          url: 'https://ymbd.org/',
         },
         {
           id: 'technoscope',
@@ -860,6 +876,7 @@ export const translations = {
           name: 'Mersin Technoscope / Technopark',
           description:
             'Mersin Technoscope is a technology and innovation ecosystem supporting companies developing software, digital solutions and technology-driven business models. Filenders develops its technology activities within this innovation-focused structure.',
+          url: 'https://www.technoscope.com.tr/',
         },
         {
           id: 'mto',
@@ -867,6 +884,15 @@ export const translations = {
           name: 'Mersin Chamber of Shipping',
           description:
             "The Mersin Chamber of Shipping represents and supports the maritime trade ecosystem in Mersin, one of Türkiye's most important port and logistics regions. Filenders' connection to the Mersin maritime ecosystem strengthens its position in ocean freight, project logistics, port operations and international trade.",
+          url: 'https://mdto.org.tr/',
+        },
+        {
+          id: 'filenetwork',
+          shortName: 'FileNetwork',
+          name: 'FileNetwork – Filenders Digital Partner Network',
+          description:
+            "FileNetwork is Filenders' own digital partner platform, bringing our agents, carriers and solution partners together on a single platform to strengthen operational collaboration, information sharing and shipment coordination.",
+          url: 'https://filentech.com/auth/login',
         },
       ],
     },

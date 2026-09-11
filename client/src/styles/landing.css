@@ -3782,10 +3782,6 @@
   border-color: var(--color-primary);
 }
 
-.org-card-feature {
-  grid-column: span 2;
-}
-
 .org-card-ghost {
   position: absolute;
   right: -0.4rem;
@@ -3858,19 +3854,11 @@
   .org-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .org-card-feature {
-    grid-column: span 2;
-  }
 }
 
 @media (max-width: 640px) {
   .org-grid {
     grid-template-columns: 1fr;
-  }
-
-  .org-card-feature {
-    grid-column: span 1;
   }
 
   .org-card-ghost {

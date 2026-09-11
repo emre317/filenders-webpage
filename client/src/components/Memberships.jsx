@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useLanguage } from '../i18n/LanguageContext'
 import useTilt3D from '../hooks/useTilt3D'
-import { LinkIcon, CompassIcon, WeightIcon, CpuIcon, AnchorIcon, ArrowRightIcon } from './icons'
+import { LinkIcon, CompassIcon, WeightIcon, CpuIcon, AnchorIcon, UsersIcon, ArrowRightIcon } from './icons'
 
 const EASE = [0.16, 1, 0.3, 1]
 
@@ -12,6 +12,7 @@ const orgIcons = {
   ymb: WeightIcon,
   technoscope: CpuIcon,
   mto: AnchorIcon,
+  filenetwork: UsersIcon,
 }
 
 function ghostText(shortName) {
@@ -25,9 +26,12 @@ function OrgCard({ item, index }) {
   const { ref, tiltProps, glowX, glowY } = useTilt3D(6)
 
   return (
-    <motion.div
+    <motion.a
       ref={ref}
-      className={`org-card ${index === 0 ? 'org-card-feature' : ''}`}
+      href={item.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="org-card"
       initial={{ opacity: 0, y: 22, rotateX: 8 }}
       whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
       viewport={{ once: true, margin: '-10%' }}
@@ -48,7 +52,7 @@ function OrgCard({ item, index }) {
       <span className="org-card-link" aria-hidden="true">
         <LinkIcon width={14} height={14} />
       </span>
-    </motion.div>
+    </motion.a>
   )
 }
 
