@@ -1,3 +1,5 @@
+import { useId } from 'react'
+
 const base = {
   width: 20,
   height: 20,
@@ -358,6 +360,42 @@ export function InstagramIcon(props) {
       <rect x="3" y="3" width="18" height="18" rx="5" />
       <circle cx="12" cy="12" r="4" />
       <path d="M17.5 6.5h.01" />
+    </svg>
+  )
+}
+
+export function TurkeyFlagIcon({ width = 22, height = 16, className, ...rest }) {
+  return (
+    <svg width={width} height={height} viewBox="0 0 30 20" className={className} {...rest}>
+      <rect width="30" height="20" rx="2" fill="#E30A17" />
+      <circle cx="11.5" cy="10" r="5" fill="#fff" />
+      <circle cx="13" cy="10" r="4" fill="#E30A17" />
+      <polygon
+        points="16.5,7.7 17.03,9.27 18.69,9.29 17.36,10.28 17.85,11.86 16.5,10.9 15.15,11.86 15.64,10.28 14.31,9.29 15.97,9.27"
+        fill="#fff"
+      />
+    </svg>
+  )
+}
+
+export function UKFlagIcon({ width = 22, height = 16, className, ...rest }) {
+  const clipId = useId()
+  return (
+    <svg width={width} height={height} viewBox="0 0 30 20" className={className} {...rest}>
+      <clipPath id={clipId}>
+        <rect width="30" height="20" rx="2" />
+      </clipPath>
+      <g clipPath={`url(#${clipId})`}>
+        <rect width="30" height="20" fill="#00247D" />
+        <line x1="0" y1="0" x2="30" y2="20" stroke="#fff" strokeWidth="4.5" />
+        <line x1="30" y1="0" x2="0" y2="20" stroke="#fff" strokeWidth="4.5" />
+        <line x1="0" y1="0" x2="30" y2="20" stroke="#CF142B" strokeWidth="2" />
+        <line x1="30" y1="0" x2="0" y2="20" stroke="#CF142B" strokeWidth="2" />
+        <rect x="0" y="7.5" width="30" height="5" fill="#fff" />
+        <rect x="11.5" y="0" width="7" height="20" fill="#fff" />
+        <rect x="0" y="8.7" width="30" height="2.6" fill="#CF142B" />
+        <rect x="13" y="0" width="4" height="20" fill="#CF142B" />
+      </g>
     </svg>
   )
 }

@@ -17,6 +17,7 @@ export default function Footer({
   onOpenMemberships,
   onOpenIndustries,
   onOpenAbout,
+  onOpenBoardMessage,
   onOpenTrade,
   onOpenLegal,
   onNavigateHome,
@@ -83,6 +84,11 @@ export default function Footer({
             <li>
               <a href="#about" onClick={() => onOpenAbout?.()}>
                 {t('nav.about')}
+              </a>
+            </li>
+            <li>
+              <a href="#board-message" onClick={() => onOpenBoardMessage?.()}>
+                {t('nav.boardMessage')}
               </a>
             </li>
             <li>

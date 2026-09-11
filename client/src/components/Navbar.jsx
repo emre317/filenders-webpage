@@ -16,6 +16,7 @@ export default function Navbar({
   onOpenMemberships,
   onOpenIndustries,
   onOpenAbout,
+  onOpenBoardMessage,
   onOpenTrade,
   onOpenLegal,
   onSelectDivision,
@@ -24,8 +25,10 @@ export default function Navbar({
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
+  const [aboutMenuOpen, setAboutMenuOpen] = useState(false)
   const [legalOpen, setLegalOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false)
   const [mobileLegalOpen, setMobileLegalOpen] = useState(false)
 
   const divisionItems = divisionOrder.map((id) => ({
@@ -41,9 +44,9 @@ export default function Navbar({
     { id: 'conduct', label: t('nav.codeOfConduct') },
   ]
 
-  const linksBeforeServices = [
-    { href: '#about', label: t('nav.about'), onClick: onOpenAbout },
-    { href: '#industries', label: t('nav.industries'), onClick: onOpenIndustries },
+  const aboutItems = [
+    { id: 'about', href: '#about', label: t('nav.about'), onClick: onOpenAbout },
+    { id: 'board', href: '#board-message', label: t('nav.boardMessage'), onClick: onOpenBoardMessage },
   ]
 
   const linksAfterServices = [
@@ -51,6 +54,13 @@ export default function Navbar({
     { href: '#memberships', label: t('nav.memberships'), onClick: onOpenMemberships },
     { href: '#contact', label: t('nav.contact'), onClick: onNavigateHome },
   ]
+
+  const selectAbout = (item) => {
+    item.onClick?.()
+    setAboutMenuOpen(false)
+    setMobileAboutOpen(false)
+    setOpen(false)
+  }
 
   const selectLegal = (id) => {
     onOpenLegal?.(id)
@@ -94,11 +104,52 @@ export default function Navbar({
         </a>
 
         <nav className="navbar-links" aria-label="Primary">
-          {linksBeforeServices.map((link) => (
-            <a key={link.href} href={link.href} onClick={() => link.onClick?.()}>
-              {link.label}
+          <div
+            className="navbar-dropdown"
+            onMouseEnter={() => setAboutMenuOpen(true)}
+            onMouseLeave={() => setAboutMenuOpen(false)}
+          >
+            <a
+              href="#about"
+              className="navbar-dropdown-trigger"
+              onClick={(e) => {
+                e.preventDefault()
+                selectAbout(aboutItems[0])
+              }}
+            >
+              {t('nav.about')}
+              <ChevronDownIcon width={15} height={15} className="navbar-dropdown-caret" />
             </a>
-          ))}
+            <AnimatePresence>
+              {aboutMenuOpen && (
+                <motion.div
+                  className="navbar-dropdown-panel navbar-dropdown-panel-legal"
+                  initial={{ opacity: 0, x: '-50%', y: -6 }}
+                  animate={{ opacity: 1, x: '-50%', y: 0 }}
+                  exit={{ opacity: 0, x: '-50%', y: -6 }}
+                  transition={{ duration: 0.2, ease: EASE }}
+                >
+                  {aboutItems.map((item) => (
+                    <a
+                      key={item.id}
+                      href={item.href}
+                      className="navbar-dropdown-item"
+                      onClick={(e) => {
+                        e.preventDefault()
+                        selectAbout(item)
+                      }}
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <a href="#industries" onClick={() => onOpenIndustries?.()}>
+            {t('nav.industries')}
+          </a>
 
           <div
             className="navbar-dropdown"
@@ -191,8 +242,8 @@ export default function Navbar({
         </nav>
 
         <div className="navbar-actions">
-          <LanguageToggle />
           <ThemeToggle />
+          <LanguageToggle />
           <a href="#contact" className="btn btn-primary btn-sm navbar-cta" onClick={onNavigateHome}>
             {t('nav.contactCta')}
           </a>
@@ -211,18 +262,55 @@ export default function Navbar({
 
       {open && (
         <nav className="navbar-mobile" aria-label="Mobile">
-          {linksBeforeServices.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => {
-                link.onClick?.()
-                setOpen(false)
-              }}
+          <div className="navbar-mobile-group">
+            <button
+              type="button"
+              className="navbar-mobile-toggle"
+              onClick={() => setMobileAboutOpen((v) => !v)}
+              aria-expanded={mobileAboutOpen}
             >
-              {link.label}
-            </a>
-          ))}
+              {t('nav.about')}
+              <ChevronDownIcon
+                width={16}
+                height={16}
+                style={{ transform: mobileAboutOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
+              />
+            </button>
+            <AnimatePresence initial={false}>
+              {mobileAboutOpen && (
+                <motion.div
+                  className="navbar-mobile-submenu"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.25, ease: EASE }}
+                >
+                  {aboutItems.map((item) => (
+                    <a
+                      key={item.id}
+                      href={item.href}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        selectAbout(item)
+                      }}
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <a
+            href="#industries"
+            onClick={() => {
+              onOpenIndustries?.()
+              setOpen(false)
+            }}
+          >
+            {t('nav.industries')}
+          </a>
 
           <div className="navbar-mobile-group">
             <button

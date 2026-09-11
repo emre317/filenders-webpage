@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useLanguage } from '../i18n/LanguageContext'
+import { UKFlagIcon, TurkeyFlagIcon } from './icons'
 
 export default function LanguageToggle({ className = '' }) {
   const { lang, toggle } = useLanguage()
@@ -18,7 +19,7 @@ export default function LanguageToggle({ className = '' }) {
         animate={{ x: isEn ? 26 : 0 }}
         transition={{ type: 'spring', stiffness: 500, damping: 32 }}
       >
-        {lang.toUpperCase()}
+        {isEn ? <UKFlagIcon width={16} height={12} /> : <TurkeyFlagIcon width={16} height={12} />}
       </motion.span>
     </button>
   )

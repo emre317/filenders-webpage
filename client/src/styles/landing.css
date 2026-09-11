@@ -75,17 +75,6 @@
   font-size: var(--primitive-fontSize-base);
 }
 
-.navbar-cta {
-  background: linear-gradient(90deg, var(--color-accent), var(--color-danger));
-  color: #ffffff;
-  box-shadow: 0 8px 20px -8px rgb(239 68 68 / 0.55);
-}
-
-.navbar-cta:hover {
-  background: linear-gradient(90deg, var(--color-accent), var(--color-danger));
-  filter: brightness(1.08);
-}
-
 /* ==================== Page intro (shatter) ==================== */
 
 .page-intro {
@@ -336,10 +325,12 @@
   height: 18px;
   border-radius: 9999px;
   background: linear-gradient(90deg, var(--color-accent), var(--color-danger));
-  color: #ffffff;
-  font-size: 0.62rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
+  overflow: hidden;
+}
+
+.lang-toggle-thumb svg {
+  display: block;
+  border-radius: 2px;
 }
 
 .navbar-toggle {
@@ -4636,6 +4627,99 @@
   .trade-contact-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ==================== Board Message ==================== */
+
+.board-page {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: var(--spacing-section-y) 1.5rem;
+}
+
+.board-hero {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.board-hero h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0.9rem 0 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.board-subtitle {
+  font-size: var(--primitive-fontSize-lg);
+  font-weight: 700;
+  color: var(--color-primary);
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.board-body {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  color: var(--color-foreground-muted);
+  line-height: 1.85;
+  font-size: var(--primitive-fontSize-base);
+}
+
+.board-quote-mark {
+  display: block;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--color-primary);
+  opacity: 0.35;
+  margin-bottom: -1.75rem;
+}
+
+.board-body p {
+  margin-bottom: 1.25rem;
+}
+
+.board-body p:last-child {
+  margin-bottom: 0;
+}
+
+.board-closing {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: var(--primitive-radius-2xl);
+  border: 1px solid var(--color-border);
+  background: radial-gradient(circle at 50% 0%, var(--color-primary-subtle), var(--color-surface) 70%);
+}
+
+.board-closing-line {
+  font-size: var(--primitive-fontSize-lg);
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin-bottom: 0.4rem;
+}
+
+.board-closing-tagline {
+  margin-top: 1.25rem;
+  font-size: clamp(1.2rem, 2.6vw, 1.6rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-danger));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.board-signature {
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: var(--color-foreground-muted);
+  font-size: var(--primitive-fontSize-sm);
 }
 
 /* ==================== Legal Pages ==================== */

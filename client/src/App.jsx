@@ -7,6 +7,7 @@ import WhyUs from './components/WhyUs'
 import Memberships from './components/Memberships'
 import Industries from './components/Industries'
 import AboutUs from './components/AboutUs'
+import BoardMessage from './components/BoardMessage'
 import TradeSolutions from './components/TradeSolutions'
 import LegalNotice from './components/LegalNotice'
 import DataPrivacy from './components/DataPrivacy'
@@ -38,6 +39,7 @@ function initialRouteState() {
     industriesOpen: route.view === 'industries',
     industriesSector: route.view === 'industries' ? route.sector ?? null : null,
     aboutOpen: route.view === 'about',
+    boardMessageOpen: route.view === 'boardMessage',
     tradeOpen: route.view === 'trade',
     legalView: route.view === 'legal' ? route.id : null,
   }
@@ -45,7 +47,16 @@ function initialRouteState() {
 
 function App() {
   const [
-    { activeDivision, membershipsOpen, industriesOpen, industriesSector, aboutOpen, tradeOpen, legalView },
+    {
+      activeDivision,
+      membershipsOpen,
+      industriesOpen,
+      industriesSector,
+      aboutOpen,
+      boardMessageOpen,
+      tradeOpen,
+      legalView,
+    },
     setRoute,
   ] = useState(initialRouteState)
 
@@ -62,10 +73,12 @@ function App() {
       industriesOpen: false,
       industriesSector: null,
       aboutOpen: false,
+      boardMessageOpen: false,
       tradeOpen: false,
       legalView: null,
     })
     pushRoute('')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   const selectDivision = (id) => {
@@ -75,6 +88,7 @@ function App() {
       industriesOpen: false,
       industriesSector: null,
       aboutOpen: false,
+      boardMessageOpen: false,
       tradeOpen: false,
       legalView: null,
     })
@@ -88,6 +102,7 @@ function App() {
       industriesOpen: false,
       industriesSector: null,
       aboutOpen: false,
+      boardMessageOpen: false,
       tradeOpen: false,
       legalView: null,
     })
@@ -101,6 +116,7 @@ function App() {
       industriesOpen: true,
       industriesSector: sectorId ?? null,
       aboutOpen: false,
+      boardMessageOpen: false,
       tradeOpen: false,
       legalView: null,
     })
@@ -114,10 +130,25 @@ function App() {
       industriesOpen: false,
       industriesSector: null,
       aboutOpen: true,
+      boardMessageOpen: false,
       tradeOpen: false,
       legalView: null,
     })
     pushRoute('about')
+  }
+
+  const openBoardMessage = () => {
+    setRoute({
+      activeDivision: null,
+      membershipsOpen: false,
+      industriesOpen: false,
+      industriesSector: null,
+      aboutOpen: false,
+      boardMessageOpen: true,
+      tradeOpen: false,
+      legalView: null,
+    })
+    pushRoute('board-message')
   }
 
   const openTrade = () => {
@@ -127,6 +158,7 @@ function App() {
       industriesOpen: false,
       industriesSector: null,
       aboutOpen: false,
+      boardMessageOpen: false,
       tradeOpen: true,
       legalView: null,
     })
@@ -140,6 +172,7 @@ function App() {
       industriesOpen: false,
       industriesSector: null,
       aboutOpen: false,
+      boardMessageOpen: false,
       tradeOpen: false,
       legalView: view,
     })
@@ -147,7 +180,13 @@ function App() {
   }
 
   const showHomeChrome =
-    !activeDivision && !membershipsOpen && !industriesOpen && !aboutOpen && !tradeOpen && !legalView
+    !activeDivision &&
+    !membershipsOpen &&
+    !industriesOpen &&
+    !aboutOpen &&
+    !boardMessageOpen &&
+    !tradeOpen &&
+    !legalView
 
   return (
     <LanguageProvider>
@@ -159,19 +198,21 @@ function App() {
         onOpenMemberships={openMemberships}
         onOpenIndustries={openIndustries}
         onOpenAbout={openAbout}
+        onOpenBoardMessage={openBoardMessage}
         onOpenTrade={openTrade}
         onOpenLegal={openLegal}
         onSelectDivision={selectDivision}
       />
       <main id="top">
         {showHomeChrome && <Hero onOpenIndustries={openIndustries} />}
-        {!membershipsOpen && !industriesOpen && !aboutOpen && !tradeOpen && !legalView && (
+        {!membershipsOpen && !industriesOpen && !aboutOpen && !boardMessageOpen && !tradeOpen && !legalView && (
           <Divisions active={activeDivision} onActiveChange={selectDivision} />
         )}
         {showHomeChrome && <WhyUs />}
         {membershipsOpen && <Memberships onBack={goHome} />}
         {industriesOpen && <Industries onBack={goHome} initialSector={industriesSector} />}
         {aboutOpen && <AboutUs onBack={goHome} />}
+        {boardMessageOpen && <BoardMessage onBack={goHome} />}
         {tradeOpen && <TradeSolutions onBack={goHome} />}
         {legalView === 'notice' && <LegalNotice onBack={goHome} />}
         {legalView === 'privacy' && <DataPrivacy onBack={goHome} />}
@@ -183,6 +224,7 @@ function App() {
         onOpenMemberships={openMemberships}
         onOpenIndustries={openIndustries}
         onOpenAbout={openAbout}
+        onOpenBoardMessage={openBoardMessage}
         onOpenTrade={openTrade}
         onOpenLegal={openLegal}
         onNavigateHome={goHome}

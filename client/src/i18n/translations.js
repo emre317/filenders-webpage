@@ -2,7 +2,7 @@
 export const translations = {
   tr: {
     meta: {
-      title: 'Filenders — Lojistik & Teknoloji',
+      title: 'Filenders',
       description:
         'Filenders Lojistik ve Teknoloji — güvenilir taşımacılık ve akıllı lojistik teknolojileri tek çatı altında.',
     },
@@ -22,6 +22,7 @@ export const translations = {
       dataPrivacy: 'Veri Gizliliği',
       codeOfConduct: 'İş Etiği Kuralları',
       trade: 'Ticaret Çözümleri',
+      boardMessage: 'Yönetim Kurulu Mesajı',
     },
     hero: {
       badge: 'Lojistik ve Teknolojiyi Bir Araya Getiriyoruz',
@@ -844,6 +845,27 @@ export const translations = {
       address: 'Mersin Üniversitesi Çiftlikköy Kampüsü Teknopark, 1. Kuluçka Binası 35B/B02, Yenişehir/Mersin',
       rights: 'Tüm hakları saklıdır.',
     },
+    boardMessage: {
+      back: 'Ana Sayfa',
+      badge: '%100 Türk Sermayesi',
+      title: 'Yönetim Kurulu Mesajı',
+      subtitle: "Türkiye'den Doğan, Global Standartlarda Büyüyen Bir Lojistik ve Teknoloji Girişimi",
+      paragraphs: [
+        "Filenders'i kurarken hedefimiz yalnızca yeni bir lojistik şirketi oluşturmak değildi. Amacımız, %100 Türk sermayesiyle doğan; Türkiye'nin güçlü lojistik kabiliyetini teknoloji, operasyonel tecrübe ve uluslararası iş yapma standartlarıyla birleştiren yeni nesil bir yapı kurmaktı.",
+        'Bugün küresel tedarik zincirleri yalnızca taşıma kapasitesiyle yönetilemiyor. Müşteriler; görünürlük, hız, maliyet kontrolü, güçlü compliance süreçleri, doğru veri ve değişen koşullara hızlı uyum sağlayabilen lojistik ağlara ihtiyaç duyuyor.',
+        "Filenders'i bu yeni dönemin ihtiyaçlarına cevap verecek şekilde geliştiriyoruz.",
+        "Deniz ve hava freight forwarding, proje ve multimodal taşımacılık, karayolu ve intermodal çözümler ile teknoloji faaliyetlerimizi aynı ekosistem içinde bir araya getiriyoruz. Türkiye'nin Avrupa, CIS & Orta Asya, Orta Doğu ve GCC arasındaki stratejik konumunu kullanarak yeni ticaret koridorları oluşturuyor ve müşterilerimize alternatif, güvenilir ve entegre lojistik modeller sunuyoruz.",
+        "Filenders'in temel hedeflerinden biri, Türkiye'de kurulmuş bir şirketin global lojistik pazarında uluslararası standartlarda hizmet verebileceğini, rekabet edebileceğini ve kendi lojistik teknolojisini geliştirebileceğini göstermektir.",
+        'Bu nedenle kalite, şeffaflık, etik ticaret, kurumsal yönetim, compliance, veri güvenliği ve operasyonel mükemmeliyet bizim için yalnızca destekleyici unsurlar değil; iş modelimizin temel parçalarıdır.',
+        'Teknolojiyi operasyonlarımızın yanında duran bir araç olarak değil, şirketin ana işletim sistemi olarak görüyoruz. Filentech ile lojistik süreçlerini daha görünür, ölçülebilir ve yönetilebilir hale getiren dijital bir yapı geliştiriyoruz.',
+        "Amacımız yalnızca Türkiye'den dünyaya hizmet veren bir lojistik şirketi olmak değil; Türkiye'den doğmuş, global standartlarda çalışan, farklı coğrafyaları birbirine bağlayan ve teknoloji geliştiren güçlü bir uluslararası lojistik markası oluşturmaktır.",
+        'Büyümeyi yalnızca daha fazla iş yapmak olarak görmüyoruz. Doğru partnerlerle uzun vadeli ilişkiler kurmak, güçlü sistemler geliştirmek, sürdürülebilir değer yaratmak ve her yeni pazarda aynı hizmet standardını korumak bizim için büyümenin temelidir.',
+        "Filenders'in geleceğini; Türkiye merkezli, global ölçekte bağlantılı, teknoloji destekli ve yüksek operasyon standartlarına sahip bir lojistik ekosistemi olarak görüyoruz.",
+      ],
+      closingLines: ["Türkiye'den dünyaya", 'Küresel standartlarla şekillenen', 'Kalıcı değer yaratıyoruz'],
+      closingTagline: 'Discover the True Path',
+      signature: 'Filenders Yönetim Kurulu',
+    },
     legalNotice: {
       back: 'Ana sayfaya dön',
       badge: 'Yasal',
@@ -1564,7 +1586,7 @@ export const translations = {
   },
   en: {
     meta: {
-      title: 'Filenders — Logistics & Technology',
+      title: 'Filenders',
       description:
         'Filenders Logistics and Technology — reliable transportation and smart logistics technology under one roof.',
     },
@@ -1584,6 +1606,7 @@ export const translations = {
       dataPrivacy: 'Data privacy',
       codeOfConduct: 'Code of Business Conduct',
       trade: 'Trade Solutions',
+      boardMessage: 'Message from the Board',
     },
     hero: {
       badge: 'Bringing Logistics and Technology Together',
@@ -2406,6 +2429,27 @@ export const translations = {
       rdCenter: 'R&D Center',
       address: 'Mersin University Çiftlikköy Campus Technopark, Incubation Building 1, 35B/B02, Yenişehir/Mersin',
       rights: 'All rights reserved.',
+    },
+    boardMessage: {
+      back: 'Home',
+      badge: '100% Turkish Capital',
+      title: 'Message from the Board',
+      subtitle: 'Born in Türkiye. Built to Global Standards.',
+      paragraphs: [
+        "When we founded Filenders, our objective was not simply to create another logistics company. Our ambition was to build a new-generation logistics and technology organization, founded with 100% Turkish capital, combining Türkiye's strong logistics capabilities with technology, operational experience and international business standards.",
+        'Today, global supply chains can no longer be managed through transportation capacity alone. Customers require visibility, speed, cost control, strong compliance processes, reliable data and logistics networks capable of adapting quickly to changing market conditions.',
+        'Filenders is being built around these needs.',
+        "We bring together ocean and air freight forwarding, project and multimodal logistics, road and intermodal transportation and technology within one integrated ecosystem. By leveraging Türkiye's strategic position between Europe, CIS & Central Asia, the Middle East and GCC, we develop new trade corridors and provide customers with reliable, flexible and integrated logistics solutions.",
+        'One of our core ambitions is to demonstrate that a company founded in Türkiye can operate at global standards, compete internationally and develop its own logistics technology.',
+        'For this reason, quality, transparency, ethical business practices, corporate governance, compliance, data security and operational excellence are not supporting functions; they are fundamental parts of our business model.',
+        'We do not see technology simply as a tool supporting our operations. Through Filentech, we are developing a digital operating system that makes logistics processes more visible, measurable and manageable.',
+        'Our ambition is not only to become a logistics company serving the world from Türkiye, but to build a strong international logistics brand, born in Türkiye, operating at global standards, connecting regions and developing technology.',
+        'We believe growth is not only about doing more business. It is about building long-term partnerships, developing strong systems, creating sustainable value and maintaining the same service standards across every market in which we operate.',
+        'We see the future of Filenders as a Türkiye-based, globally connected, technology-enabled logistics ecosystem built on strong operational standards.',
+      ],
+      closingLines: ['From Türkiye to the world', 'Built to global standards', 'Creating long-term value'],
+      closingTagline: 'Discover the True Path',
+      signature: 'Filenders Board of Directors',
     },
     legalNotice: {
       back: 'Back to home',
