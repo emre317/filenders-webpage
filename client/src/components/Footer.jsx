@@ -17,6 +17,7 @@ export default function Footer({
   onOpenMemberships,
   onOpenIndustries,
   onOpenAbout,
+  onOpenTrade,
   onOpenLegal,
   onNavigateHome,
 }) {
@@ -87,6 +88,11 @@ export default function Footer({
             <li>
               <a href="#industries" onClick={() => onOpenIndustries?.()}>
                 {t('nav.industries')}
+              </a>
+            </li>
+            <li>
+              <a href="#trade" onClick={() => onOpenTrade?.()}>
+                {t('nav.trade')}
               </a>
             </li>
             <li>

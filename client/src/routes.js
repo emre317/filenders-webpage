@@ -23,7 +23,9 @@ export function getRouteFromHash() {
   const hash = window.location.hash.replace(/^#/, '')
   if (hash === 'about') return { view: 'about' }
   if (hash === 'industries') return { view: 'industries' }
+  if (hash.startsWith('industries-')) return { view: 'industries', sector: hash.slice('industries-'.length) }
   if (hash === 'memberships') return { view: 'memberships' }
+  if (hash === 'trade') return { view: 'trade' }
   if (SLUG_TO_LEGAL[hash]) return { view: 'legal', id: SLUG_TO_LEGAL[hash] }
   if (SLUG_TO_DIVISION[hash]) return { view: 'division', id: SLUG_TO_DIVISION[hash] }
   return { view: 'home' }

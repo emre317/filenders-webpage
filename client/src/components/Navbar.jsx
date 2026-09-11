@@ -16,6 +16,7 @@ export default function Navbar({
   onOpenMemberships,
   onOpenIndustries,
   onOpenAbout,
+  onOpenTrade,
   onOpenLegal,
   onSelectDivision,
 }) {
@@ -40,9 +41,13 @@ export default function Navbar({
     { id: 'conduct', label: t('nav.codeOfConduct') },
   ]
 
-  const links = [
-    { href: '#industries', label: t('nav.industries'), onClick: onOpenIndustries },
+  const linksBeforeServices = [
     { href: '#about', label: t('nav.about'), onClick: onOpenAbout },
+    { href: '#industries', label: t('nav.industries'), onClick: onOpenIndustries },
+  ]
+
+  const linksAfterServices = [
+    { href: '#trade', label: t('nav.trade'), onClick: onOpenTrade },
     { href: '#memberships', label: t('nav.memberships'), onClick: onOpenMemberships },
     { href: '#contact', label: t('nav.contact'), onClick: onNavigateHome },
   ]
@@ -89,6 +94,12 @@ export default function Navbar({
         </a>
 
         <nav className="navbar-links" aria-label="Primary">
+          {linksBeforeServices.map((link) => (
+            <a key={link.href} href={link.href} onClick={() => link.onClick?.()}>
+              {link.label}
+            </a>
+          ))}
+
           <div
             className="navbar-dropdown"
             onMouseEnter={() => setServicesOpen(true)}
@@ -129,7 +140,7 @@ export default function Navbar({
             </AnimatePresence>
           </div>
 
-          {links.map((link) => (
+          {linksAfterServices.map((link) => (
             <a key={link.href} href={link.href} onClick={() => link.onClick?.()}>
               {link.label}
             </a>
@@ -200,6 +211,19 @@ export default function Navbar({
 
       {open && (
         <nav className="navbar-mobile" aria-label="Mobile">
+          {linksBeforeServices.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => {
+                link.onClick?.()
+                setOpen(false)
+              }}
+            >
+              {link.label}
+            </a>
+          ))}
+
           <div className="navbar-mobile-group">
             <button
               type="button"
@@ -234,7 +258,7 @@ export default function Navbar({
             </AnimatePresence>
           </div>
 
-          {links.map((link) => (
+          {linksAfterServices.map((link) => (
             <a
               key={link.href}
               href={link.href}

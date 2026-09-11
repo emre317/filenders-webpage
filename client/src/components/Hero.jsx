@@ -99,7 +99,7 @@ export default function Hero({ onOpenIndustries }) {
                       style={{ transform: `rotate(${-angle}deg)` }}
                       onClick={(e) => {
                         e.preventDefault()
-                        onOpenIndustries?.()
+                        onOpenIndustries?.(sector.id)
                       }}
                     >
                       {sector.key}

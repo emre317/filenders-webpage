@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useLanguage } from '../i18n/LanguageContext'
 import {
   ArrowRightIcon,
@@ -57,43 +57,42 @@ function SectorTab({ sector, index, active, onSelect }) {
 function SectorPanel({ sector }) {
   const Icon = sectorIcons[sector.id]
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={sector.id}
-        className="ind-panel"
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -16 }}
-        transition={{ duration: 0.35, ease: EASE }}
-      >
-        <span className="ind-panel-icon">
-          <Icon width={26} height={26} />
-        </span>
-        <span className="ind-panel-eyebrow">{sector.title}</span>
-        <h3>{sector.tagline}</h3>
-        {sector.body.map((paragraph) => (
-          <p key={paragraph.slice(0, 24)}>{paragraph}</p>
-        ))}
-        {sector.bullets.length > 0 && (
-          <ul className="ind-panel-bullets">
-            {sector.bullets.map((bullet) => (
-              <li key={bullet}>
-                <CheckIcon width={13} height={13} />
-                <span>{bullet}</span>
-              </li>
-            ))}
-          </ul>
-        )}
-      </motion.div>
-    </AnimatePresence>
+    <motion.div
+      key={sector.id}
+      className="ind-panel"
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.35, ease: EASE }}
+    >
+      <span className="ind-panel-icon">
+        <Icon width={26} height={26} />
+      </span>
+      <span className="ind-panel-eyebrow">{sector.title}</span>
+      <h3>{sector.tagline}</h3>
+      {sector.body.map((paragraph) => (
+        <p key={paragraph.slice(0, 24)}>{paragraph}</p>
+      ))}
+      {sector.bullets.length > 0 && (
+        <ul className="ind-panel-bullets">
+          {sector.bullets.map((bullet) => (
+            <li key={bullet}>
+              <CheckIcon width={13} height={13} />
+              <span>{bullet}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </motion.div>
   )
 }
 
-export default function Industries({ onBack }) {
+export default function Industries({ onBack, initialSector }) {
   const { t } = useLanguage()
   const detail = t('industries')
   const contactCta = t('divisions.contactCtaTemplate').replace('{title}', detail.title)
-  const [active, setActive] = useState(detail.sectors[0].id)
+  const [active, setActive] = useState(() =>
+    detail.sectors.some((s) => s.id === initialSector) ? initialSector : detail.sectors[0].id,
+  )
   const activeSector = detail.sectors.find((s) => s.id === active) ?? detail.sectors[0]
 
   useEffect(() => {

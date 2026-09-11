@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useLanguage } from '../i18n/LanguageContext'
 import useTilt3D from '../hooks/useTilt3D'
 import techGlobeVideo from '../assets/divisions/tech-globe.mp4'
@@ -109,37 +109,34 @@ function ModulePill({ mod, active, onSelect }) {
 function ModulePanel({ mod }) {
   const Icon = moduleIcons[mod.id]
   return (
-    <AnimatePresence initial={false}>
-      <motion.div
-        key={mod.id}
-        className="tech-panel"
-        initial={{ opacity: 0, x: 24 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -24, position: 'absolute' }}
-        transition={{ duration: 0.35, ease: EASE }}
-      >
-        <div className="tech-panel-media">
-          <video src={moduleVideos[mod.video]} autoPlay muted loop playsInline preload="metadata" />
-        </div>
-        <div className="tech-panel-body">
-          <span className="tech-panel-icon">
-            <Icon width={22} height={22} />
-          </span>
-          <h3>{mod.title}</h3>
-          <p>{mod.body}</p>
-          {mod.bullets.length > 0 && (
-            <ul className="tech-panel-bullets">
-              {mod.bullets.map((bullet) => (
-                <li key={bullet}>
-                  <CheckIcon width={14} height={14} />
-                  <span>{bullet}</span>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      </motion.div>
-    </AnimatePresence>
+    <motion.div
+      key={mod.id}
+      className="tech-panel"
+      initial={{ opacity: 0, x: 24 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.35, ease: EASE }}
+    >
+      <div className="tech-panel-media">
+        <video src={moduleVideos[mod.video]} autoPlay muted loop playsInline preload="metadata" />
+      </div>
+      <div className="tech-panel-body">
+        <span className="tech-panel-icon">
+          <Icon width={22} height={22} />
+        </span>
+        <h3>{mod.title}</h3>
+        <p>{mod.body}</p>
+        {mod.bullets.length > 0 && (
+          <ul className="tech-panel-bullets">
+            {mod.bullets.map((bullet) => (
+              <li key={bullet}>
+                <CheckIcon width={14} height={14} />
+                <span>{bullet}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </motion.div>
   )
 }
 

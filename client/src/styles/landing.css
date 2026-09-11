@@ -683,8 +683,8 @@
   border-radius: 9999px;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  font-size: 0.66rem;
-  font-weight: 700;
+  font-size: 0.8rem;
+  font-weight: 900;
   color: var(--color-foreground-muted);
   white-space: nowrap;
   box-shadow: var(--card-shadow);
@@ -720,7 +720,7 @@
 
 @media (max-width: 880px) {
   .hero-orbit-item {
-    font-size: 0.58rem;
+    font-size: 0.7rem;
     padding: 0.26rem 0.6rem;
   }
 }
@@ -4545,6 +4545,96 @@
 
   .about-outlook-card {
     padding: 1.5rem;
+  }
+}
+
+/* ==================== Trade Solutions ==================== */
+
+.trade-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: var(--spacing-section-y) 1.5rem;
+}
+
+.trade-panel-note {
+  margin-top: 1.25rem;
+  padding: 0.9rem 1.1rem;
+  border-left: 3px solid var(--color-primary);
+  background: var(--color-primary-subtle);
+  border-radius: 0 var(--primitive-radius-md) var(--primitive-radius-md) 0;
+  font-size: var(--primitive-fontSize-sm);
+  color: var(--color-foreground-muted);
+  font-style: italic;
+}
+
+.trade-contact {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.trade-contact h3 {
+  font-size: var(--primitive-fontSize-xl);
+  margin-bottom: 2rem;
+}
+
+.trade-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.trade-contact-card {
+  display: block;
+  padding: 2rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  transition: border-color var(--primitive-duration-normal) var(--primitive-ease-out),
+    transform var(--primitive-duration-normal) var(--primitive-ease-out);
+}
+
+.trade-contact-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+.trade-contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--primitive-radius-md);
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.trade-contact-card h4 {
+  font-size: var(--primitive-fontSize-base);
+  margin-bottom: 0.35rem;
+}
+
+.trade-contact-email {
+  display: inline-block;
+  font-size: var(--primitive-fontSize-sm);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.85rem;
+}
+
+.trade-contact-card p {
+  color: var(--color-foreground-muted);
+  font-size: var(--primitive-fontSize-sm);
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .trade-contact-grid {
+    grid-template-columns: 1fr;
   }
 }
 
