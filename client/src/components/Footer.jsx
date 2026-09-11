@@ -79,7 +79,7 @@ export default function Footer({ onSelectDivision, onOpenMemberships }) {
 
       <div className="footer-bottom">
         <p>
-          © {year} Filenders {t('hero.subtitle')}. {t('footer.rights')}
+          © {year} Filentech. {t('footer.rights')}
         </p>
         <p className="footer-duns">D-U-N-S® No: 751133530</p>
       </div>
