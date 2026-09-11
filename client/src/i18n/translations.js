@@ -28,7 +28,7 @@ export const translations = {
       tagline: 'discover the true path',
     },
     divisions: {
-      badge: 'Dört Yön, Tek Sorumluluk',
+      badge: 'Dört Servis, Tek Sorumluluk',
       title: 'Hizmetlerimiz',
       subtitle: 'Detayları görmek istediğiniz alanı seçin.',
       viewDetails: 'Detayları Gör',
@@ -37,7 +37,7 @@ export const translations = {
       items: {
         freight: {
           title: 'Deniz ve Hava Forwarding Hizmetleri',
-          tagline: 'Çıkış noktasından nihai teslimata. Tek kontrol noktası.',
+          tagline: 'Başlangıçtan varışa. Tüm süreç tek noktadan yönetilir.',
           description:
             "Türkiye'yi dünyanın önde gelen ticaret merkezlerine bağlayan güvenilir, esnek ve maliyet odaklı deniz ve hava taşımacılığı çözümleri.",
           features: [
@@ -49,7 +49,7 @@ export const translations = {
         },
         teknoloji: {
           title: 'Teknoloji',
-          tagline: 'Operasyonu yöneten zeka, arka planda çalışır.',
+          tagline: 'Operasyonun arkasındaki güç, kusursuzca işliyor.',
           description:
             'Lojistik operasyonlarını akıllı hale getiren yazılım, filo takip ve veri analitiği çözümleri geliştiriyoruz.',
           features: [
@@ -61,9 +61,9 @@ export const translations = {
         },
         ground: {
           title: 'Karayolu ve Intermodal Taşımacılık',
-          tagline: 'Bağlantılı koridorlar. Esnek taşıma.',
+          tagline: 'Entegre güzergâhlar. Dinamik taşımacılık.',
           description:
-            "Türkiye'yi Avrupa, Orta Doğu, CIS ve Orta Asya'ya bağlayan esnek karayolu ve intermodal çözümler sunuyoruz.",
+            "Türkiye'yi Avrupa, Orta Doğu, Orta Asya ve GCC'ye bağlayan esnek karayolu ve intermodal çözümler sunuyoruz.",
           features: [
             { label: 'Karayolu Taşımacılığı', desc: 'Esnek filo kapasitesiyle yurt içi dağıtım.' },
             { label: 'Depolama & Elleçleme', desc: 'Modern depo altyapısı ile güvenli stok yönetimi.' },
@@ -73,7 +73,7 @@ export const translations = {
         },
         project: {
           title: 'Proje & Multimodal Taşımacılık',
-          tagline: 'Karmaşık yük. Zorlu güzergah. Teslim edildi.',
+          tagline: 'Zorlu yük. Zorlu rota. Sorunsuz teslimat.',
           description:
             'Ağır ve gabari dışı yükleri, birden fazla taşıma modunu birleştirerek güvenle hedefine ulaştırıyoruz.',
           features: [
@@ -86,8 +86,8 @@ export const translations = {
       },
     },
     whyus: {
-      badge: 'Neden Filenders',
-      title: 'Dört yön, tek güç',
+      badge: 'Neden Filenders?',
+      title: 'Dört servis, tek güç',
       lede:
         'Taşımacılık, teknoloji, saha operasyonları ve proje lojistiğini aynı çatı altında geliştirerek, sektörün ihtiyaç duyduğu hızı ve öngörüyü birlikte sunuyoruz.',
       points: [
@@ -300,7 +300,7 @@ export const translations = {
           'Mühendislik odaklı lojistik planlama',
           'Güçlü proje kargo ve multimodal uzmanlığı',
           'Bağımsız taşıma modu ve taşıyıcı seçimi',
-          'Türkiye, Orta Doğu, Avrupa ve CIS koridor bilgisi',
+          'Türkiye, Orta Doğu, Avrupa ve Orta Asya koridor bilgisi',
           'Özel ekipman ve uzman partner ağı',
           'Teknoloji destekli proje görünürlüğü',
         ],
@@ -487,18 +487,18 @@ export const translations = {
       },
     },
     groundDetail: {
-      badge: 'Bağlantılı Koridorlar',
+      badge: 'Entegre Güzergâhlar',
       intro: [
-        "Filenders; Türkiye'yi Avrupa, Balkanlar, Orta Doğu, CIS ve Orta Asya'ya bağlayan esnek karayolu ve intermodal taşıma çözümleri sunar. Uluslararası karayolu taşımacılığı, demiryolu bağlantıları, RoRo servisleri ve iç dağıtım ağlarını bir araya getirerek komple ve parsiyel yükler için uçtan uca çözümler geliştiriyoruz.",
+        "Filenders; Türkiye'yi Avrupa, Balkanlar, Orta Doğu, Orta Asya ve GCC'ye bağlayan esnek karayolu ve intermodal taşıma çözümleri sunar. Uluslararası karayolu taşımacılığı, demiryolu bağlantıları, RoRo servisleri ve iç dağıtım ağlarını bir araya getirerek komple ve parsiyel yükler için uçtan uca çözümler geliştiriyoruz.",
         'Düzenli FTL ve LTL taşımalarından reefer, transit ve zamana duyarlı operasyonlara kadar her taşıma; yük özellikleri, güzergah koşulları, sınır gereklilikleri, transit süre ve toplam maliyet dikkate alınarak planlanır.',
       ],
       corridor: {
-        title: 'Bağlantılı Koridorlar',
-        nodes: ['Avrupa', 'Türkiye', 'Orta Doğu', 'CIS', 'Orta Asya'],
+        title: 'Entegre Güzergâhlar',
+        nodes: ['Avrupa', 'Türkiye', 'Orta Doğu', 'Orta Asya', 'GCC'],
         europeText:
           "Karayolu ağımız Türkiye ile Avrupa'nın önemli pazarları arasındaki düzenli ithalat ve ihracat akışlarını destekler. Pickup, ana taşıma, sınır operasyonları ve nihai teslimatlar seçilmiş uluslararası taşıyıcılar ve bölgesel ağlar üzerinden koordine edilir.",
         eastText:
-          "Filenders, Türkiye'yi Irak, Kafkaslar, CIS ve Orta Asya'ya bağlayan stratejik ve operasyonel olarak zor koridorlarda karayolu ve multimodal çözümler geliştirir. Rota seçimi; sınır koşulları, transit gereklilikleri, güvenlik, altyapı, transit süre ve toplam lojistik maliyet dikkate alınarak yapılır.",
+          "Filenders, Türkiye'yi Irak, Kafkaslar, Orta Asya ve GCC'ye bağlayan stratejik ve operasyonel olarak zor koridorlarda karayolu ve multimodal çözümler geliştirir. Rota seçimi; sınır koşulları, transit gereklilikleri, güvenlik, altyapı, transit süre ve toplam lojistik maliyet dikkate alınarak yapılır.",
       },
       capabilities: [
         {
@@ -511,7 +511,7 @@ export const translations = {
             'Kapıdan kapıya FTL servisleri',
             'İhracat, ithalat ve transit taşımalar',
             'Standart tenteli ve mega treylerler',
-            'Reefer ve ısı kontrollü ekipman',
+            'Frigo ve ısı kontrollü ekipman',
             'Dedike araç çözümleri',
             'Cross-border ve üçüncü ülke taşımaları',
             'Zamana duyarlı ve planlı taşıma',
@@ -527,7 +527,7 @@ export const translations = {
         },
         {
           id: 'reefer',
-          title: 'Reefer ve Isı Kontrollü Taşımacılık',
+          title: 'Frigo ve Isı Kontrollü Taşımacılık',
           teaser: 'Kontrollü sıcaklık gerektiren yükler için özel ekipman.',
           video: 'mountain',
           body: 'Taşıma süresince kontrollü sıcaklık koşulu gerektiren yükler için reefer ve sıcaklık kontrollü karayolu çözümleri sağlıyoruz. Operasyonlar ürün gereklilikleri, sıcaklık aralığı, rota, transit süre ve ekipman uygunluğuna göre planlanır.',
@@ -538,7 +538,7 @@ export const translations = {
           title: 'Transit Karayolu Taşımacılığı',
           teaser: "Türkiye üzerinden yönetilen sınır aşan operasyonlar.",
           video: 'interchange',
-          body: "Türkiye; Avrupa, Orta Doğu, Kafkaslar ve Orta Asya arasında stratejik bir lojistik geçiş noktasıdır. Filenders, Türkiye üzerinden transit karayolu operasyonlarını yönetir ve yürürlükteki gümrük ve mevzuat şartlarına bağlı olarak Irak, Suriye, Kafkaslar, CIS ve Orta Asya pazarları için sınır aşan çözümler geliştirir.",
+          body: "Türkiye; Avrupa, Orta Doğu, Kafkaslar ve Orta Asya arasında stratejik bir lojistik geçiş noktasıdır. Filenders, Türkiye üzerinden transit karayolu operasyonlarını yönetir ve yürürlükteki gümrük ve mevzuat şartlarına bağlı olarak Irak, Suriye, Kafkaslar, Orta Asya ve GCC pazarları için sınır aşan çözümler geliştirir.",
           bullets: [],
         },
         {
@@ -602,13 +602,13 @@ export const translations = {
           'Türkiye–Avrupa–Orta Doğu koridorlarında güçlü uzmanlık',
           'Esnek FTL ve LTL ağı',
           'Karayolu, demiryolu ve RoRo entegrasyonu',
-          'Reefer ve özel ekipman kabiliyeti',
+          'Frigo ve özel ekipman kabiliyeti',
           'Transit ve sınır aşan operasyon tecrübesi',
           'Teknoloji destekli görünürlük ve kontrol',
         ],
       },
       closing: {
-        line1: 'Bağlantılı Koridorlar. Esnek Taşıma. Tek Kontrol Noktası.',
+        line1: 'Entegre Güzergâhlar. Esnek Taşıma. Tek Kontrol Noktası.',
         line2: 'Discover the True Path.',
       },
     },
@@ -630,7 +630,7 @@ export const translations = {
           bullets: [
             "20', 40' ve 40' High Cube konteynerler",
             'Open Top ve Flat Rack ekipmanlar',
-            'Reefer konteynerler',
+            'Frigo konteynerler',
             'Armatör ve NVOCC çözümleri',
             'Limandan limana ve kapıdan kapıya taşıma',
             'İhracat ve ithalat taşımaları',
@@ -667,7 +667,7 @@ export const translations = {
         lede:
           'Seçilmiş uluslararası NVOCC ve acente iş birliklerimiz sayesinde alternatif rota seçenekleri, rekabetçi navlun koşulları ve geniş global kapsama sunuyoruz.',
         stackBadge: 'Seçili',
-        regions: ['Avrupa', 'Asya', 'Orta Doğu', 'Kuzey Amerika', 'Afrika', 'CIS', 'Orta Asya'],
+        regions: ['Avrupa', 'Asya', 'Orta Doğu', 'Kuzey Amerika', 'Afrika', 'Orta Asya', 'GCC'],
         services: [
           {
             id: 'doorToDoor',
@@ -682,7 +682,7 @@ export const translations = {
           {
             id: 'nvocc',
             title: 'NVOCC ve Global Acentelik Çözümleri',
-            body: 'Seçilmiş uluslararası NVOCC ve acente iş birliklerimiz sayesinde alternatif rota seçenekleri, rekabetçi navlun koşulları ve geniş global kapsama sunuyoruz. Avrupa, Asya, Orta Doğu, Kuzey Amerika, Afrika, CIS ve Orta Asya hatlarında çözüm geliştiriyoruz.',
+            body: 'Seçilmiş uluslararası NVOCC ve acente iş birliklerimiz sayesinde alternatif rota seçenekleri, rekabetçi navlun koşulları ve geniş global kapsama sunuyoruz. Avrupa, Asya, Orta Doğu, Kuzey Amerika, Afrika, Orta Asya ve GCC hatlarında çözüm geliştiriyoruz.',
           },
           {
             id: 'importExport',
@@ -745,7 +745,7 @@ export const translations = {
       tagline: 'discover the true path',
     },
     divisions: {
-      badge: 'Four Directions, One Commitment',
+      badge: 'Four Services, One Commitment',
       title: 'Our Services',
       subtitle: "Choose the area you'd like to explore.",
       viewDetails: 'View Details',
@@ -780,7 +780,7 @@ export const translations = {
           title: 'Road & Intermodal Transport',
           tagline: 'Connected corridors. Flexible transport.',
           description:
-            'Flexible road and intermodal solutions connecting Türkiye with Europe, the Middle East, CIS and Central Asia.',
+            'Flexible road and intermodal solutions connecting Türkiye with Europe, the Middle East, Central Asia and GCC.',
           features: [
             { label: 'Road Freight', desc: 'Domestic distribution with flexible fleet capacity.' },
             { label: 'Warehousing & Handling', desc: 'Secure inventory management with modern warehouse infrastructure.' },
@@ -803,8 +803,8 @@ export const translations = {
       },
     },
     whyus: {
-      badge: 'Why Filenders',
-      title: 'Four directions, one force',
+      badge: 'Why Filenders?',
+      title: 'Four services, one force',
       lede:
         'We develop transportation, technology, field operations and project logistics under the same roof, delivering the speed and foresight the industry needs.',
       points: [
@@ -1017,7 +1017,7 @@ export const translations = {
           'Engineering-led logistics planning',
           'Strong project cargo and multimodal expertise',
           'Independent mode and carrier selection',
-          'Türkiye, Middle East, Europe and CIS corridor knowledge',
+          'Türkiye, Middle East, Europe and Central Asia corridor knowledge',
           'Specialized partner and equipment network',
           'Technology-supported project visibility',
         ],
@@ -1206,16 +1206,16 @@ export const translations = {
     groundDetail: {
       badge: 'Connected Corridors',
       intro: [
-        'Filenders provides flexible road and intermodal transport solutions connecting Türkiye with Europe, the Balkans, the Middle East, CIS and Central Asia. Our network combines international road freight, rail connections, RoRo services and inland distribution to create reliable end-to-end transportation solutions for both full and partial loads.',
+        'Filenders provides flexible road and intermodal transport solutions connecting Türkiye with Europe, the Balkans, the Middle East, Central Asia and GCC. Our network combines international road freight, rail connections, RoRo services and inland distribution to create reliable end-to-end transportation solutions for both full and partial loads.',
         'From regular FTL and LTL traffic to reefer, transit and time-sensitive road movements, our teams design each operation around cargo characteristics, route conditions, border requirements, transit time and total transportation cost.',
       ],
       corridor: {
         title: 'Connected Corridors',
-        nodes: ['Europe', 'Türkiye', 'Middle East', 'CIS', 'Central Asia'],
+        nodes: ['Europe', 'Türkiye', 'Middle East', 'Central Asia', 'GCC'],
         europeText:
           'Our road network supports regular import and export movements between Türkiye and major European markets. We coordinate pickups, linehaul transportation, border operations and final deliveries through selected international transport partners and regional networks.',
         eastText:
-          'Filenders develops road and multimodal solutions for difficult and strategically important corridors linking Türkiye with Iraq, the Caucasus, CIS and Central Asia. Route selection is based on border conditions, transit requirements, security, infrastructure, transit time and total logistics cost.',
+          'Filenders develops road and multimodal solutions for difficult and strategically important corridors linking Türkiye with Iraq, the Caucasus, Central Asia and GCC. Route selection is based on border conditions, transit requirements, security, infrastructure, transit time and total logistics cost.',
       },
       capabilities: [
         {
@@ -1228,7 +1228,7 @@ export const translations = {
             'Door-to-door FTL services',
             'Export, import and transit movements',
             'Standard tautliner and mega trailers',
-            'Reefer and temperature-controlled equipment',
+            'Frigo and temperature-controlled equipment',
             'Dedicated vehicle solutions',
             'Cross-border and third-country movements',
             'Time-sensitive and scheduled transport',
@@ -1244,7 +1244,7 @@ export const translations = {
         },
         {
           id: 'reefer',
-          title: 'Reefer & Temperature-Controlled Transport',
+          title: 'Frigo & Temperature-Controlled Transport',
           teaser: 'Specialized equipment for cargo requiring controlled conditions.',
           video: 'mountain',
           body: 'We provide refrigerated and temperature-controlled road transport solutions for cargo requiring controlled conditions throughout the journey. Operations are planned according to product requirements, temperature range, route, transit time and equipment availability.',
@@ -1255,7 +1255,7 @@ export const translations = {
           title: 'Transit Road Transport',
           teaser: 'Cross-border operations managed through Türkiye.',
           video: 'interchange',
-          body: 'Türkiye is a strategic logistics gateway between Europe, the Middle East, the Caucasus and Central Asia. Filenders manages transit road movements through Türkiye and develops cross-border solutions for markets including Iraq, Syria, the Caucasus, CIS and Central Asia, subject to applicable customs and regulatory requirements.',
+          body: 'Türkiye is a strategic logistics gateway between Europe, the Middle East, the Caucasus and Central Asia. Filenders manages transit road movements through Türkiye and develops cross-border solutions for markets including Iraq, Syria, the Caucasus, Central Asia and GCC, subject to applicable customs and regulatory requirements.',
           bullets: [],
         },
         {
@@ -1319,7 +1319,7 @@ export const translations = {
           'Strong Türkiye–Europe–Middle East corridor expertise',
           'Flexible FTL and LTL network',
           'Road, rail and RoRo integration',
-          'Reefer and special-equipment capability',
+          'Frigo and special-equipment capability',
           'Transit and cross-border operational know-how',
           'Technology-supported visibility and control',
         ],
@@ -1347,7 +1347,7 @@ export const translations = {
           bullets: [
             "20', 40' and 40' High Cube containers",
             'Open Top and Flat Rack equipment',
-            'Reefer containers',
+            'Frigo containers',
             'Carrier and NVOCC solutions',
             'Port-to-port and door-to-door transportation',
             'Export and import shipments',
@@ -1384,7 +1384,7 @@ export const translations = {
         lede:
           'Through selected international NVOCC and agency partnerships, we provide alternative routing options, competitive freight conditions and extended global coverage.',
         stackBadge: 'Selected',
-        regions: ['Europe', 'Asia', 'Middle East', 'North America', 'Africa', 'CIS', 'Central Asia'],
+        regions: ['Europe', 'Asia', 'Middle East', 'North America', 'Africa', 'Central Asia', 'GCC'],
         services: [
           {
             id: 'doorToDoor',
@@ -1399,7 +1399,7 @@ export const translations = {
           {
             id: 'nvocc',
             title: 'NVOCC & Global Agency Solutions',
-            body: 'Through selected international NVOCC and agency partnerships, Filenders provides alternative routing options, competitive freight conditions and extended global coverage across Europe, Asia, the Middle East, North America, Africa, CIS and Central Asia.',
+            body: 'Through selected international NVOCC and agency partnerships, Filenders provides alternative routing options, competitive freight conditions and extended global coverage across Europe, Asia, the Middle East, North America, Africa, Central Asia and GCC.',
           },
           {
             id: 'importExport',
