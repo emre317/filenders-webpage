@@ -52,7 +52,6 @@ export default function Hero({ onOpenIndustries }) {
               toColor="var(--color-danger)"
               fontFamily="'Baloo 2', 'Inter', system-ui, sans-serif"
               lowercase
-              dotAccent
             />
           </h1>
 
