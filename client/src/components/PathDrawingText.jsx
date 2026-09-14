@@ -15,6 +15,7 @@ export default function PathDrawingText({
   className = '',
   fontFamily = 'Inter, system-ui, sans-serif',
   fontWeight = '800',
+  letterSpacing = '-0.01em',
   lowercase = false,
 }) {
   const gradientId = `path-draw-${useId().replace(/:/g, '')}`
@@ -49,7 +50,7 @@ export default function PathDrawingText({
         fontSize={fontSize}
         fontWeight={fontWeight}
         fontFamily={fontFamily}
-        letterSpacing="-0.01em"
+        letterSpacing={letterSpacing}
         style={{
           textTransform: lowercase ? 'lowercase' : undefined,
           ...(animate ? { animationDuration: `${durationSec}s` } : undefined),
