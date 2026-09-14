@@ -170,6 +170,11 @@
 }
 
 .navbar-brand-text {
+  font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+  font-weight: 900;
+  font-size: 1.3rem;
+  text-transform: lowercase;
+  letter-spacing: -0.01em;
   line-height: 1.15;
   background: linear-gradient(90deg, var(--color-accent), var(--color-danger));
   -webkit-background-clip: text;
@@ -5269,9 +5274,11 @@
 }
 
 .footer-logo-text {
+  font-family: 'Poppins', 'Inter', system-ui, sans-serif;
   font-size: 1.8rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  font-weight: 900;
+  text-transform: lowercase;
+  letter-spacing: -0.01em;
   background: linear-gradient(90deg, var(--color-accent), var(--color-danger));
   -webkit-background-clip: text;
   background-clip: text;
