@@ -14,6 +14,7 @@ export default function PathDrawingText({
   filled = false,
   className = '',
   fontFamily = 'Inter, system-ui, sans-serif',
+  fontWeight = '800',
   lowercase = false,
 }) {
   const gradientId = `path-draw-${useId().replace(/:/g, '')}`
@@ -46,7 +47,7 @@ export default function PathDrawingText({
         strokeLinejoin="round"
         strokeLinecap="round"
         fontSize={fontSize}
-        fontWeight="800"
+        fontWeight={fontWeight}
         fontFamily={fontFamily}
         letterSpacing="-0.01em"
         style={{
