@@ -2,6 +2,7 @@ import { motion, useMotionValue, useSpring } from 'framer-motion'
 import logo from '../assets/logo.png'
 import { ArrowRightIcon } from './icons'
 import PathDrawingText from './PathDrawingText'
+import TypewriterText from './TypewriterText'
 import { useLanguage } from '../i18n/LanguageContext'
 import useTilt3D from '../hooks/useTilt3D'
 
@@ -37,27 +38,44 @@ export default function Hero({ onOpenIndustries }) {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="hero-copy"
         >
-          <span className="badge">{t('hero.badge')}</span>
+          <motion.span
+            className="badge hero-badge"
+            animate={{ y: [0, -7, 0], scale: [1, 1.06, 1] }}
+            transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            <span className="hero-badge-dot" aria-hidden="true">
+              <span className="hero-badge-dot-ping" />
+              <span className="hero-badge-dot-core" />
+            </span>
+            {t('hero.badge')}
+          </motion.span>
 
           <h1>
             <PathDrawingText
               key={`brand-${lang}`}
               text={t('hero.brand')}
+              tagline={t('hero.brandTagline')}
               className="hero-title-draw"
-              fontSize={104}
-              viewBoxWidth={560}
-              viewBoxHeight={130}
+              fontSize={92}
+              taglineFontSize={24}
+              viewBoxWidth={620}
+              viewBoxHeight={175}
               filled
-              fromColor="var(--color-accent)"
-              toColor="var(--color-danger)"
+              fromColor="var(--color-primary)"
+              toColor="var(--color-primary)"
               fontFamily="'Poppins', 'Inter', system-ui, sans-serif"
               fontWeight="900"
-              letterSpacing="0.015em"
-              lowercase
+              taglineFontWeight="700"
+              letterSpacing="0.06em"
+              taglineLetterSpacing="0.35em"
+              taglineColor="var(--color-accent)"
+              glowColor="rgb(26 196 209 / 0.4)"
+              uppercase
+              shimmer
             />
           </h1>
 
-          <p className="hero-lede">{t('hero.lede')}</p>
+          <TypewriterText key={`lede-${lang}`} text={t('hero.lede')} className="hero-lede" />
 
           <div className="hero-actions">
             <a href="#services" className="btn btn-primary btn-lg">

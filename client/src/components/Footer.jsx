@@ -20,6 +20,7 @@ export default function Footer({
   onOpenBoardMessage,
   onOpenTrade,
   onOpenLegal,
+  onOpenGlobalPartner,
   onNavigateHome,
 }) {
   const { t } = useLanguage()
@@ -104,6 +105,11 @@ export default function Footer({
             <li>
               <a href="#memberships" onClick={() => onOpenMemberships?.()}>
                 {t('nav.memberships')}
+              </a>
+            </li>
+            <li>
+              <a href="#global-partner" onClick={() => onOpenGlobalPartner?.()}>
+                {t('nav.globalPartner')}
               </a>
             </li>
             <li>

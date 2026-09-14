@@ -19,6 +19,7 @@ export default function Navbar({
   onOpenBoardMessage,
   onOpenTrade,
   onOpenLegal,
+  onOpenGlobalPartner,
   onSelectDivision,
 }) {
   const { t } = useLanguage()
@@ -30,6 +31,7 @@ export default function Navbar({
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false)
   const [mobileLegalOpen, setMobileLegalOpen] = useState(false)
+  const [settingsOpen, setSettingsOpen] = useState(false)
 
   const divisionItems = divisionOrder.map((id) => ({
     id,
@@ -52,7 +54,6 @@ export default function Navbar({
   const linksAfterServices = [
     { href: '#trade', label: t('nav.trade'), onClick: onOpenTrade },
     { href: '#memberships', label: t('nav.memberships'), onClick: onOpenMemberships },
-    { href: '#contact', label: t('nav.contact'), onClick: onNavigateHome },
   ]
 
   const selectAbout = (item) => {
@@ -139,7 +140,7 @@ export default function Navbar({
                         selectAbout(item)
                       }}
                     >
-                      {item.label}
+                      <span className="navbar-dropdown-item-label">{item.label}</span>
                     </a>
                   ))}
                 </motion.div>
@@ -167,7 +168,7 @@ export default function Navbar({
             <AnimatePresence>
               {servicesOpen && (
                 <motion.div
-                  className="navbar-dropdown-panel"
+                  className="navbar-dropdown-panel navbar-dropdown-panel-services"
                   initial={{ opacity: 0, x: '-50%', y: -6 }}
                   animate={{ opacity: 1, x: '-50%', y: 0 }}
                   exit={{ opacity: 0, x: '-50%', y: -6 }}
@@ -183,7 +184,7 @@ export default function Navbar({
                       <span className="navbar-dropdown-item-icon">
                         <item.icon width={16} height={16} />
                       </span>
-                      {item.label}
+                      <span className="navbar-dropdown-item-label">{item.label}</span>
                     </a>
                   ))}
                 </motion.div>
@@ -232,7 +233,7 @@ export default function Navbar({
                         selectLegal(item.id)
                       }}
                     >
-                      {item.label}
+                      <span className="navbar-dropdown-item-label">{item.label}</span>
                     </a>
                   ))}
                 </motion.div>
@@ -242,10 +243,52 @@ export default function Navbar({
         </nav>
 
         <div className="navbar-actions">
-          <ThemeToggle />
-          <LanguageToggle />
-          <a href="#contact" className="btn btn-primary btn-sm navbar-cta" onClick={onNavigateHome}>
+          <div
+            className="navbar-dropdown"
+            onMouseEnter={() => setSettingsOpen(true)}
+            onMouseLeave={() => setSettingsOpen(false)}
+          >
+            <button type="button" className="navbar-dropdown-trigger">
+              {t('nav.settings')}
+              <ChevronDownIcon width={15} height={15} className="navbar-dropdown-caret" />
+            </button>
+            <AnimatePresence>
+              {settingsOpen && (
+                <motion.div
+                  className="navbar-dropdown-panel navbar-dropdown-panel-settings"
+                  initial={{ opacity: 0, y: -6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -6 }}
+                  transition={{ duration: 0.2, ease: EASE }}
+                >
+                  <div className="navbar-dropdown-settings-row">
+                    <span>{t('nav.viewLabel')}</span>
+                    <ThemeToggle />
+                  </div>
+                  <div className="navbar-dropdown-settings-row">
+                    <span>{t('nav.langLabel')}</span>
+                    <LanguageToggle />
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        </div>
+
+        <div className="navbar-fabs">
+          <a href="#contact" className="btn btn-primary btn-sm navbar-fab" onClick={onNavigateHome}>
             {t('nav.contactCta')}
+          </a>
+          <a
+            href="#global-partner"
+            className="navbar-fab btn btn-secondary btn-sm"
+            onClick={(e) => {
+              e.preventDefault()
+              onOpenGlobalPartner?.()
+              setOpen(false)
+            }}
+          >
+            {t('nav.globalPartnerCta')}
           </a>
         </div>
 
@@ -416,6 +459,17 @@ export default function Navbar({
             }}
           >
             {t('nav.contactCta')}
+          </a>
+          <a
+            href="#global-partner"
+            className="btn btn-secondary btn-sm navbar-cta"
+            onClick={(e) => {
+              e.preventDefault()
+              onOpenGlobalPartner?.()
+              setOpen(false)
+            }}
+          >
+            {t('nav.globalPartnerCta')}
           </a>
         </nav>
       )}

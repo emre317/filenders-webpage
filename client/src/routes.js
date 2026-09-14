@@ -23,6 +23,7 @@ export function getRouteFromHash() {
   const hash = window.location.hash.replace(/^#/, '')
   if (hash === 'about') return { view: 'about' }
   if (hash === 'board-message') return { view: 'boardMessage' }
+  if (hash === 'global-partner') return { view: 'globalPartner' }
   if (hash === 'industries') return { view: 'industries' }
   if (hash.startsWith('industries-')) return { view: 'industries', sector: hash.slice('industries-'.length) }
   if (hash === 'memberships') return { view: 'memberships' }
