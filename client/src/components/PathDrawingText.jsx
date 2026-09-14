@@ -13,10 +13,6 @@ export default function PathDrawingText({
   align = 'start',
   filled = false,
   className = '',
-  fontFamily = 'Inter, system-ui, sans-serif',
-  fontWeight = '800',
-  letterSpacing = '-0.01em',
-  lowercase = false,
 }) {
   const gradientId = `path-draw-${useId().replace(/:/g, '')}`
   const reduceMotion = useReducedMotion()
@@ -48,14 +44,11 @@ export default function PathDrawingText({
         strokeLinejoin="round"
         strokeLinecap="round"
         fontSize={fontSize}
-        fontWeight={fontWeight}
-        fontFamily={fontFamily}
-        letterSpacing={letterSpacing}
-        style={{
-          textTransform: lowercase ? 'lowercase' : undefined,
-          ...(animate ? { animationDuration: `${durationSec}s` } : undefined),
-        }}
+        fontWeight="800"
+        fontFamily="Inter, system-ui, sans-serif"
+        letterSpacing="-0.02em"
         className={animate ? 'path-draw-sweep' : undefined}
+        style={animate ? { animationDuration: `${durationSec}s` } : undefined}
       >
         {text}
       </text>
