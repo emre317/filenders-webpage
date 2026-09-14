@@ -52,7 +52,7 @@ export default function Hero({ onOpenIndustries }) {
               toColor="var(--color-danger)"
               fontFamily="'Poppins', 'Inter', system-ui, sans-serif"
               fontWeight="900"
-              letterSpacing="0.03em"
+              letterSpacing="0.015em"
               lowercase
             />
           </h1>
