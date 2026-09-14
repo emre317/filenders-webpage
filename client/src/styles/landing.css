@@ -33,6 +33,14 @@
     background var(--primitive-duration-fast) var(--primitive-ease-out),
     border-color var(--primitive-duration-fast) var(--primitive-ease-out);
   white-space: nowrap;
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .btn {
+    white-space: normal;
+    text-align: center;
+  }
 }
 
 .btn:hover {
@@ -4235,6 +4243,22 @@
   .ind-panel-bullets {
     grid-template-columns: 1fr;
   }
+
+  .ind-tabs {
+    flex-direction: column;
+  }
+
+  .ind-tab {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .ind-tab-title {
+    white-space: normal;
+    min-width: 0;
+    flex: 1 1 auto;
+    max-width: 100%;
+  }
 }
 
 /* ==================== About Us ==================== */
@@ -5468,9 +5492,13 @@
 }
 
 @media (max-width: 480px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
   .footer-brand,
   .footer-column,
   .footer-contact-col {
-    grid-column: span 12;
+    grid-column: span 1;
   }
 }
