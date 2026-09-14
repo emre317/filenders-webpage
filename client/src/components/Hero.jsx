@@ -50,8 +50,9 @@ export default function Hero({ onOpenIndustries }) {
               filled
               fromColor="var(--color-accent)"
               toColor="var(--color-danger)"
-              fontFamily="'Fredoka', 'Inter', system-ui, sans-serif"
-              fontWeight="700"
+              fontFamily="'Baloo 2', 'Inter', system-ui, sans-serif"
+              fontWeight="800"
+              letterSpacing="-0.03em"
               lowercase
             />
           </h1>
