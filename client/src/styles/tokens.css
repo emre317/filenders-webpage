@@ -161,26 +161,26 @@
 /* === LIGHT THEME OVERRIDES === */
 /* Aynı marka renkleri (turkuaz/turuncu), zemin ve metin tonları tersine döner. */
 :root[data-theme='light'] {
-  --color-background: #FFFFFF;
-  --color-background-subtle: #F4F7FB;
+  --color-background: #FAFCFF;
+  --color-background-subtle: #F1F5FB;
   --color-foreground: #0B1730;
   --color-foreground-muted: #5B6B85;
 
   --color-primary: #1AC4D1;
   --color-primary-hover: #0E939D;
   --color-primary-foreground: #04141A;
-  --color-primary-subtle: rgb(26 196 209 / 0.1);
+  --color-primary-subtle: rgb(26 196 209 / 0.16);
 
   --color-accent: #D9631F;
   --color-accent-hover: #E8722A;
-  --color-accent-subtle: rgb(217 99 31 / 0.12);
+  --color-accent-subtle: rgb(217 99 31 / 0.16);
 
   --color-secondary: #EEF2F8;
   --color-secondary-foreground: #0B1730;
   --color-muted: #F0F3F8;
   --color-muted-foreground: #64748B;
 
-  --color-border: #E2E8F0;
+  --color-border: #DCE5F0;
   --color-border-strong: #C7D2E0;
   --color-ring: #1AC4D1;
 
@@ -189,7 +189,7 @@
   --color-warning: #D97706;
   --color-danger: #DC2626;
 
-  --color-surface: #F7F9FC;
+  --color-surface: #F5F8FC;
   --color-surface-2: #EDF1F7;
   --color-surface-inverted: #0B1730;
   --color-foreground-inverted: #FFFFFF;
@@ -205,12 +205,12 @@
   --button-secondary-border: #C7D2E0;
   --button-secondary-hover-bg: #F3F6FA;
 
-  --card-bg: #F7F9FC;
-  --card-border: #E2E8F0;
-  --card-shadow: 0 2px 6px -2px rgb(15 23 42 / 0.1), 0 1px 2px -1px rgb(15 23 42 / 0.08);
-  --card-shadow-hover: 0 24px 44px -14px rgb(15 23 42 / 0.2);
+  --card-bg: #FFFFFF;
+  --card-border: #D8E2EF;
+  --card-shadow: 0 4px 14px -4px rgb(20 40 70 / 0.14), 0 1px 3px -1px rgb(15 23 42 / 0.08);
+  --card-shadow-hover: 0 26px 48px -14px rgb(20 40 70 / 0.24);
 
-  --badge-bg: rgb(26 196 209 / 0.1);
+  --badge-bg: rgb(26 196 209 / 0.14);
   --badge-fg: #D9631F;
 
   --nav-bg: rgb(255 255 255 / 0.78);

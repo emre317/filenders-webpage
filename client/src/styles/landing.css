@@ -476,6 +476,42 @@
   pointer-events: none;
 }
 
+:root[data-theme='light'] .hero-grid {
+  opacity: 0.55;
+}
+
+:root[data-theme='light'] .hero-glow {
+  background: radial-gradient(circle, rgb(26 196 209 / 0.22), transparent 65%);
+}
+
+:root[data-theme='light'] .division-detail,
+:root[data-theme='light'] .about-page,
+:root[data-theme='light'] .board-page,
+:root[data-theme='light'] .legal-page,
+:root[data-theme='light'] .industries,
+:root[data-theme='light'] .trade-page,
+:root[data-theme='light'] .memberships {
+  background-image:
+    radial-gradient(circle at 12% 0%, rgb(26 196 209 / 0.1), transparent 45%),
+    radial-gradient(circle at 100% 8%, rgb(217 99 31 / 0.08), transparent 40%);
+  background-repeat: no-repeat;
+}
+
+:root[data-theme='light'] .navbar.is-scrolled {
+  box-shadow: 0 8px 24px -16px rgb(15 23 42 / 0.18);
+}
+
+:root[data-theme='light'] .btn-primary:hover {
+  box-shadow: 0 16px 36px -10px rgb(26 196 209 / 0.5);
+}
+
+:root[data-theme='light'] .footer {
+  background-image:
+    radial-gradient(circle at 18% 0%, rgb(26 196 209 / 0.08), transparent 45%),
+    radial-gradient(circle at 85% 0%, rgb(217 99 31 / 0.06), transparent 40%);
+  background-repeat: no-repeat;
+}
+
 .hero-cursor-glow {
   position: absolute;
   width: 460px;
