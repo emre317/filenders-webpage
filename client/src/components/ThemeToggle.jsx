@@ -22,7 +22,7 @@ export default function ThemeToggle({ className = '' }) {
     >
       <motion.span
         className="theme-toggle-thumb"
-        animate={{ x: isLight ? 20 : 0 }}
+        animate={{ x: isLight ? 34 : 0 }}
         transition={{ type: 'spring', stiffness: 500, damping: 32 }}
       >
         {isLight ? <SunIcon width={13} height={13} /> : <MoonIcon width={13} height={13} />}
