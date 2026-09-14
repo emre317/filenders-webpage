@@ -100,7 +100,9 @@ export default function Navbar({
           }}
         >
           <img src={logo} alt="Filenders logo" className="navbar-logo" />
-          <span className="navbar-brand-text">Filenders</span>
+          <span className="navbar-brand-text">
+            <span className="brand-f">F</span>ilenders
+          </span>
         </a>
 
         <nav className="navbar-links" aria-label="Primary">

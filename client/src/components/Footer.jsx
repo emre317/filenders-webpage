@@ -51,7 +51,9 @@ export default function Footer({
             }}
           >
             <img src={logo} alt="Filenders" className="footer-logo-icon" />
-            <span className="footer-logo-text">Filenders</span>
+            <span className="footer-logo-text">
+              <span className="brand-f">F</span>ilenders
+            </span>
           </a>
           <span className="footer-logo-tagline">{t('hero.tagline')}</span>
           <p>{t('footer.brandDesc')}</p>

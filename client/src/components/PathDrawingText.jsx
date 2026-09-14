@@ -13,12 +13,18 @@ export default function PathDrawingText({
   align = 'start',
   filled = false,
   className = '',
+  fontFamily = 'Inter, system-ui, sans-serif',
+  lowercase = false,
+  dotAccent = false,
 }) {
   const gradientId = `path-draw-${useId().replace(/:/g, '')}`
   const reduceMotion = useReducedMotion()
   const x = align === 'start' ? '0' : '50%'
   const textAnchor = align === 'start' ? 'start' : 'middle'
   const animate = !filled && !reduceMotion
+  const dotRadius = fontSize * 0.095
+  const dotCx = fontSize * 0.13
+  const dotCy = viewBoxHeight / 2 - fontSize * 0.58
 
   return (
     <svg
@@ -33,6 +39,7 @@ export default function PathDrawingText({
           <stop offset="100%" stopColor={toColor} />
         </linearGradient>
       </defs>
+      {dotAccent && <circle cx={dotCx} cy={dotCy} r={dotRadius} fill={fromColor} />}
       <text
         x={x}
         y="50%"
@@ -45,10 +52,13 @@ export default function PathDrawingText({
         strokeLinecap="round"
         fontSize={fontSize}
         fontWeight="800"
-        fontFamily="Inter, system-ui, sans-serif"
-        letterSpacing="-0.02em"
+        fontFamily={fontFamily}
+        letterSpacing="-0.01em"
+        style={{
+          textTransform: lowercase ? 'lowercase' : undefined,
+          ...(animate ? { animationDuration: `${durationSec}s` } : undefined),
+        }}
         className={animate ? 'path-draw-sweep' : undefined}
-        style={animate ? { animationDuration: `${durationSec}s` } : undefined}
       >
         {text}
       </text>
