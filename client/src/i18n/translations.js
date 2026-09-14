@@ -4,7 +4,7 @@ export const translations = {
     meta: {
       title: 'Filenders',
       description:
-        'Filenders Lojistik ve Teknoloji — güvenilir taşımacılık ve akıllı lojistik teknolojileri tek çatı altında.',
+        'Filenders Lojistik ve Teknoloji — güvenilir taşımacılık ve akıllı lojistik teknolojileri tek çatı altında. %100 Türk sermayesiyle, global standartlarda hizmet veren lojistik ve teknoloji markası.',
     },
     nav: {
       services: 'Hizmetlerimiz',
@@ -1588,7 +1588,7 @@ export const translations = {
     meta: {
       title: 'Filenders',
       description:
-        'Filenders Logistics and Technology — reliable transportation and smart logistics technology under one roof.',
+        'Filenders Logistics and Technology — reliable transportation and smart logistics technology under one roof. A 100% Turkish-capital logistics and technology brand operating at global standards.',
     },
     nav: {
       services: 'Services',
