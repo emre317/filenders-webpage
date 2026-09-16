@@ -793,7 +793,14 @@
   height: 62%;
   filter: drop-shadow(0 20px 50px rgb(26 196 209 / 0.35));
   transition: filter 0.4s var(--primitive-ease-out);
-  cursor: pointer;
+  cursor: grab;
+  touch-action: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.hero-logo:active {
+  cursor: grabbing;
 }
 
 .hero-visual:hover .hero-logo {

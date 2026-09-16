@@ -1,4 +1,5 @@
-import { motion, useMotionValue, useSpring } from 'framer-motion'
+import { useRef } from 'react'
+import { motion, useMotionValue, useSpring, useAnimationFrame } from 'framer-motion'
 // A byte-identical but separately-imported copy of the logo: the Hero
 // visual animates a CSS filter/box-shadow on hover, and sharing the exact
 // same image resource as the navbar/footer instances caused the browser to
@@ -19,6 +20,37 @@ export default function Hero({ onOpenIndustries }) {
   const glowX = useSpring(mx, { stiffness: 120, damping: 30, mass: 0.6 })
   const glowY = useSpring(my, { stiffness: 120, damping: 30, mass: 0.6 })
   const { ref: visualRef, tiltProps: visualTilt } = useTilt3D(10)
+
+  // Logo spins ambiently on its own, but drag it left/right to spin it
+  // yourself — dragging pauses the ambient spin and picks up again from
+  // wherever you left it once you let go.
+  const logoRotate = useMotionValue(0)
+  const isDraggingLogo = useRef(false)
+  const lastPointerX = useRef(0)
+
+  useAnimationFrame((_t, delta) => {
+    if (!isDraggingLogo.current) {
+      logoRotate.set(logoRotate.get() + (delta / 1000) * 9)
+    }
+  })
+
+  const handleLogoPointerDown = (e) => {
+    isDraggingLogo.current = true
+    lastPointerX.current = e.clientX
+    e.currentTarget.setPointerCapture(e.pointerId)
+  }
+
+  const handleLogoPointerMove = (e) => {
+    if (!isDraggingLogo.current) return
+    const deltaX = e.clientX - lastPointerX.current
+    lastPointerX.current = e.clientX
+    logoRotate.set(logoRotate.get() + deltaX * 0.6)
+  }
+
+  const handleLogoPointerUp = (e) => {
+    isDraggingLogo.current = false
+    e.currentTarget.releasePointerCapture(e.pointerId)
+  }
 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect()
@@ -140,12 +172,15 @@ export default function Hero({ onOpenIndustries }) {
             src={logo}
             alt="Filenders"
             className="hero-logo"
-            animate={{ rotate: 360 }}
+            draggable={false}
+            style={{ rotate: logoRotate }}
             whileHover={{ scale: 1.1 }}
-            transition={{
-              rotate: { duration: 40, repeat: Infinity, ease: 'linear' },
-              scale: { type: 'spring', stiffness: 260, damping: 16 },
-            }}
+            whileTap={{ scale: 1.05 }}
+            transition={{ scale: { type: 'spring', stiffness: 260, damping: 16 } }}
+            onPointerDown={handleLogoPointerDown}
+            onPointerMove={handleLogoPointerMove}
+            onPointerUp={handleLogoPointerUp}
+            onPointerCancel={handleLogoPointerUp}
           />
           <span className="hero-tagline">{t('hero.tagline')}</span>
         </motion.div>
