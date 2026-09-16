@@ -18,6 +18,7 @@ import Footer from './components/Footer'
 import PageIntro from './components/PageIntro'
 import CursorFx from './components/CursorFx'
 import { LanguageProvider, useLanguage } from './i18n/LanguageContext'
+import { ThemeProvider } from './context/ThemeContext'
 import { DIVISION_TO_SLUG, LEGAL_SLUGS, getRouteFromHash, pushRoute } from './routes'
 
 function DocumentMeta() {
@@ -216,54 +217,56 @@ function App() {
     !legalView
 
   return (
-    <LanguageProvider>
-      <DocumentMeta />
-      <PageIntro />
-      <CursorFx />
-      <Navbar
-        onNavigateHome={goHome}
-        onOpenMemberships={openMemberships}
-        onOpenIndustries={openIndustries}
-        onOpenAbout={openAbout}
-        onOpenBoardMessage={openBoardMessage}
-        onOpenTrade={openTrade}
-        onOpenLegal={openLegal}
-        onOpenGlobalPartner={openGlobalPartner}
-        onSelectDivision={selectDivision}
-      />
-      <main id="top">
-        {showHomeChrome && <Hero onOpenIndustries={openIndustries} />}
-        {!membershipsOpen &&
-          !industriesOpen &&
-          !aboutOpen &&
-          !boardMessageOpen &&
-          !tradeOpen &&
-          !globalPartnerOpen &&
-          !legalView && <Divisions active={activeDivision} onActiveChange={selectDivision} />}
-        {showHomeChrome && <WhyUs />}
-        {membershipsOpen && <Memberships onBack={goHome} />}
-        {industriesOpen && <Industries onBack={goHome} initialSector={industriesSector} />}
-        {aboutOpen && <AboutUs onBack={goHome} />}
-        {boardMessageOpen && <BoardMessage onBack={goHome} />}
-        {tradeOpen && <TradeSolutions onBack={goHome} />}
-        {globalPartnerOpen && <GlobalPartner onBack={goHome} />}
-        {legalView === 'notice' && <LegalNotice onBack={goHome} />}
-        {legalView === 'privacy' && <DataPrivacy onBack={goHome} />}
-        {legalView === 'conduct' && <CodeOfConduct onBack={goHome} />}
-        <CTA activeDivision={activeDivision} />
-      </main>
-      <Footer
-        onSelectDivision={selectDivision}
-        onOpenMemberships={openMemberships}
-        onOpenIndustries={openIndustries}
-        onOpenAbout={openAbout}
-        onOpenBoardMessage={openBoardMessage}
-        onOpenTrade={openTrade}
-        onOpenLegal={openLegal}
-        onOpenGlobalPartner={openGlobalPartner}
-        onNavigateHome={goHome}
-      />
-    </LanguageProvider>
+    <ThemeProvider>
+      <LanguageProvider>
+        <DocumentMeta />
+        <PageIntro />
+        <CursorFx />
+        <Navbar
+          onNavigateHome={goHome}
+          onOpenMemberships={openMemberships}
+          onOpenIndustries={openIndustries}
+          onOpenAbout={openAbout}
+          onOpenBoardMessage={openBoardMessage}
+          onOpenTrade={openTrade}
+          onOpenLegal={openLegal}
+          onOpenGlobalPartner={openGlobalPartner}
+          onSelectDivision={selectDivision}
+        />
+        <main id="top">
+          {showHomeChrome && <Hero onOpenIndustries={openIndustries} />}
+          {!membershipsOpen &&
+            !industriesOpen &&
+            !aboutOpen &&
+            !boardMessageOpen &&
+            !tradeOpen &&
+            !globalPartnerOpen &&
+            !legalView && <Divisions active={activeDivision} onActiveChange={selectDivision} />}
+          {showHomeChrome && <WhyUs />}
+          {membershipsOpen && <Memberships onBack={goHome} />}
+          {industriesOpen && <Industries onBack={goHome} initialSector={industriesSector} />}
+          {aboutOpen && <AboutUs onBack={goHome} />}
+          {boardMessageOpen && <BoardMessage onBack={goHome} />}
+          {tradeOpen && <TradeSolutions onBack={goHome} />}
+          {globalPartnerOpen && <GlobalPartner onBack={goHome} />}
+          {legalView === 'notice' && <LegalNotice onBack={goHome} />}
+          {legalView === 'privacy' && <DataPrivacy onBack={goHome} />}
+          {legalView === 'conduct' && <CodeOfConduct onBack={goHome} />}
+          <CTA activeDivision={activeDivision} />
+        </main>
+        <Footer
+          onSelectDivision={selectDivision}
+          onOpenMemberships={openMemberships}
+          onOpenIndustries={openIndustries}
+          onOpenAbout={openAbout}
+          onOpenBoardMessage={openBoardMessage}
+          onOpenTrade={openTrade}
+          onOpenLegal={openLegal}
+          onOpenGlobalPartner={openGlobalPartner}
+          onNavigateHome={goHome}
+        />
+      </LanguageProvider>
+    </ThemeProvider>
   )
 }
 

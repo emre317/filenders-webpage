@@ -83,8 +83,14 @@ export default function CTA({ activeDivision }) {
             <ContactInfoRow icon={PhoneIcon} label={t('cta.form.phoneLabel')} value="+90 324 503 8433" />
             <ContactInfoRow
               icon={MapPinIcon}
-              label={t('cta.form.addressLabel')}
+              label={t('footer.headOffice')}
               value={`${t('footer.rdCenter')} — ${t('footer.address')}`}
+              wide
+            />
+            <ContactInfoRow
+              icon={MapPinIcon}
+              label={t('footer.branch')}
+              value={t('footer.branchAddress')}
               wide
             />
           </div>

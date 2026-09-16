@@ -845,8 +845,11 @@ export const translations = {
       companyTitle: 'Kurumsal',
       legalTitle: 'Yasal',
       contactTitle: 'İletişim',
+      headOffice: 'Merkez Şube',
       rdCenter: 'Ar-Ge Merkezi',
       address: 'Mersin Üniversitesi Çiftlikköy Kampüsü Teknopark, 1. Kuluçka Binası 35B/B02, Yenişehir/Mersin',
+      branch: 'Şube',
+      branchAddress: 'Fişekhane Cad. No:5 34710 Bakırköy/İstanbul',
       rights: 'Tüm hakları saklıdır.',
     },
     globalPartner: {
@@ -2464,8 +2467,11 @@ export const translations = {
       companyTitle: 'Company',
       legalTitle: 'Legal',
       contactTitle: 'Contact',
+      headOffice: 'Head Office',
       rdCenter: 'R&D Center',
       address: 'Mersin University Çiftlikköy Campus Technopark, Incubation Building 1, 35B/B02, Yenişehir/Mersin',
+      branch: 'Branch Office',
+      branchAddress: 'Fişekhane Cad. No:5 34710 Bakırköy/İstanbul',
       rights: 'All rights reserved.',
     },
     globalPartner: {

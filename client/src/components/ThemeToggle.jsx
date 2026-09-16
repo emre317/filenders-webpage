@@ -1,15 +1,9 @@
-import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { SunIcon, MoonIcon } from './icons'
+import { useTheme } from '../context/ThemeContext'
 
 export default function ThemeToggle({ className = '' }) {
-  const [theme, setTheme] = useState('dark')
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme)
-  }, [theme])
-
-  const toggle = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))
+  const { theme, toggle } = useTheme()
   const isLight = theme === 'light'
 
   return (
