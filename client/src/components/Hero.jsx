@@ -21,12 +21,15 @@ export default function Hero({ onOpenIndustries }) {
   const glowY = useSpring(my, { stiffness: 120, damping: 30, mass: 0.6 })
   const { ref: visualRef, tiltProps: visualTilt } = useTilt3D(10)
 
-  // Logo spins ambiently on its own, but drag it left/right to spin it
-  // yourself — dragging pauses the ambient spin and picks up again from
-  // wherever you left it once you let go.
+  // Logo spins ambiently on its own, but drag it to spin it yourself —
+  // the exact point you grab tracks the cursor (like turning a dial around
+  // the logo's center), not just a linear left/right nudge. Dragging pauses
+  // the ambient spin and it picks up again from wherever you left it.
   const logoRotate = useMotionValue(0)
   const isDraggingLogo = useRef(false)
-  const lastPointerX = useRef(0)
+  const logoCenter = useRef({ x: 0, y: 0 })
+  const dragStartAngle = useRef(0)
+  const dragStartRotation = useRef(0)
 
   useAnimationFrame((_t, delta) => {
     if (!isDraggingLogo.current) {
@@ -34,22 +37,37 @@ export default function Hero({ onOpenIndustries }) {
     }
   })
 
+  const angleFromCenter = (clientX, clientY) => {
+    const { x: cx, y: cy } = logoCenter.current
+    return (Math.atan2(clientY - cy, clientX - cx) * 180) / Math.PI
+  }
+
   const handleLogoPointerDown = (e) => {
     isDraggingLogo.current = true
-    lastPointerX.current = e.clientX
-    e.currentTarget.setPointerCapture(e.pointerId)
+    const rect = e.currentTarget.getBoundingClientRect()
+    logoCenter.current = { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 }
+    dragStartAngle.current = angleFromCenter(e.clientX, e.clientY)
+    dragStartRotation.current = logoRotate.get()
+    try {
+      e.currentTarget.setPointerCapture(e.pointerId)
+    } catch {
+      // no-op: pointer already released (e.g. a second touch point)
+    }
   }
 
   const handleLogoPointerMove = (e) => {
     if (!isDraggingLogo.current) return
-    const deltaX = e.clientX - lastPointerX.current
-    lastPointerX.current = e.clientX
-    logoRotate.set(logoRotate.get() + deltaX * 0.6)
+    const currentAngle = angleFromCenter(e.clientX, e.clientY)
+    logoRotate.set(dragStartRotation.current + (currentAngle - dragStartAngle.current))
   }
 
   const handleLogoPointerUp = (e) => {
     isDraggingLogo.current = false
-    e.currentTarget.releasePointerCapture(e.pointerId)
+    try {
+      e.currentTarget.releasePointerCapture(e.pointerId)
+    } catch {
+      // no-op: capture was already released
+    }
   }
 
   const handleMouseMove = (e) => {
