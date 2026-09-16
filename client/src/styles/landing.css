@@ -73,6 +73,17 @@
   border-color: var(--color-primary);
 }
 
+.navbar-partner-cta {
+  background: var(--primitive-color-orange-500);
+  border-color: var(--primitive-color-orange-500);
+  color: var(--primitive-color-navy-900);
+}
+
+.navbar-partner-cta:hover {
+  background: var(--primitive-color-orange-600);
+  border-color: var(--primitive-color-orange-600);
+}
+
 .btn-sm {
   padding: 0.55rem 1.2rem;
   font-size: var(--primitive-fontSize-sm);
@@ -316,10 +327,6 @@
   flex-shrink: 0;
 }
 
-.navbar-dropdown-panel-legal .navbar-dropdown-item {
-  gap: 0;
-}
-
 .navbar-dropdown-item {
   display: flex;
   align-items: center;
@@ -491,6 +498,10 @@
 .navbar-mobile .btn {
   margin-top: 0.85rem;
   justify-content: center;
+}
+
+.navbar-mobile .navbar-partner-cta {
+  color: var(--primitive-color-navy-900);
 }
 
 .navbar-mobile-theme,

@@ -1,7 +1,20 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import logo from '../assets/logo.png'
-import { MenuIcon, CloseIcon, ChevronDownIcon, PlaneIcon, CpuIcon, TruckIcon, CraneIcon } from './icons'
+import {
+  MenuIcon,
+  CloseIcon,
+  ChevronDownIcon,
+  PlaneIcon,
+  CpuIcon,
+  TruckIcon,
+  CraneIcon,
+  BuildingIcon,
+  UsersIcon,
+  ClipboardIcon,
+  ShieldIcon,
+  CheckIcon,
+} from './icons'
 import ThemeToggle from './ThemeToggle'
 import LanguageToggle from './LanguageToggle'
 import { useLanguage } from '../i18n/LanguageContext'
@@ -41,14 +54,14 @@ export default function Navbar({
   }))
 
   const legalItems = [
-    { id: 'notice', label: t('nav.legalNotice') },
-    { id: 'privacy', label: t('nav.dataPrivacy') },
-    { id: 'conduct', label: t('nav.codeOfConduct') },
+    { id: 'notice', label: t('nav.legalNotice'), icon: ClipboardIcon },
+    { id: 'privacy', label: t('nav.dataPrivacy'), icon: ShieldIcon },
+    { id: 'conduct', label: t('nav.codeOfConduct'), icon: CheckIcon },
   ]
 
   const aboutItems = [
-    { id: 'about', href: '#about', label: t('nav.about'), onClick: onOpenAbout },
-    { id: 'board', href: '#board-message', label: t('nav.boardMessage'), onClick: onOpenBoardMessage },
+    { id: 'about', href: '#about', label: t('nav.about'), onClick: onOpenAbout, icon: BuildingIcon },
+    { id: 'board', href: '#board-message', label: t('nav.boardMessage'), onClick: onOpenBoardMessage, icon: UsersIcon },
   ]
 
   const linksAfterServices = [
@@ -140,6 +153,9 @@ export default function Navbar({
                         selectAbout(item)
                       }}
                     >
+                      <span className="navbar-dropdown-item-icon">
+                        <item.icon width={16} height={16} />
+                      </span>
                       <span className="navbar-dropdown-item-label">{item.label}</span>
                     </a>
                   ))}
@@ -233,6 +249,9 @@ export default function Navbar({
                         selectLegal(item.id)
                       }}
                     >
+                      <span className="navbar-dropdown-item-icon">
+                        <item.icon width={16} height={16} />
+                      </span>
                       <span className="navbar-dropdown-item-label">{item.label}</span>
                     </a>
                   ))}
@@ -281,7 +300,7 @@ export default function Navbar({
           </a>
           <a
             href="#global-partner"
-            className="navbar-fab btn btn-secondary btn-sm"
+            className="navbar-fab navbar-partner-cta btn btn-secondary btn-sm"
             onClick={(e) => {
               e.preventDefault()
               onOpenGlobalPartner?.()
@@ -337,6 +356,7 @@ export default function Navbar({
                         selectAbout(item)
                       }}
                     >
+                      <item.icon width={16} height={16} />
                       {item.label}
                     </a>
                   ))}
@@ -434,6 +454,7 @@ export default function Navbar({
                         selectLegal(item.id)
                       }}
                     >
+                      <item.icon width={16} height={16} />
                       {item.label}
                     </a>
                   ))}
@@ -462,7 +483,7 @@ export default function Navbar({
           </a>
           <a
             href="#global-partner"
-            className="btn btn-secondary btn-sm navbar-cta"
+            className="btn btn-secondary btn-sm navbar-cta navbar-partner-cta"
             onClick={(e) => {
               e.preventDefault()
               onOpenGlobalPartner?.()
