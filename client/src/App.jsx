@@ -99,6 +99,18 @@ function App() {
       legalView: null,
     })
     pushRoute(DIVISION_TO_SLUG[id] ?? id)
+
+    if (!id) {
+      // "All Services" from a division detail page: Hero/WhyUs remount above
+      // Divisions once activeDivision clears, so the old scroll position no
+      // longer lines up with #services. The outgoing detail panel is still
+      // mid exit-animation at this point, and a *smooth* scroll started
+      // while that's happening gets silently cancelled by the layout churn
+      // (net-zero movement) — an instant jump doesn't have that problem.
+      setTimeout(() => {
+        document.getElementById('services')?.scrollIntoView({ behavior: 'auto', block: 'start' })
+      }, 150)
+    }
   }
 
   const openMemberships = () => {
