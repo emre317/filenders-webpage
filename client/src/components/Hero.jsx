@@ -1,5 +1,10 @@
 import { motion, useMotionValue, useSpring } from 'framer-motion'
-import logo from '../assets/logo.png'
+// A byte-identical but separately-imported copy of the logo: the Hero
+// visual animates a CSS filter/box-shadow on hover, and sharing the exact
+// same image resource as the navbar/footer instances caused the browser to
+// re-rasterize those smaller instances at a lower quality whenever this one
+// animated. A distinct asset URL keeps their decode/paint state isolated.
+import logo from '../assets/logo-hero.png'
 import { ArrowRightIcon } from './icons'
 import PathDrawingText from './PathDrawingText'
 import TypewriterText from './TypewriterText'
