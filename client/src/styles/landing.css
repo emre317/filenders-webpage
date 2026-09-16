@@ -5669,6 +5669,11 @@
   gap: 0.5rem;
   font-weight: 600;
   font-size: var(--primitive-fontSize-sm);
+  color: var(--color-foreground);
+}
+
+.footer-contact-col .footer-contact svg {
+  flex-shrink: 0;
   color: var(--color-primary);
 }
 
