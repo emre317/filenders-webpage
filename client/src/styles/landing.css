@@ -5663,7 +5663,7 @@
   transform: translate(-50%, 0);
 }
 
-.footer-contact {
+.footer-contact-col .footer-contact {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;

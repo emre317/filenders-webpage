@@ -159,7 +159,13 @@ export default function Footer({
             <li className="footer-address">
               <MapPinIcon width={16} height={16} />
               <span>
-                {t('footer.rdCenter')} — {t('footer.address')}
+                {t('footer.headOffice')}: {t('footer.rdCenter')} — {t('footer.address')}
+              </span>
+            </li>
+            <li className="footer-address">
+              <MapPinIcon width={16} height={16} />
+              <span>
+                {t('footer.branch')}: {t('footer.branchAddress')}
               </span>
             </li>
           </ul>
